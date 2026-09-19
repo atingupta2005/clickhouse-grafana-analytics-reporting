@@ -1,0 +1,38 @@
+# Student-facing training repository
+
+# --- Never push instructor workspace ---
+/internal/
+/.cursor/
+
+# --- Windows junk ---
+/nul
+nul
+
+# --- Secrets (defense in depth; also live under internal/) ---
+**/.env
+**/.env.*
+**/.env.local
+**/secrets/
+**/secrets.env
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Generated / deps ---
+node_modules/
+*.log
+tmp/
+**/__pycache__/
+*.pyc
+
+# --- Safety: never commit practice packs if dropped into sessions ---
+**/exercises.md

@@ -8,7 +8,7 @@ This lab uses the existing dbt project under:
 the course dbt project/
 ```
 
-The Core path is a guided walkthrough. You do not need SSH access to the App VM.
+The Core path is a guided walkthrough. You do not need server login.
 
 The project uses:
 

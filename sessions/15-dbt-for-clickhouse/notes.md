@@ -551,4 +551,4 @@ dbt test
 
 from the existing `lab-dbt` container when the configured profile is available.
 
-Do not be required to SSH to the App VM for the Core session.
+You do not need server login for the Core session.

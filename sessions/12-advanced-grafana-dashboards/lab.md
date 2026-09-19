@@ -31,30 +31,30 @@ Use the existing provisioned **ClickHouse** datasource. Prefer copying variables
 
 1. Open:
 
-   `https://vmclickhouse.canadacentral.cloudapp.azure.com/grafana/`
+ `https://vmclickhouse.canadacentral.cloudapp.azure.com/grafana/`
 
 2. Log in with:
 
-   ```text
-   Username: student
-   Password: StudentLab!2026
-   ```
+ ```text
+ Username: student
+ Password: StudentLab!2026
+ ```
 
 3. Prefer copying **Session 10 - Variables Lab** (it already has `region` / `status`). If that dashboard is missing, create a new dashboard and add the same variables as Session 10 (region query from `training.regions`, status custom default **Completed**).
 
-   Session 11 is OData-focused — do not rely on it as the only source of ClickHouse variables.
+ Session 11 is OData-focused — do not rely on it as the only source of ClickHouse variables.
 
 4. Set the dashboard time range to:
 
-   ```text
-   2023-01-01 00:00:00
-   →
-   2025-06-18 23:59:59
-   ```
+ ```text
+ 2023-01-01 00:00:00
+ →
+ 2025-06-18 23:59:59
+ ```
 
 5. Save a working copy as:
 
-   **`Session 12 - Advanced Dashboard Lab`**
+ **`Session 12 - Advanced Dashboard Lab`**
 
 ### Expected result
 
@@ -96,12 +96,12 @@ Query:
 
 ```sql
 SELECT
-    uniqExact(order_id) AS completed_orders
+ uniqExact(order_id) AS completed_orders
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND order_date >= '2023-01-01'
-  AND order_date < '2025-06-19'
-  AND region_id IN (${region})
+ AND order_date >= '2023-01-01'
+ AND order_date < '2025-06-19'
+ AND region_id IN (${region})
 ```
 
 Configure:
@@ -129,12 +129,12 @@ Use:
 
 ```sql
 SELECT
-    sum(sales_amount) AS total_sales
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND order_date >= '2023-01-01'
-  AND order_date < '2025-06-19'
-  AND region_id IN (${region})
+ AND order_date >= '2023-01-01'
+ AND order_date < '2025-06-19'
+ AND region_id IN (${region})
 ```
 
 Configure:
@@ -162,13 +162,13 @@ Use:
 
 ```sql
 SELECT
-    toStartOfMonth(order_date) AS month,
-    sum(sales_amount) AS sales
+ toStartOfMonth(order_date) AS month,
+ sum(sales_amount) AS sales
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND order_date >= '2023-01-01'
-  AND order_date < '2025-06-19'
-  AND region_id IN (${region})
+ AND order_date >= '2023-01-01'
+ AND order_date < '2025-06-19'
+ AND region_id IN (${region})
 GROUP BY month
 ORDER BY month
 ```
@@ -205,13 +205,13 @@ Use:
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS sales
+ region_id,
+ sum(sales_amount) AS sales
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND order_date >= '2023-01-01'
-  AND order_date < '2025-06-19'
-  AND region_id IN (${region})
+ AND order_date >= '2023-01-01'
+ AND order_date < '2025-06-19'
+ AND region_id IN (${region})
 GROUP BY region_id
 ORDER BY sales DESC
 ```
@@ -288,16 +288,16 @@ Use:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    region_id,
-    status,
-    sales_amount
+ order_id,
+ order_date,
+ region_id,
+ status,
+ sales_amount
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND order_date >= '2023-01-01'
-  AND order_date < '2025-06-19'
-  AND region_id IN (${region})
+ AND order_date >= '2023-01-01'
+ AND order_date < '2025-06-19'
+ AND region_id IN (${region})
 ORDER BY order_date DESC
 LIMIT 100
 ```
@@ -339,9 +339,9 @@ Use a field-organization transformation to:
 For example:
 
 ```text
-order_id     → Order ID
-order_date   → Order Date
-region_id    → Region
+order_id → Order ID
+order_date → Order Date
+region_id → Region
 sales_amount → Sales Amount
 ```
 
@@ -365,14 +365,14 @@ Use this ClickHouse query:
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS sales,
-    sum(quantity) AS quantity
+ region_id,
+ sum(sales_amount) AS sales,
+ sum(quantity) AS quantity
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND order_date >= '2023-01-01'
-  AND order_date < '2025-06-19'
-  AND region_id IN (${region})
+ AND order_date >= '2023-01-01'
+ AND order_date < '2025-06-19'
+ AND region_id IN (${region})
 GROUP BY region_id
 ORDER BY region_id
 ```
@@ -407,16 +407,16 @@ Use this query:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    region_id,
-    status,
-    sales_amount
+ order_id,
+ order_date,
+ region_id,
+ status,
+ sales_amount
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND order_date >= '2023-01-01'
-  AND order_date < '2025-06-19'
-  AND region_id IN (${region})
+ AND order_date >= '2023-01-01'
+ AND order_date < '2025-06-19'
+ AND region_id IN (${region})
 ORDER BY order_date DESC
 LIMIT 100
 ```
@@ -443,8 +443,8 @@ The navigation should follow:
 
 ```text
 Session 12 - Advanced Dashboard Lab
-             ↓
-    Regional Detail
+ ↓
+ Regional Detail
 ```
 
 ### Expected result

@@ -63,8 +63,8 @@ Query:
 
 ```sql
 SELECT
-    region_id,
-    region_name
+ region_id,
+ region_name
 FROM training.regions
 ORDER BY region_id
 ```
@@ -110,8 +110,8 @@ Query:
 
 ```sql
 SELECT
-    plant_id,
-    plant_name
+ plant_id,
+ plant_name
 FROM training.plants
 WHERE region_id IN (${region})
 ORDER BY plant_id
@@ -167,11 +167,11 @@ Add visualization → **Stat** → data source **ClickHouse**.
 
 ```sql
 SELECT
-    sum(sales_amount) AS total_sales
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE region_id IN (${region})
-  AND plant_id IN (${plant})
-  AND status IN (${status:sqlstring})
+ AND plant_id IN (${plant})
+ AND status IN (${status:sqlstring})
 ```
 
 Title: **Filtered Sales**.
@@ -195,19 +195,19 @@ Add **Table** panel → ClickHouse.
 
 ```sql
 SELECT
-    order_date,
-    region_id,
-    plant_id,
-    order_id,
-    product_id,
-    customer_id,
-    quantity,
-    sales_amount,
-    status
+ order_date,
+ region_id,
+ plant_id,
+ order_id,
+ product_id,
+ customer_id,
+ quantity,
+ sales_amount,
+ status
 FROM training.v_lab_orders
 WHERE region_id IN (${region})
-  AND plant_id IN (${plant})
-  AND status IN (${status:sqlstring})
+ AND plant_id IN (${plant})
+ AND status IN (${status:sqlstring})
 ORDER BY order_date DESC
 LIMIT 100
 ```
@@ -224,11 +224,11 @@ Add **Time series** → ClickHouse.
 
 ```sql
 SELECT
-    order_date AS time,
-    sum(sales_amount) AS sales
+ order_date AS time,
+ sum(sales_amount) AS sales
 FROM training.v_lab_orders
 WHERE region_id IN (${region})
-  AND status IN (${status:sqlstring})
+ AND status IN (${status:sqlstring})
 GROUP BY order_date
 ORDER BY time
 ```
@@ -247,7 +247,7 @@ Confirm the Stat / Table still work with:
 
 ```sql
 WHERE region_id IN (${region})
-  AND status IN (${status:sqlstring})
+ AND status IN (${status:sqlstring})
 ```
 
 If Status errors, verify the `:sqlstring` (or equivalent quoted) format — bare `${status}` is wrong for strings in `IN`.

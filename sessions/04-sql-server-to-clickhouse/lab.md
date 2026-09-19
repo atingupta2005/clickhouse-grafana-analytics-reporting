@@ -63,9 +63,9 @@ LIMIT 5;
 
 ```sql
 SELECT TOP 5
-    order_id,
-    order_date,
-    sales_amount
+ order_id,
+ order_date,
+ sales_amount
 FROM orders
 ORDER BY sales_amount DESC;
 ```
@@ -78,9 +78,9 @@ Expected pattern:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount
+ order_id,
+ order_date,
+ sales_amount
 FROM training.v_lab_orders
 ORDER BY sales_amount DESC
 LIMIT 5;
@@ -104,9 +104,9 @@ Compare:
 
 ```sql
 SELECT
-    customer_id,
-    customer_name,
-    ISNULL(email, 'Not Available') AS email
+ customer_id,
+ customer_name,
+ ISNULL(email, 'Not Available') AS email
 FROM customers;
 ```
 
@@ -116,9 +116,9 @@ Rewrite the query using ClickHouse `ifNull()`.
 
 ```sql
 SELECT
-    customer_id,
-    customer_name,
-    ifNull(email, 'Not Available') AS email
+ customer_id,
+ customer_name,
+ ifNull(email, 'Not Available') AS email
 FROM training.customers;
 ```
 
@@ -132,8 +132,8 @@ Run both queries and verify the customer with a missing email.
 
 ```sql
 SELECT
-    customer_id,
-    COALESCE(email, 'Not Available') AS email
+ customer_id,
+ COALESCE(email, 'Not Available') AS email
 FROM customers;
 ```
 
@@ -143,8 +143,8 @@ Run the equivalent ClickHouse query.
 
 ```sql
 SELECT
-    customer_id,
-    coalesce(email, 'Not Available') AS email
+ customer_id,
+ coalesce(email, 'Not Available') AS email
 FROM training.customers;
 ```
 
@@ -158,8 +158,8 @@ Compare the result with the SQL Server query.
 
 ```sql
 SELECT
-    order_id,
-    CAST(sales_amount AS decimal(12,2)) AS sales_amount
+ order_id,
+ CAST(sales_amount AS decimal(12,2)) AS sales_amount
 FROM orders;
 ```
 
@@ -169,8 +169,8 @@ Rewrite it for ClickHouse.
 
 ```sql
 SELECT
-    order_id,
-    CAST(sales_amount, 'Decimal(12,2)') AS sales_amount
+ order_id,
+ CAST(sales_amount, 'Decimal(12,2)') AS sales_amount
 FROM training.v_lab_orders;
 ```
 
@@ -180,8 +180,8 @@ SQL Server:
 
 ```sql
 SELECT
-    order_id,
-    CAST(order_date AS datetime) AS order_datetime
+ order_id,
+ CAST(order_date AS datetime) AS order_datetime
 FROM orders;
 ```
 
@@ -189,8 +189,8 @@ ClickHouse:
 
 ```sql
 SELECT
-    order_id,
-    toDateTime(order_date) AS order_datetime
+ order_id,
+ toDateTime(order_date) AS order_datetime
 FROM training.v_lab_orders;
 ```
 
@@ -204,13 +204,13 @@ Compare the resulting data types and values.
 
 ```sql
 SELECT
-    order_id,
-    sales_amount,
-    CASE
-        WHEN sales_amount >= 2000 THEN 'High'
-        WHEN sales_amount >= 1000 THEN 'Medium'
-        ELSE 'Low'
-    END AS sales_class
+ order_id,
+ sales_amount,
+ CASE
+ WHEN sales_amount >= 2000 THEN 'High'
+ WHEN sales_amount >= 1000 THEN 'Medium'
+ ELSE 'Low'
+ END AS sales_class
 FROM orders;
 ```
 
@@ -220,13 +220,13 @@ Run the equivalent query in ClickHouse.
 
 ```sql
 SELECT
-    order_id,
-    sales_amount,
-    CASE
-        WHEN sales_amount >= 2000 THEN 'High'
-        WHEN sales_amount >= 1000 THEN 'Medium'
-        ELSE 'Low'
-    END AS sales_class
+ order_id,
+ sales_amount,
+ CASE
+ WHEN sales_amount >= 2000 THEN 'High'
+ WHEN sales_amount >= 1000 THEN 'Medium'
+ ELSE 'Low'
+ END AS sales_class
 FROM training.v_lab_orders;
 ```
 
@@ -240,16 +240,16 @@ Validate the classification for several orders.
 
 ```sql
 SELECT
-    YEAR(order_date) AS order_year,
-    MONTH(order_date) AS order_month,
-    SUM(sales_amount) AS total_sales
+ YEAR(order_date) AS order_year,
+ MONTH(order_date) AS order_month,
+ SUM(sales_amount) AS total_sales
 FROM orders
 GROUP BY
-    YEAR(order_date),
-    MONTH(order_date)
+ YEAR(order_date),
+ MONTH(order_date)
 ORDER BY
-    order_year,
-    order_month;
+ order_year,
+ order_month;
 ```
 
 ### Task
@@ -258,16 +258,16 @@ Rewrite the query using ClickHouse date functions.
 
 ```sql
 SELECT
-    toYear(order_date) AS order_year,
-    toMonth(order_date) AS order_month,
-    sum(sales_amount) AS total_sales
+ toYear(order_date) AS order_year,
+ toMonth(order_date) AS order_month,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY
-    order_year,
-    order_month
+ order_year,
+ order_month
 ORDER BY
-    order_year,
-    order_month;
+ order_year,
+ order_month;
 ```
 
 Compare the monthly totals.
@@ -280,9 +280,9 @@ Compare the monthly totals.
 
 ```sql
 SELECT
-    customer_name,
-    UPPER(customer_name) AS customer_name_upper,
-    LOWER(customer_name) AS customer_name_lower
+ customer_name,
+ UPPER(customer_name) AS customer_name_upper,
+ LOWER(customer_name) AS customer_name_lower
 FROM customers;
 ```
 
@@ -292,9 +292,9 @@ Rewrite the query for ClickHouse.
 
 ```sql
 SELECT
-    customer_name,
-    upper(customer_name) AS customer_name_upper,
-    lower(customer_name) AS customer_name_lower
+ customer_name,
+ upper(customer_name) AS customer_name_upper,
+ lower(customer_name) AS customer_name_lower
 FROM training.customers;
 ```
 
@@ -304,8 +304,8 @@ SQL Server:
 
 ```sql
 SELECT
-    customer_name,
-    LEN(customer_name) AS name_length
+ customer_name,
+ LEN(customer_name) AS name_length
 FROM customers;
 ```
 
@@ -313,8 +313,8 @@ ClickHouse:
 
 ```sql
 SELECT
-    customer_name,
-    length(customer_name) AS name_length
+ customer_name,
+ length(customer_name) AS name_length
 FROM training.customers;
 ```
 
@@ -326,13 +326,13 @@ FROM training.customers;
 
 ```sql
 SELECT
-    o.order_id,
-    c.customer_name,
-    o.order_date,
-    o.sales_amount
+ o.order_id,
+ c.customer_name,
+ o.order_date,
+ o.sales_amount
 FROM orders o
 INNER JOIN customers c
-    ON o.customer_id = c.customer_id
+ ON o.customer_id = c.customer_id
 WHERE o.status = 'Completed';
 ```
 
@@ -342,13 +342,13 @@ Rewrite the query for ClickHouse.
 
 ```sql
 SELECT
-    o.order_id,
-    c.customer_name,
-    o.order_date,
-    o.sales_amount
+ o.order_id,
+ c.customer_name,
+ o.order_date,
+ o.sales_amount
 FROM training.v_lab_orders AS o
 INNER JOIN training.customers AS c
-    ON o.customer_id = c.customer_id
+ ON o.customer_id = c.customer_id
 WHERE o.status = 'Completed';
 ```
 
@@ -368,16 +368,16 @@ Compare:
 ```sql
 WITH regional_sales AS
 (
-    SELECT
-        region_id,
-        SUM(sales_amount) AS total_sales
-    FROM orders
-    WHERE status = 'Completed'
-    GROUP BY region_id
+ SELECT
+ region_id,
+ SUM(sales_amount) AS total_sales
+ FROM orders
+ WHERE status = 'Completed'
+ GROUP BY region_id
 )
 SELECT
-    region_id,
-    total_sales
+ region_id,
+ total_sales
 FROM regional_sales
 WHERE total_sales > 300000
 ORDER BY total_sales DESC;
@@ -390,16 +390,16 @@ Rewrite the query for ClickHouse.
 ```sql
 WITH regional_sales AS
 (
-    SELECT
-        region_id,
-        sum(sales_amount) AS total_sales
-    FROM training.v_lab_orders
-    WHERE status = 'Completed'
-    GROUP BY region_id
+ SELECT
+ region_id,
+ sum(sales_amount) AS total_sales
+ FROM training.v_lab_orders
+ WHERE status = 'Completed'
+ GROUP BY region_id
 )
 SELECT
-    region_id,
-    total_sales
+ region_id,
+ total_sales
 FROM regional_sales
 WHERE total_sales > 300000
 ORDER BY total_sales DESC;
@@ -415,13 +415,13 @@ Validate the result against SQL Server.
 
 ```sql
 SELECT
-    order_id,
-    sales_amount
+ order_id,
+ sales_amount
 FROM orders
 WHERE sales_amount >
 (
-    SELECT AVG(sales_amount)
-    FROM orders
+ SELECT AVG(sales_amount)
+ FROM orders
 )
 ORDER BY sales_amount DESC;
 ```
@@ -432,13 +432,13 @@ Rewrite and execute the equivalent ClickHouse query.
 
 ```sql
 SELECT
-    order_id,
-    sales_amount
+ order_id,
+ sales_amount
 FROM training.v_lab_orders
 WHERE sales_amount >
 (
-    SELECT avg(sales_amount)
-    FROM training.v_lab_orders
+ SELECT avg(sales_amount)
+ FROM training.v_lab_orders
 )
 ORDER BY sales_amount DESC;
 ```
@@ -453,12 +453,12 @@ Check that the same business condition is being applied.
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount,
-    SUM(sales_amount) OVER (
-        ORDER BY order_date, order_id
-    ) AS running_sales
+ order_id,
+ order_date,
+ sales_amount,
+ SUM(sales_amount) OVER (
+ ORDER BY order_date, order_id
+ ) AS running_sales
 FROM orders;
 ```
 
@@ -468,12 +468,12 @@ Rewrite it for ClickHouse.
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount,
-    sum(sales_amount) OVER (
-        ORDER BY order_date, order_id
-    ) AS running_sales
+ order_id,
+ order_date,
+ sales_amount,
+ sum(sales_amount) OVER (
+ ORDER BY order_date, order_id
+ ) AS running_sales
 FROM training.v_lab_orders;
 ```
 
@@ -487,13 +487,13 @@ Migrate the following SQL Server reporting query.
 
 ```sql
 SELECT TOP 5
-    c.customer_name,
-    COUNT(*) AS order_count,
-    SUM(o.quantity) AS total_quantity,
-    SUM(o.sales_amount) AS total_sales
+ c.customer_name,
+ COUNT(*) AS order_count,
+ SUM(o.quantity) AS total_quantity,
+ SUM(o.sales_amount) AS total_sales
 FROM orders o
 INNER JOIN customers c
-    ON o.customer_id = c.customer_id
+ ON o.customer_id = c.customer_id
 WHERE o.status = 'Completed'
 GROUP BY c.customer_name
 HAVING SUM(o.sales_amount) > 100000
@@ -514,13 +514,13 @@ A possible structure is:
 
 ```sql
 SELECT
-    c.customer_name,
-    count() AS order_count,
-    sum(o.quantity) AS total_quantity,
-    sum(o.sales_amount) AS total_sales
+ c.customer_name,
+ count() AS order_count,
+ sum(o.quantity) AS total_quantity,
+ sum(o.sales_amount) AS total_sales
 FROM training.v_lab_orders AS o
 INNER JOIN training.customers AS c
-    ON o.customer_id = c.customer_id
+ ON o.customer_id = c.customer_id
 WHERE o.status = 'Completed'
 GROUP BY c.customer_name
 HAVING total_sales > 100000
@@ -536,14 +536,14 @@ Validate the result against SQL Server.
 
 For the final validation, compare the source and migrated queries using a simple checklist.
 
-| Check          | SQL Server | ClickHouse | Notes |
+| Check | SQL Server | ClickHouse | Notes |
 | -------------- | ---------: | ---------: | ----- |
-| Row count      |            |            | Expect CH ≫ SQL Server |
-| Total sales    |            |            | Shape/logic, not equal totals |
-| Total quantity |            |            | Same |
-| Minimum date   |            |            | May differ by dataset |
-| Maximum date   |            |            | May differ by dataset |
-| NULL count     |            |            | On matching dimension tables |
+| Row count | | | Expect CH ≫ SQL Server |
+| Total sales | | | Shape/logic, not equal totals |
+| Total quantity | | | Same |
+| Minimum date | | | May differ by dataset |
+| Maximum date | | | May differ by dataset |
+| NULL count | | | On matching dimension tables |
 
 **Expected result:** SQL Server row counts are much smaller. That does **not** mean the migration failed. Confirm filters, joins, and expressions behave the same way.
 
@@ -551,11 +551,11 @@ For example (ClickHouse — full seed):
 
 ```sql
 SELECT
-    count() AS row_count,
-    sum(sales_amount) AS total_sales,
-    sum(quantity) AS total_quantity,
-    min(order_date) AS min_date,
-    max(order_date) AS max_date
+ count() AS row_count,
+ sum(sales_amount) AS total_sales,
+ sum(quantity) AS total_quantity,
+ min(order_date) AS min_date,
+ max(order_date) AS max_date
 FROM training.v_lab_orders;
 ```
 

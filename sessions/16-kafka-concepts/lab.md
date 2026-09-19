@@ -16,19 +16,19 @@ Start with the reporting architecture used in this course:
 
 ```text
 Application
-    |
-    | JSON order events
-    v
-  Kafka
-    |
-    | Consumer / processing job
-    v
+ |
+ | JSON order events
+ v
+ Kafka
+ |
+ | Consumer / processing job
+ v
 ClickHouse
-    |
-    v
+ |
+ v
 training.v_lab_orders
-    |
-    v
+ |
+ v
  Grafana
 ```
 
@@ -54,12 +54,12 @@ Consider this example event:
 
 ```json
 {
-  "event_type": "order_completed",
-  "order_id": 10001,
-  "customer_id": 501,
-  "region_id": 3,
-  "order_date": "2025-06-18",
-  "sales_amount": 2450.50
+ "event_type": "order_completed",
+ "order_id": 10001,
+ "customer_id": 501,
+ "region_id": 3,
+ "order_date": "2025-06-18",
+ "sales_amount": 2450.50
 }
 ```
 
@@ -96,10 +96,10 @@ The conceptual flow is:
 
 ```text
 Order Application
-       |
-       | JSON event
-       v
-   orders topic
+ |
+ | JSON event
+ v
+ orders topic
 ```
 
 Answer these questions:
@@ -126,10 +126,10 @@ Assume the `orders` topic has three partitions:
 
 ```text
 orders
-  |
-  +-- Partition 0
-  +-- Partition 1
-  +-- Partition 2
+ |
+ +-- Partition 0
+ +-- Partition 1
+ +-- Partition 2
 ```
 
 Discuss the following scenario:
@@ -163,17 +163,17 @@ Remember: Kafka does not provides one global ordering across all partitions.
 Now extend the architecture:
 
 ```text
-                 orders
-              /    |    \
-             /     |     \
-            v      v      v
-       Partition 0  1      2
-            |       |      |
-            v       v      v
-           C1      C2     C3
-             \      |     /
-              \     |    /
-             Consumer Group
+ orders
+ / | \
+ / | \
+ v v v
+ Partition 0 1 2
+ | | |
+ v v v
+ C1 C2 C3
+ \ | /
+ \ | /
+ Consumer Group
 ```
 
 Discuss:
@@ -195,27 +195,27 @@ Complete the following architecture:
 
 ```text
 Order Application
-       |
-       v
-    Producer
-       |
-       v
-   __________
-       |
-       v
-   Consumer
-       |
-       v
+ |
+ v
+ Producer
+ |
+ v
+ __________
+ |
+ v
+ Consumer
+ |
+ v
 Processing Job
-       |
-       v
-  __________
-       |
-       v
+ |
+ v
+ __________
+ |
+ v
 training.v_lab_orders
-       |
-       v
-    Grafana
+ |
+ v
+ Grafana
 ```
 
 Fill the two missing components.
@@ -226,27 +226,27 @@ The completed flow is:
 
 ```text
 Order Application
-       |
-       v
-    Producer
-       |
-       v
+ |
+ v
+ Producer
+ |
+ v
  Kafka Topic
-       |
-       v
-   Consumer
-       |
-       v
+ |
+ v
+ Consumer
+ |
+ v
 Processing Job
-       |
-       v
-  ClickHouse
-       |
-       v
+ |
+ v
+ ClickHouse
+ |
+ v
 training.v_lab_orders
-       |
-       v
-    Grafana
+ |
+ v
+ Grafana
 ```
 
 ### Tip
@@ -261,19 +261,19 @@ Consider this conceptual processing job:
 
 ```text
 Kafka
-  |
-  v
+ |
+ v
 Order Processing Job
-  |
-  +--> Validate event
-  |
-  +--> Transform data
-  |
-  +--> Filter invalid events
-  |
-  +--> Enrich data
-  |
-  v
+ |
+ +--> Validate event
+ |
+ +--> Transform data
+ |
+ +--> Filter invalid events
+ |
+ +--> Enrich data
+ |
+ v
 ClickHouse
 ```
 
@@ -300,14 +300,14 @@ Compare these two designs.
 
 ```text
 Application
-    |
-    v
+ |
+ v
  Kafka
-    |
-    v
+ |
+ v
 Processing
-    |
-    v
+ |
+ v
 ClickHouse
 ```
 
@@ -315,11 +315,11 @@ ClickHouse
 
 ```text
 Database
-    |
-    v
+ |
+ v
 Scheduled ETL
-    |
-    v
+ |
+ v
 ClickHouse
 ```
 
@@ -344,8 +344,8 @@ Known lab facts:
 
 ```text
 Compose profile: kafka
-Container:       lab-kafka
-Internal port:   9092 (Kafka API inside the compose network)
+Container: lab-kafka
+Internal port: 9092 (Kafka API inside the compose network)
 Student public Kafka URL: none
 ```
 
@@ -391,23 +391,23 @@ You should be able to describe the complete flow:
 
 ```text
 Producer
-   |
-   v
+ |
+ v
 Kafka Topic
-   |
-   v
+ |
+ v
 Partitions
-   |
-   v
+ |
+ v
 Consumer Group
-   |
-   v
+ |
+ v
 Processing Job
-   |
-   v
+ |
+ v
 ClickHouse
-   |
-   v
+ |
+ v
 Grafana
 ```
 

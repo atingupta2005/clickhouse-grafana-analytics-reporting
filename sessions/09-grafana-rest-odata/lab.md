@@ -19,8 +19,8 @@ Sign in:
 * User: `student`
 * Password: `StudentLab!2026`
 
-**Verify dashboard (optional reference):**  
-https://vmclickhouse.canadacentral.cloudapp.azure.com/grafana/d/lab-s09-rest-odata/session-09-rest-and-odata-infinity-lab-verify  
+**Verify dashboard (optional reference):** 
+https://vmclickhouse.canadacentral.cloudapp.azure.com/grafana/d/lab-s09-rest-odata/session-09-rest-and-odata-infinity-lab-verify 
 
 Set the dashboard time range to absolute **2023-01-01** → **2025-06-18** if panels look empty.
 
@@ -45,7 +45,7 @@ Public base: `https://vmclickhouse.canadacentral.cloudapp.azure.com`
 /odata/Orders
 ```
 
-List REST responses use `{ "data": [ ... ], "count": N }`.  
+List REST responses use `{ "data": [ ... ], "count": N }`. 
 OData collections use a `value` array.
 
 Training `/api` and `/odata` have **no authentication**.
@@ -66,17 +66,17 @@ Confirm `200`, JSON, fields such as `order_date`, `region_id`, `order_id`, `stat
 
 ```json
 {
-  "data": [
-    {
-      "order_date": "2023-01-05",
-      "region_id": 1,
-      "order_id": 100001,
-      "status": "Completed",
-      "sales_amount": 1250.50,
-      "quantity": 12
-    }
-  ],
-  "count": 1
+ "data": [
+ {
+ "order_date": "2023-01-05",
+ "region_id": 1,
+ "order_id": 100001,
+ "status": "Completed",
+ "sales_amount": 1250.50,
+ "quantity": 12
+ }
+ ],
+ "count": 1
 }
 ```
 

@@ -88,17 +88,17 @@ A response looks similar to:
 
 ```json
 {
-  "data": [
-    {
-      "region_id": 1,
-      "region_name": "North"
-    },
-    {
-      "region_id": 2,
-      "region_name": "South"
-    }
-  ],
-  "count": 2
+ "data": [
+ {
+ "region_id": 1,
+ "region_name": "North"
+ },
+ {
+ "region_id": 2,
+ "region_name": "South"
+ }
+ ],
+ "count": 2
 }
 ```
 
@@ -147,15 +147,15 @@ A representative **live** row looks like:
 
 ```json
 {
-  "order_id": 100001,
-  "customer_id": 1,
-  "plant_id": 1,
-  "region_id": 1,
-  "order_date": "2023-01-05",
-  "status": "Completed",
-  "currency": "USD",
-  "quantity": 12,
-  "sales_amount": 1250.50
+ "order_id": 100001,
+ "customer_id": 1,
+ "plant_id": 1,
+ "region_id": 1,
+ "order_date": "2023-01-05",
+ "status": "Completed",
+ "currency": "USD",
+ "quantity": 12,
+ "sales_amount": 1250.50
 }
 ```
 
@@ -182,9 +182,9 @@ Some production APIs nest related objects. Practice reading a nested sample (do 
 
 ```json
 {
-  "order_id": 100001,
-  "customer": { "customer_id": 1, "customer_name": "Customer-1" },
-  "plant": { "plant_id": 1, "plant_name": "Plant-1" }
+ "order_id": 100001,
+ "customer": { "customer_id": 1, "customer_name": "Customer-1" },
+ "plant": { "plant_id": 1, "plant_name": "Plant-1" }
 }
 ```
 
@@ -196,12 +196,12 @@ Use an **inline** JSON string. Do not create `training.json_demo`.
 
 ```sql
 SELECT
-    JSONExtractUInt(j, 'customer_id') AS customer_id,
-    JSONExtractString(j, 'customer_name') AS customer_name,
-    JSONExtractFloat(j, 'sales_amount') AS sales_amount
+ JSONExtractUInt(j, 'customer_id') AS customer_id,
+ JSONExtractString(j, 'customer_name') AS customer_name,
+ JSONExtractFloat(j, 'sales_amount') AS sales_amount
 FROM
 (
-    SELECT '{"customer_id":1,"customer_name":"Customer-1","sales_amount":1250.50}' AS j
+ SELECT '{"customer_id":1,"customer_name":"Customer-1","sales_amount":1250.50}' AS j
 );
 ```
 
@@ -215,16 +215,16 @@ Verify the extracted values have the expected types and values.
 
 ```sql
 SELECT
-    JSONExtractString(j, 'customer_name') AS customer_name,
-    JSONExtractString(j, 'email') AS email_raw,
-    if(
-        JSONHas(j, 'email') = 0 OR JSONExtractString(j, 'email') = '',
-        'Not Available',
-        JSONExtractString(j, 'email')
-    ) AS email_display
+ JSONExtractString(j, 'customer_name') AS customer_name,
+ JSONExtractString(j, 'email') AS email_raw,
+ if(
+ JSONHas(j, 'email') = 0 OR JSONExtractString(j, 'email') = '',
+ 'Not Available',
+ JSONExtractString(j, 'email')
+ ) AS email_display
 FROM
 (
-    SELECT '{"customer_id":3,"customer_name":"Customer-3","email":null}' AS j
+ SELECT '{"customer_id":3,"customer_name":"Customer-3","email":null}' AS j
 );
 ```
 
@@ -240,13 +240,13 @@ Inline nested practice (theory — not the live orders envelope):
 
 ```sql
 SELECT
-    JSONExtractUInt(j, 'order_id') AS order_id,
-    JSONExtractUInt(j, 'customer', 'id') AS customer_id,
-    JSONExtractString(j, 'customer', 'name') AS customer_name,
-    JSONExtractFloat(j, 'sales_amount') AS sales_amount
+ JSONExtractUInt(j, 'order_id') AS order_id,
+ JSONExtractUInt(j, 'customer', 'id') AS customer_id,
+ JSONExtractString(j, 'customer', 'name') AS customer_name,
+ JSONExtractFloat(j, 'sales_amount') AS sales_amount
 FROM
 (
-    SELECT '{"order_id":100001,"customer":{"id":1,"name":"Customer-1"},"sales_amount":1250.50}' AS j
+ SELECT '{"order_id":100001,"customer":{"id":1,"name":"Customer-1"},"sales_amount":1250.50}' AS j
 );
 ```
 
@@ -262,11 +262,11 @@ Consider a theoretical line-item array (not returned by `/api/orders`):
 
 ```json
 {
-  "order_id": 100001,
-  "products": [
-    { "product_id": 1001, "quantity": 5 },
-    { "product_id": 1003, "quantity": 2 }
-  ]
+ "order_id": 100001,
+ "products": [
+ { "product_id": 1001, "quantity": 5 },
+ { "product_id": 1003, "quantity": 2 }
+ ]
 }
 ```
 
@@ -304,15 +304,15 @@ Identify:
 Field mapping:
 
 ```text
-API Field              Reporting Field
+API Field Reporting Field
 ----------------------------------------
-order_id               order_id
-order_date             order_date
-region_id              region_id
-customer_id            customer_id
-quantity               quantity
-sales_amount           sales_amount
-status                 status
+order_id order_id
+order_date order_date
+region_id region_id
+customer_id customer_id
+quantity quantity
+sales_amount sales_amount
+status status
 ```
 
 ---
@@ -417,9 +417,9 @@ GET /api/orders?page=2&page_size=10
 ```text
 Page | Records | First Order | Last Order
 -----|---------|-------------|------------
-1    |         |             |
-2    |         |             |
-3    |         |             |
+1 | | |
+2 | | |
+3 | | |
 ```
 
 ---

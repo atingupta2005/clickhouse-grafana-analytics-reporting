@@ -1,8 +1,8 @@
 # Session 1 — ClickHouse Architecture and Data Modeling
 
-**Duration:** 4 Hours
+**Duration:** 4 hours
 
-## Connect (do this first)
+## Connect
 
 | Item | Value |
 |------|--------|
@@ -10,161 +10,39 @@
 | Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
 | User | `training_ro` (read-only) |
 
-Open CloudBeaver, pick that connection, and run `SELECT version();` to confirm you are in.
+Open CloudBeaver, pick that connection, and run `SELECT version();`.
 
-> **DDL / CREATE / INSERT:** the default student path is read-only. To practice creating tables you need `training_rw` plus your own database `training_student_<yourname>`. Write access is provided when needed.
+> **DDL:** default path is read-only. Sandbox DDL uses `training_rw` and `training_student_<yourname>` when write access is provided. Never DROP `training`.
 
-## Session Overview
+## Overview
 
-This session introduces ClickHouse and how it is designed for analytical workloads.
+How ClickHouse stores and queries analytical data, and how to explore the lab model (or build a small sandbox).
 
-You will learn the basics of designing ClickHouse tables for reporting, then either **explore the lab data** or **build a small sandbox model** of your own.
+![Explore vs sandbox paths](./assets/explore-vs-sandbox.svg)
 
-The examples use a simple **manufacturing and sales** scenario that continues through the course.
+| Path | What you do |
+|------|-------------|
+| **Explore** | `SHOW` / `DESCRIBE` on `training.*`, analytics on `training.v_lab_orders` |
+| **Sandbox** | Create tables only in `training_student_<yourname>` |
 
-## Two paths in this session
+## Topics
 
-| Path | Who | What you do |
-|------|-----|-------------|
-| **Explore (lab data)** | With `training_ro` | `SHOW` / `DESCRIBE` on `training.*`, analytics on **`training.v_lab_orders`** |
-| **Sandbox (DDL practice)** | Students with write access | Create tables in **`training_student_<yourname>`** — never recreate or DROP the `training` database |
+* OLTP vs OLAP, columnar storage, MergeTree
+* `ORDER BY`, `PARTITION BY`, basic types
+* Shards/replicas (overview)
 
-The shared `training` database is already seeded. You do **not** create it.
+## What you will do
 
-## Learning Objectives
+**Core:** explore lab tables/views → simple analytics on `training.v_lab_orders`  
 
-By the end of this session, participants will be able to:
+**Stretch:** sandbox DDL if you have write access
 
-* Explain what ClickHouse is and where it is useful
-* Explain the difference between OLTP and OLAP workloads
-* Describe the main differences between SQL Server and ClickHouse
-* Explain columnar storage and why it helps analytics
-* Understand basic ClickHouse architecture
-* Create databases and tables (sandbox path)
-* Explain MergeTree, `ORDER BY`, and partitioning
-* Select suitable basic data types and use `Nullable` thoughtfully
-* Run basic analytical queries on the lab reporting view
-* Understand shards and replicas at a high level
+**Seed:** Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**
 
-## Business Scenario
-
-A manufacturing company runs plants across several regions. Customers place orders for products. Management wants to analyze:
-
-* Sales by region, plant, and product
-* Order quantities and values
-* Trends over time
-
-```mermaid
-erDiagram
-    REGIONS ||--o{ PLANTS : contains
-    PLANTS ||--o{ ORDERS : fulfills
-    CUSTOMERS ||--o{ ORDERS : places
-    PRODUCTS ||--o{ ORDERS : includes
-    ORDERS ||--|{ ANALYTICS : feeds
-```
-
-## Session Topics
-
-### 1. ClickHouse Introduction
-
-* What ClickHouse is and where it fits
-* Typical reporting and analytical workloads
-
-### 2. OLTP and OLAP
-
-* Transaction vs analysis workloads
-* Why analytical databases store and query data differently
-
-### 3. SQL Server and ClickHouse
-
-* Storage, indexing, and table-design differences
-* Why copying an SQL Server design into ClickHouse often fails
-
-### 4. Columnar Storage
-
-* Row vs column layout, compression, reading only needed columns
-
-### 5. ClickHouse Architecture
-
-* Server, query processing, storage, and data parts (high level)
-
-### 6. Databases, Tables and Table Engines
-
-* Creating databases/tables (sandbox)
-* MergeTree family and why the engine matters
-
-### 7. Sorting Keys and `ORDER BY`
-
-* What `ORDER BY` means in MergeTree
-* Live seed vs sandbox teaching examples (see lab/notes)
-
-### 8. Partitioning
-
-* Partition keys, when they help, partitioning vs sorting
-
-### 9. Data Types and Nullable Data
-
-* Common types for identifiers, dates, money, and optional fields
-
-### 10. Storage Considerations
-
-* Size, compression, types, partitions, and sorting
-
-### 11. Distributed ClickHouse Overview
-
-* Shards and replicas at a high level only
-
-![ClickHouse cluster with shards and replicas](./assets/cluster-shards-replicas.svg)
-
-```mermaid
-flowchart TB
-    subgraph Clients
-        C[BI tool / application]
-    end
-
-    subgraph Cluster["ClickHouse cluster"]
-        S[Coordinator / cluster entry]
-        S --> SH1[Shard 1]
-        S --> SH2[Shard 2]
-        SH1 --> R1[(Replica)]
-        SH2 --> R2[(Replica)]
-    end
-
-    C --> S
-```
-
-## Hands-on Work
-
-1. Connect via CloudBeaver (see connect block above).
-2. **Explore path:** list and describe `training` tables; query **`training.v_lab_orders`**.
-3. **Sandbox path (if write access):** create `training_student_<yourname>`, build small MergeTree tables, insert sample rows, inspect parts and definitions.
-4. Relate table design (`ORDER BY`, `PARTITION BY`) to simple analytical filters.
-
-> **Tip:** Prefer the explore path. Use sandbox DDL if you have `training_rw`.
-
-## Expected Outcome
-
-You can explain how ClickHouse stores and queries analytical data, and you can either explore the lab data safely or build a small personal sandbox model.
-
-Design loop to remember:
-
-```mermaid
-flowchart LR
-    A[Business data] --> B[Choose types]
-    B --> C[Choose engine]
-    C --> D[PARTITION BY]
-    D --> E[ORDER BY]
-    E --> F[Load data]
-    F --> G[Analytical queries]
-```
-
-The same lab dataset is reused in later sessions (SQL, migration, optimization, Grafana, OData, and more).
-
-## Files in This Session
+## Files
 
 | File | Purpose |
 |------|---------|
-| `README.md` | Session overview and navigation |
-| `notes.md` | Theory and teaching examples |
-| `lab.md` | Guided hands-on lab |
-| `assets/` | Colorful SVG diagrams (plus Mermaid in the Markdown) |
+| `notes.md` | Concepts |
+| `lab.md` | Guided lab |
+| `assets/` | Diagrams |

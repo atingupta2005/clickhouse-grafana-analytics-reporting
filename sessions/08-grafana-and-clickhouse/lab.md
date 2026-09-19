@@ -38,8 +38,8 @@ The **ClickHouse** data source is already provisioned. Prefer that data source f
 
 > Seed: order dates **2023-01-01** … **2025-06-18**. Completed orders exist for regions **1, 3, 5** only.
 
-**Verify dashboard (optional reference):**  
-https://vmclickhouse.canadacentral.cloudapp.azure.com/grafana/d/lab-s08-clickhouse-kpis/session-08-clickhouse-kpis-lab-verify  
+**Verify dashboard (optional reference):** 
+https://vmclickhouse.canadacentral.cloudapp.azure.com/grafana/d/lab-s08-clickhouse-kpis/session-08-clickhouse-kpis-lab-verify 
 
 Set the dashboard time range to absolute **2023-01-01** → **2025-06-18** if panels look empty.
 
@@ -69,7 +69,7 @@ Run a simple query:
 
 ```sql
 SELECT
-    count() AS total_orders
+ count() AS total_orders
 FROM training.v_lab_orders;
 ```
 
@@ -83,7 +83,7 @@ Run:
 
 ```sql
 SELECT
-    *
+ *
 FROM training.v_lab_orders
 LIMIT 10;
 ```
@@ -112,7 +112,7 @@ Use the following query:
 
 ```sql
 SELECT
-    sum(sales_amount) AS total_sales
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE status = 'Completed';
 ```
@@ -143,7 +143,7 @@ Use:
 
 ```sql
 SELECT
-    count() AS total_orders
+ count() AS total_orders
 FROM training.v_lab_orders
 WHERE status = 'Completed';
 ```
@@ -164,8 +164,8 @@ Use:
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE status = 'Completed'
 GROUP BY region_id
@@ -190,8 +190,8 @@ Use:
 
 ```sql
 SELECT
-    order_date,
-    sum(sales_amount) AS total_sales
+ order_date,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE status = 'Completed'
 GROUP BY order_date
@@ -212,7 +212,7 @@ Verify that the horizontal axis represents the order date.
 
 **Primary time range for this lab (required):** set an **absolute** range:
 
-**From:** `2023-01-01`  
+**From:** `2023-01-01` 
 **To:** `2025-06-18`
 
 Do **not** use “Last 30 days” as the main setting. Class dates in 2026 sit after the seed ends (2025-06-18), so relative ranges often return **empty panels**.
@@ -227,12 +227,12 @@ Modify the daily sales query to use an explicit reporting period:
 
 ```sql
 SELECT
-    order_date,
-    sum(sales_amount) AS total_sales
+ order_date,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE status = 'Completed'
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-04-01'
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-04-01'
 GROUP BY order_date
 ORDER BY order_date;
 ```
@@ -261,13 +261,13 @@ Use:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    region_id,
-    plant_id,
-    quantity,
-    sales_amount,
-    status
+ order_id,
+ order_date,
+ region_id,
+ plant_id,
+ quantity,
+ sales_amount,
+ status
 FROM training.v_lab_orders
 ORDER BY order_date DESC
 LIMIT 20;
@@ -287,11 +287,11 @@ Arrange the panels into a simple reporting layout:
 
 ```text
 +----------------+----------------+
-| Total Sales    | Total Orders   |
+| Total Sales | Total Orders |
 +----------------+----------------+
-| Sales by Region| Daily Sales    |
+| Sales by Region| Daily Sales |
 +----------------+----------------+
-|         Recent Orders          |
+| Recent Orders |
 +--------------------------------+
 ```
 
@@ -398,24 +398,24 @@ Build a basic **Manufacturing Sales Dashboard** containing:
 
 ```text
 ClickHouse
-    |
-    v
+ |
+ v
 Grafana ClickHouse Data Source
-    |
-    v
+ |
+ v
 ClickHouse SQL
-    |
-    +----> Total Sales
-    |
-    +----> Total Orders
-    |
-    +----> Sales by Region
-    |
-    +----> Daily Sales
-    |
-    +----> Recent Orders
-    |
-    v
+ |
+ +----> Total Sales
+ |
+ +----> Total Orders
+ |
+ +----> Sales by Region
+ |
+ +----> Daily Sales
+ |
+ +----> Recent Orders
+ |
+ v
 Manufacturing Sales Dashboard
 ```
 

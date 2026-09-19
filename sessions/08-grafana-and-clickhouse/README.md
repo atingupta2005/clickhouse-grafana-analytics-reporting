@@ -1,81 +1,37 @@
 # Session 8 — Grafana Fundamentals and ClickHouse Integration
 
-## Session Overview
+**Duration:** 4 hours
 
-<!-- training-diagrams:v1 -->
+## Overview
+
+Introduce Grafana and connect it to ClickHouse for basic reporting panels and a simple dashboard.
+
 ![ClickHouse to Grafana panel](./assets/grafana-ch-flow.svg)
-
-
-This session introduces Grafana for analytics and reporting and connects Grafana to ClickHouse.
-
-The focus is on the Grafana interface, data sources, ClickHouse connectivity, SQL queries, time ranges, refresh, Explore, panels, and basic dashboards.
 
 ## Topics
 
-* Grafana overview
-* Grafana interface
-* Dashboards
-* Panels
-* Data sources
-* ClickHouse data source
-* Connection and authentication
-* ClickHouse SQL in Grafana
-* Query editor
-* Time ranges
-* Dashboard refresh
-* Explore
-* Basic dashboard creation
+* Grafana UI, dashboards, panels, Explore
+* Provisioned ClickHouse data source
+* SQL in Grafana, time ranges, refresh
 
-## Practical Work
+## What you will do
 
-Participants will:
+* Sign in (`student` / `StudentLab!2026`)
+* Use the provisioned ClickHouse data source (do not create a new one)
+* Absolute time **2023-01-01** → **2025-06-18**
+* Build KPI / trend / by-region panels on `training.v_lab_orders`
+* Save one dashboard
 
-* Use the **provisioned** ClickHouse data source (do not add a new one).
-* Confirm ClickHouse connectivity
-* Execute ClickHouse queries
-* Use the query editor
-* Set absolute time range **2023-01-01** → **2025-06-18**
-* Use Explore
-* Create basic panels
-* Build a simple reporting dashboard
-* Optionally open the lab verify dashboard `lab-s08-clickhouse-kpis`
+**Core:** login → ClickHouse DS → absolute time → 3 panels (Completed, regions **1/3/5**) → save  
 
-## Reporting Flow
+**Stretch:** extra visualizations, Completed vs all comparison
 
-```text
-ClickHouse
-     |
-     v
-Grafana Data Source
-     |
-     v
-ClickHouse SQL
-     |
-     v
-Panel
-     |
-     v
-Dashboard
-```
-
-## Timing (PAX ~2×)
-
-TOC: **4 hours**. Borderline feasible if Grafana + ClickHouse datasource are pre-provisioned.
-
-**Core:** open Grafana (`student` / `StudentLab!2026`), confirm provisioned ClickHouse DS, absolute time **2023-01-01→2025-06-18**, 3 panels on `training.v_lab_orders` (KPI / trend / by region for Completed regions **1/3/5**), save one dashboard. Optional: open verify dashboard `/grafana/d/lab-s08-clickhouse-kpis/...`.
-
-**Stretch:** extra visualizations, Completed vs all comparison exercises.
-
-Use Q1 **2023** and Completed regions **1 / 3 / 5**. Seed dates **2023-01-01** … **2025-06-18**.
+**Seed:** Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**
 
 ## Files
 
-Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
-
-
-| File           | Purpose                         |
-| -------------- | ------------------------------- |
-| `README.md`    | Session overview                |
-| `notes.md`     | Grafana and ClickHouse concepts |
-| `lab.md`       | Guided Grafana integration lab  |
-| `assets/`      | Supporting files, if required   |
+| File | Purpose |
+|------|---------|
+| `notes.md` | Concepts |
+| `lab.md` | Guided lab |
+| `assets/` | Diagrams |

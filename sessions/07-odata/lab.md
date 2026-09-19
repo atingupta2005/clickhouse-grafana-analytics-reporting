@@ -95,11 +95,11 @@ Create a simple mapping:
 ```text
 Entity Set | Key | Important Properties
 -----------|-----|----------------------
-Orders     |     |
-Customers  |     |
-Products   |     |
-Plants     |     |
-Regions    |     |
+Orders | |
+Customers | |
+Products | |
+Plants | |
+Regions | |
 ```
 
 ---
@@ -437,12 +437,12 @@ Create:
 
 ```text
 Order
-  |
-  +-- Customer
-  |
-  +-- Product
-  |
-  +-- Plant
+ |
+ +-- Customer
+ |
+ +-- Product
+ |
+ +-- Plant
 ```
 
 using the actual navigation-property names from the service.
@@ -555,14 +555,14 @@ Draw the response structure:
 
 ```text
 OData Response
-     |
-     +-- @odata.context
-     |
-     +-- value
-          |
-          +-- Order
-          +-- Order
-          +-- Order
+ |
+ +-- @odata.context
+ |
+ +-- value
+ |
+ +-- Order
+ +-- Order
+ +-- Order
 ```
 
 ---

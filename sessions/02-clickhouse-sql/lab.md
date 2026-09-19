@@ -29,13 +29,13 @@ Use the `training` database.
 
 Open CloudBeaver → pick the LAN RO connection → run `SELECT version();`.
 
-For reporting queries in this session, use the lab view **`training.v_lab_orders`**.  
+For reporting queries in this session, use the lab view **`training.v_lab_orders`**. 
 It joins orders + line items + plants and exposes:
 
 * `sales_amount`, `quantity`, `region_id`
 * `status = 'Completed'` (maps stored `Closed`)
 
-Seed date range: **2023-01-01** through **2025-06-18**.  
+Seed date range: **2023-01-01** through **2025-06-18**. 
 Completed rows exist for **region_id 1, 3, and 5** (not 2 / 4 / 6).
 
 **Statuses in the seed:** `Open`, `Shipped`, `Completed`, `Cancelled` — there is no `Pending`.
@@ -69,12 +69,12 @@ Instead of selecting all columns, select only the fields needed for a report.
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    region_id,
-    quantity,
-    sales_amount,
-    status
+ order_id,
+ order_date,
+ region_id,
+ quantity,
+ sales_amount,
+ status
 FROM training.v_lab_orders
 LIMIT 100;
 ```
@@ -97,9 +97,9 @@ Find orders from region 1:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount
+ order_id,
+ order_date,
+ sales_amount
 FROM training.v_lab_orders
 WHERE region_id = 1
 LIMIT 100;
@@ -109,9 +109,9 @@ Find completed orders:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount
+ order_id,
+ order_date,
+ sales_amount
 FROM training.v_lab_orders
 WHERE status = 'Completed'
 LIMIT 100;
@@ -121,12 +121,12 @@ Combine conditions:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount
+ order_id,
+ order_date,
+ sales_amount
 FROM training.v_lab_orders
 WHERE region_id = 1
-  AND status = 'Completed'
+ AND status = 'Completed'
 LIMIT 100;
 ```
 
@@ -142,8 +142,8 @@ Find orders greater than 2,000:
 
 ```sql
 SELECT
-    order_id,
-    sales_amount
+ order_id,
+ sales_amount
 FROM training.v_lab_orders
 WHERE sales_amount > 2000
 ORDER BY sales_amount DESC
@@ -154,11 +154,11 @@ Find orders between 1,000 and 2,000:
 
 ```sql
 SELECT
-    order_id,
-    sales_amount
+ order_id,
+ sales_amount
 FROM training.v_lab_orders
 WHERE sales_amount >= 1000
-  AND sales_amount <= 2000
+ AND sales_amount <= 2000
 ORDER BY sales_amount DESC
 LIMIT 100;
 ```
@@ -175,9 +175,9 @@ Find the five highest-value orders:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount
+ order_id,
+ order_date,
+ sales_amount
 FROM training.v_lab_orders
 ORDER BY sales_amount DESC
 LIMIT 5;
@@ -187,9 +187,9 @@ Find the five lowest-value orders:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    sales_amount
+ order_id,
+ order_date,
+ sales_amount
 FROM training.v_lab_orders
 ORDER BY sales_amount ASC
 LIMIT 5;
@@ -223,12 +223,12 @@ Find unique region and plant combinations:
 
 ```sql
 SELECT DISTINCT
-    region_id,
-    plant_id
+ region_id,
+ plant_id
 FROM training.v_lab_orders
 ORDER BY
-    region_id,
-    plant_id;
+ region_id,
+ plant_id;
 ```
 
 ---
@@ -239,12 +239,12 @@ Create a simple overall sales KPI report:
 
 ```sql
 SELECT
-    count() AS total_orders,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales,
-    avg(sales_amount) AS average_order_value,
-    min(sales_amount) AS minimum_order_value,
-    max(sales_amount) AS maximum_order_value
+ count() AS total_orders,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales,
+ avg(sales_amount) AS average_order_value,
+ min(sales_amount) AS minimum_order_value,
+ max(sales_amount) AS maximum_order_value
 FROM training.v_lab_orders;
 ```
 
@@ -258,10 +258,10 @@ Management wants sales for each region.
 
 ```sql
 SELECT
-    region_id,
-    count() AS order_count,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales
+ region_id,
+ count() AS order_count,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY region_id
 ORDER BY total_sales DESC;
@@ -286,10 +286,10 @@ Create a plant-level report:
 
 ```sql
 SELECT
-    plant_id,
-    count() AS order_count,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales
+ plant_id,
+ count() AS order_count,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY plant_id
 ORDER BY total_sales DESC;
@@ -309,8 +309,8 @@ Management wants to see only regions whose total sales are greater than 300,000.
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY region_id
 HAVING total_sales > 300000
@@ -323,10 +323,10 @@ Compare:
 
 ```text
 WHERE
-    -> filters individual rows
+ -> filters individual rows
 
 HAVING
-    -> filters grouped results
+ -> filters grouped results
 ```
 
 ### Exercise
@@ -341,10 +341,10 @@ Create a daily sales report:
 
 ```sql
 SELECT
-    order_date,
-    count() AS order_count,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales
+ order_date,
+ count() AS order_count,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY order_date
 ORDER BY order_date;
@@ -364,10 +364,10 @@ Create a monthly report:
 
 ```sql
 SELECT
-    toYYYYMM(order_date) AS month,
-    count() AS order_count,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales
+ toYYYYMM(order_date) AS month,
+ count() AS order_count,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY month
 ORDER BY month;
@@ -392,12 +392,12 @@ Management wants the sales report for January 2023.
 
 ```sql
 SELECT
-    count() AS order_count,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales
+ count() AS order_count,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE order_date >= '2023-01-01'
-  AND order_date < '2023-02-01';
+ AND order_date < '2023-02-01';
 ```
 
 The same pattern can be used for other months.
@@ -406,11 +406,11 @@ For example, February:
 
 ```sql
 SELECT
-    count() AS order_count,
-    sum(sales_amount) AS total_sales
+ count() AS order_count,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE order_date >= '2023-02-01'
-  AND order_date < '2023-03-01';
+ AND order_date < '2023-03-01';
 ```
 
 ---
@@ -423,8 +423,8 @@ Display customer names in uppercase:
 
 ```sql
 SELECT
-    customer_id,
-    upper(customer_name) AS customer_name
+ customer_id,
+ upper(customer_name) AS customer_name
 FROM training.customers;
 ```
 
@@ -432,8 +432,8 @@ Find customers whose name contains `Industrial`:
 
 ```sql
 SELECT
-    customer_id,
-    customer_name
+ customer_id,
+ customer_name
 FROM training.customers
 WHERE customer_name LIKE '%Industrial%';
 ```
@@ -454,9 +454,9 @@ Find them:
 
 ```sql
 SELECT
-    customer_id,
-    customer_name,
-    email
+ customer_id,
+ customer_name,
+ email
 FROM training.customers
 WHERE email IS NULL;
 ```
@@ -465,9 +465,9 @@ Display a replacement value instead of `NULL`:
 
 ```sql
 SELECT
-    customer_id,
-    customer_name,
-    coalesce(email, 'Not Available') AS email
+ customer_id,
+ customer_name,
+ coalesce(email, 'Not Available') AS email
 FROM training.customers;
 ```
 
@@ -483,13 +483,13 @@ Classify orders according to sales amount:
 
 ```sql
 SELECT
-    order_id,
-    sales_amount,
-    CASE
-        WHEN sales_amount >= 2000 THEN 'High'
-        WHEN sales_amount >= 1000 THEN 'Medium'
-        ELSE 'Low'
-    END AS order_category
+ order_id,
+ sales_amount,
+ CASE
+ WHEN sales_amount >= 2000 THEN 'High'
+ WHEN sales_amount >= 1000 THEN 'Medium'
+ ELSE 'Low'
+ END AS order_category
 FROM training.v_lab_orders
 ORDER BY sales_amount DESC
 LIMIT 100;
@@ -517,7 +517,7 @@ Calculate completed sales:
 
 ```sql
 SELECT
-    sumIf(sales_amount, status = 'Completed') AS completed_sales
+ sumIf(sales_amount, status = 'Completed') AS completed_sales
 FROM training.v_lab_orders;
 ```
 
@@ -525,7 +525,7 @@ Calculate completed orders:
 
 ```sql
 SELECT
-    countIf(status = 'Completed') AS completed_orders
+ countIf(status = 'Completed') AS completed_orders
 FROM training.v_lab_orders;
 ```
 
@@ -533,8 +533,8 @@ Calculate both:
 
 ```sql
 SELECT
-    countIf(status = 'Completed') AS completed_orders,
-    sumIf(sales_amount, status = 'Completed') AS completed_sales
+ countIf(status = 'Completed') AS completed_orders,
+ sumIf(sales_amount, status = 'Completed') AS completed_sales
 FROM training.v_lab_orders;
 ```
 
@@ -546,9 +546,9 @@ Combine filtering, grouping and conditional aggregation.
 
 ```sql
 SELECT
-    region_id,
-    countIf(status = 'Completed') AS completed_orders,
-    sumIf(sales_amount, status = 'Completed') AS completed_sales
+ region_id,
+ countIf(status = 'Completed') AS completed_orders,
+ sumIf(sales_amount, status = 'Completed') AS completed_sales
 FROM training.v_lab_orders
 GROUP BY region_id
 ORDER BY completed_sales DESC;
@@ -575,12 +575,12 @@ One possible solution is:
 
 ```sql
 SELECT
-    count() AS total_orders,
-    countIf(status = 'Completed') AS completed_orders,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales,
-    sumIf(sales_amount, status = 'Completed') AS completed_sales,
-    avg(sales_amount) AS average_order_value
+ count() AS total_orders,
+ countIf(status = 'Completed') AS completed_orders,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales,
+ sumIf(sales_amount, status = 'Completed') AS completed_sales,
+ avg(sales_amount) AS average_order_value
 FROM training.v_lab_orders;
 ```
 
@@ -614,12 +614,12 @@ A possible solution:
 
 ```sql
 SELECT
-    region_id,
-    count() AS order_count,
-    countIf(status = 'Completed') AS completed_orders,
-    sum(quantity) AS total_quantity,
-    sum(sales_amount) AS total_sales,
-    sumIf(sales_amount, status = 'Completed') AS completed_sales
+ region_id,
+ count() AS order_count,
+ countIf(status = 'Completed') AS completed_orders,
+ sum(quantity) AS total_quantity,
+ sum(sales_amount) AS total_sales,
+ sumIf(sales_amount, status = 'Completed') AS completed_sales
 FROM training.v_lab_orders
 GROUP BY region_id
 ORDER BY total_sales DESC;

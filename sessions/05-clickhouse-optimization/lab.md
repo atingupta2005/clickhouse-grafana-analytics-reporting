@@ -22,8 +22,8 @@ Start with a regional sales query:
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY region_id
 ORDER BY region_id;
@@ -57,10 +57,10 @@ Now run:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    region_id,
-    sales_amount
+ order_id,
+ order_date,
+ region_id,
+ sales_amount
 FROM training.v_lab_orders
 WHERE region_id = 3
 LIMIT 100;
@@ -89,7 +89,7 @@ Run a query without a date restriction:
 
 ```sql
 SELECT
-    sum(sales_amount) AS total_sales
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE region_id = 3;
 ```
@@ -98,11 +98,11 @@ Now restrict the reporting period:
 
 ```sql
 SELECT
-    sum(sales_amount) AS total_sales
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE region_id = 3
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-04-01';
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-04-01';
 ```
 
 ### Tasks
@@ -138,22 +138,22 @@ Now run a query aligned with the sort key:
 
 ```sql
 SELECT
-    sum(sales_amount)
+ sum(sales_amount)
 FROM training.v_lab_orders
 WHERE order_date >= '2023-01-01'
-  AND order_date < '2023-04-01'
-  AND plant_id = 1;
+ AND order_date < '2023-04-01'
+ AND plant_id = 1;
 ```
 
 Also try a region + date filter (region is useful for reporting, but is **not** a leading sort-key column):
 
 ```sql
 SELECT
-    sum(sales_amount)
+ sum(sales_amount)
 FROM training.v_lab_orders
 WHERE region_id = 3
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-04-01';
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-04-01';
 ```
 
 ### Tasks
@@ -173,13 +173,13 @@ Inspect the table parts:
 
 ```sql
 SELECT
-    partition,
-    count() AS parts,
-    sum(rows) AS rows
+ partition,
+ count() AS parts,
+ sum(rows) AS rows
 FROM system.parts
 WHERE database = 'training'
-  AND table = 'orders'
-  AND active
+ AND table = 'orders'
+ AND active
 GROUP BY partition
 ORDER BY partition;
 ```
@@ -188,11 +188,11 @@ Run a query restricted to one month:
 
 ```sql
 SELECT
-    count() AS order_count,
-    sum(sales_amount) AS total_sales
+ count() AS order_count,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE order_date >= '2023-02-01'
-  AND order_date < '2023-03-01';
+ AND order_date < '2023-03-01';
 ```
 
 ### Task
@@ -213,8 +213,8 @@ Run:
 ```sql
 EXPLAIN
 SELECT
-    region_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE region_id = 3
 GROUP BY region_id;
@@ -229,12 +229,12 @@ Then try:
 ```sql
 EXPLAIN indexes = 1
 SELECT
-    region_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE region_id = 3
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-04-01'
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-04-01'
 GROUP BY region_id;
 ```
 
@@ -252,13 +252,13 @@ Then inspect completed queries:
 
 ```sql
 SELECT
-    event_time,
-    query_duration_ms,
-    read_rows,
-    read_bytes,
-    result_rows,
-    memory_usage,
-    query
+ event_time,
+ query_duration_ms,
+ read_rows,
+ read_bytes,
+ result_rows,
+ memory_usage,
+ query
 FROM system.query_log
 WHERE type = 'QueryFinish'
 ORDER BY event_time DESC
@@ -286,8 +286,8 @@ Start with:
 SELECT *
 FROM training.v_lab_orders
 WHERE status = 'Completed'
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-04-01'
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-04-01'
 LIMIT 100;
 ```
 
@@ -302,14 +302,14 @@ Rewrite the query:
 
 ```sql
 SELECT
-    order_id,
-    order_date,
-    region_id,
-    sales_amount
+ order_id,
+ order_date,
+ region_id,
+ sales_amount
 FROM training.v_lab_orders
 WHERE status = 'Completed'
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-04-01'
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-04-01'
 LIMIT 100;
 ```
 
@@ -325,11 +325,11 @@ Run:
 
 ```sql
 SELECT
-    c.customer_name,
-    sum(o.sales_amount) AS total_sales
+ c.customer_name,
+ sum(o.sales_amount) AS total_sales
 FROM training.v_lab_orders AS o
 INNER JOIN training.customers AS c
-    ON o.customer_id = c.customer_id
+ ON o.customer_id = c.customer_id
 GROUP BY c.customer_name
 ORDER BY total_sales DESC;
 ```
@@ -338,14 +338,14 @@ Now apply a business filter:
 
 ```sql
 SELECT
-    c.customer_name,
-    sum(o.sales_amount) AS total_sales
+ c.customer_name,
+ sum(o.sales_amount) AS total_sales
 FROM training.v_lab_orders AS o
 INNER JOIN training.customers AS c
-    ON o.customer_id = c.customer_id
+ ON o.customer_id = c.customer_id
 WHERE o.status = 'Completed'
-  AND o.order_date >= '2023-01-01'
-  AND o.order_date < '2023-04-01'
+ AND o.order_date >= '2023-01-01'
+ AND o.order_date < '2023-04-01'
 GROUP BY c.customer_name
 ORDER BY total_sales DESC;
 ```
@@ -366,17 +366,17 @@ Run:
 
 ```sql
 SELECT
-    region_id,
-    plant_id,
-    customer_id,
-    product_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ plant_id,
+ customer_id,
+ product_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY
-    region_id,
-    plant_id,
-    customer_id,
-    product_id;
+ region_id,
+ plant_id,
+ customer_id,
+ product_id;
 ```
 
 This may produce a large number of groups when using the full training dataset.
@@ -385,8 +385,8 @@ Now run:
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY region_id;
 ```
@@ -410,11 +410,11 @@ Start with:
 
 ```sql
 SELECT
-    *
+ *
 FROM training.v_lab_orders
 WHERE order_date >= '2023-01-01'
-  AND order_date < '2023-04-01'
-  AND status = 'Completed'
+ AND order_date < '2023-04-01'
+ AND status = 'Completed'
 LIMIT 100;
 ```
 
@@ -451,8 +451,8 @@ Now consider this query:
 
 ```sql
 SELECT
-    customer_id,
-    sum(sales_amount) AS total_sales
+ customer_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 WHERE customer_id = 10002
 GROUP BY customer_id;
@@ -528,15 +528,15 @@ Check:
 
 ```sql
 SELECT
-    count() AS row_count,
-    sum(sales_amount) AS total_sales,
-    sum(quantity) AS total_quantity,
-    min(order_date) AS min_date,
-    max(order_date) AS max_date
+ count() AS row_count,
+ sum(sales_amount) AS total_sales,
+ sum(quantity) AS total_quantity,
+ min(order_date) AS min_date,
+ max(order_date) AS max_date
 FROM training.v_lab_orders
 WHERE status = 'Completed'
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-04-01';
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-04-01';
 ```
 
 The optimized query must preserve the required business result.
@@ -549,10 +549,10 @@ Consider this reporting query:
 
 ```sql
 SELECT
-    *
+ *
 FROM training.v_lab_orders
 WHERE order_date >= '2023-01-01'
-  AND order_date < '2023-04-01';
+ AND order_date < '2023-04-01';
 ```
 
 The reporting requirement is:

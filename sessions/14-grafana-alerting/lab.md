@@ -63,21 +63,21 @@ Before creating the demonstration rule, review this flow:
 
 ```text
 ClickHouse query
-      ↓
+ ↓
 Metric value
-      ↓
+ ↓
 Condition / threshold
-      ↓
+ ↓
 Evaluation
-      ↓
+ ↓
 Pending
-      ↓
+ ↓
 Firing
-      ↓
+ ↓
 Notification policy
-      ↓
+ ↓
 Contact point
-      ↓
+ ↓
 Webhook
 ```
 
@@ -121,11 +121,11 @@ Use the reporting view:
 
 ```sql
 SELECT
-    sum(sales_amount) AS completed_sales
+ sum(sales_amount) AS completed_sales
 FROM training.v_lab_orders
 WHERE status = 'Completed'
-  AND order_date >= toDate('2023-01-01')
-  AND order_date <= toDate('2025-06-18')
+ AND order_date >= toDate('2023-01-01')
+ AND order_date <= toDate('2025-06-18')
 ```
 
 ### Expected Result
@@ -155,8 +155,8 @@ Use the returned KPI as the input to the alert condition.
 
 1. Note the approximate `completed_sales` value returned by the query (full seed Completed sales is a large positive number).
 2. For a **firing** demonstration, configure a condition such as:
-   - **Is below** `999999999999` (or any threshold clearly **above** the returned sales), **or**
-   - **Is above** `0` (condition true whenever sales exist).
+ - **Is below** `999999999999` (or any threshold clearly **above** the returned sales), **or**
+ - **Is above** `0` (condition true whenever sales exist).
 3. Say aloud: this threshold is a **classroom demonstration value**, not a real business target.
 
 To show **Normal** instead, temporarily use a condition that is false (for example **Is above** a number larger than returned sales).
@@ -165,11 +165,11 @@ Explain:
 
 ```text
 Query returns metric
-        ↓
+ ↓
 Grafana evaluates metric
-        ↓
+ ↓
 Metric is compared with threshold
-        ↓
+ ↓
 Condition becomes true or false
 ```
 
@@ -206,13 +206,13 @@ Explain the state transition:
 
 ```text
 Normal
-  ↓
+ ↓
 Condition becomes true
-  ↓
+ ↓
 Pending
-  ↓
+ ↓
 Condition remains true
-  ↓
+ ↓
 Firing
 ```
 
@@ -220,9 +220,9 @@ Then explain the alternative:
 
 ```text
 Pending
-  ↓
+ ↓
 Condition becomes false
-  ↓
+ ↓
 Normal
 ```
 
@@ -246,12 +246,12 @@ Show a second query (still on the provisioned ClickHouse datasource):
 
 ```sql
 SELECT
-    sum(sales_amount) AS completed_sales
+ sum(sales_amount) AS completed_sales
 FROM training.v_lab_orders
 WHERE status = 'Completed'
-  AND region_id = 2
-  AND order_date >= toDate('2023-01-01')
-  AND order_date <= toDate('2025-06-18')
+ AND region_id = 2
+ AND order_date >= toDate('2023-01-01')
+ AND order_date <= toDate('2025-06-18')
 ```
 
 ### Expected Result
@@ -362,11 +362,11 @@ Explain:
 
 ```text
 Alert Rule
-    ↓
+ ↓
 Notification Policy
-    ↓
+ ↓
 Contact Point
-    ↓
+ ↓
 Webhook
 ```
 
@@ -384,17 +384,17 @@ the demonstration shows the complete flow:
 
 ```text
 ClickHouse
-    ↓
+ ↓
 KPI Query
-    ↓
+ ↓
 Alert Condition
-    ↓
+ ↓
 Evaluation
-    ↓
+ ↓
 Alert State
-    ↓
+ ↓
 Notification Policy
-    ↓
+ ↓
 Webhook Contact Point
 ```
 
@@ -494,17 +494,17 @@ Return to the main Alerting view and review the alert lifecycle one final time:
 
 ```text
 Query
-  ↓
+ ↓
 Condition
-  ↓
+ ↓
 Evaluation
-  ↓
+ ↓
 Pending / Firing / Normal
-  ↓
+ ↓
 Notification Policy
-  ↓
+ ↓
 Contact Point
-  ↓
+ ↓
 Webhook
 ```
 

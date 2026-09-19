@@ -22,7 +22,7 @@ The lab focuses on:
 
 The lab uses the provisioned Grafana Infinity datasource and the lab OData service.
 
-**Core timing:** Steps 1–14 (~90–120 minutes). **Stretch** (Part 2) is optional / homework when PAX are slow.
+**Core:** Steps 1–14. **Stretch** (Part 2) is optional / homework.
 
 ---
 
@@ -91,7 +91,7 @@ Use the absolute dashboard time range:
 2. Create a new dashboard.
 3. Name it:
 
-   `Session 11 - Advanced OData Lab`
+ `Session 11 - Advanced OData Lab`
 
 4. Add a new panel.
 5. Select the provisioned `Infinity` datasource.
@@ -203,13 +203,13 @@ The important pattern is:
 
 ```text
 Grafana variable
-        ↓
+ ↓
 URL substitution
-        ↓
+ ↓
 OData $filter
-        ↓
+ ↓
 JSON response
-        ↓
+ ↓
 Grafana panel
 ```
 

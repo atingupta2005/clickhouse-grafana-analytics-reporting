@@ -122,12 +122,12 @@ Students can explain:
 
 ```text
 dbt_project.yml
-        |
-        +-- identifies/configures the project
+ |
+ +-- identifies/configures the project
 
 profiles.yml
-        |
-        +-- defines the database connection
+ |
+ +-- defines the database connection
 ```
 
 ### Tip
@@ -196,14 +196,14 @@ Draw the transformation on the board:
 
 ```text
 training.orders
-       +
+ +
 training.order_items
-       +
+ +
 training.plants
-       +
+ +
 training.regions
-       |
-       v
+ |
+ v
 mart_sales_by_region
 ```
 
@@ -225,9 +225,9 @@ Explain where the model is intended to be materialized.
 Source:
 training.*
 
-        |
-        | dbt transformation
-        v
+ |
+ | dbt transformation
+ v
 
 Target:
 training_dbt.*
@@ -251,20 +251,20 @@ Use the existing project to walk through the normal workflow:
 
 ```text
 Source definitions
-       |
-       v
+ |
+ v
 SQL model
-       |
-       v
+ |
+ v
 dbt run
-       |
-       v
+ |
+ v
 Target model
-       |
-       v
+ |
+ v
 dbt test
-       |
-       v
+ |
+ v
 Validate in ClickHouse
 ```
 
@@ -321,14 +321,14 @@ Discuss the following scenario:
 
 ```text
 ClickHouse source data
-        |
-        +---- dbt
-        |
-        +---- Application
-        |
-        +---- REST/OData
-        |
-        +---- Grafana
+ |
+ +---- dbt
+ |
+ +---- Application
+ |
+ +---- REST/OData
+ |
+ +---- Grafana
 ```
 
 Ask students:

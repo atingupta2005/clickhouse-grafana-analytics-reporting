@@ -67,7 +67,7 @@ Set the dashboard time picker to:
 
 ```text
 From: 2023-01-01
-To:   2025-06-18
+To: 2025-06-18
 ```
 
 Use the absolute time range for the Core dashboard.
@@ -225,11 +225,11 @@ Use:
 
 ```sql
 SELECT
-    uniqExact(order_id) AS completed_orders
+ uniqExact(order_id) AS completed_orders
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND region_id IN (${region})
-  AND plant_id IN (${plant})
+ AND region_id IN (${region})
+ AND plant_id IN (${plant})
 ```
 
 Set the visualization to a **Stat** panel.
@@ -266,11 +266,11 @@ Query:
 
 ```sql
 SELECT
-    sum(sales_amount) AS completed_revenue
+ sum(sales_amount) AS completed_revenue
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND region_id IN (${region})
-  AND plant_id IN (${plant})
+ AND region_id IN (${region})
+ AND plant_id IN (${plant})
 ```
 
 Visualization:
@@ -303,11 +303,11 @@ Use:
 
 ```sql
 SELECT
-    countIf(sales_amount >= 2000) AS high_value_lines
+ countIf(sales_amount >= 2000) AS high_value_lines
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND region_id IN (${region})
-  AND plant_id IN (${plant})
+ AND region_id IN (${region})
+ AND plant_id IN (${plant})
 ```
 
 Panel title:
@@ -342,12 +342,12 @@ Query:
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS revenue
+ region_id,
+ sum(sales_amount) AS revenue
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND region_id IN (${region})
-  AND plant_id IN (${plant})
+ AND region_id IN (${region})
+ AND plant_id IN (${plant})
 GROUP BY region_id
 ORDER BY region_id
 ```
@@ -388,12 +388,12 @@ Use:
 
 ```sql
 SELECT
-    plant_id,
-    sum(sales_amount) AS revenue
+ plant_id,
+ sum(sales_amount) AS revenue
 FROM training.v_lab_orders
 WHERE status IN (${status:sqlstring})
-  AND region_id IN (${region})
-  AND plant_id IN (${plant})
+ AND region_id IN (${region})
+ AND plant_id IN (${plant})
 GROUP BY plant_id
 ORDER BY plant_id
 ```
@@ -491,7 +491,7 @@ Set the dashboard time range to:
 
 ```text
 From: 2023-01-01
-To:   2023-04-01
+To: 2023-04-01
 ```
 
 Keep:
@@ -522,8 +522,8 @@ Before considering the dashboard complete, run this validation query in the Clic
 
 ```sql
 SELECT
-    count() AS completed_rows,
-    uniqExact(order_id) AS completed_orders
+ count() AS completed_rows,
+ uniqExact(order_id) AS completed_orders
 FROM training.v_lab_orders
 WHERE status = 'Completed'
 ```
@@ -533,7 +533,7 @@ WHERE status = 'Completed'
 The seed validation targets are approximately:
 
 ```text
-completed_rows:   300000
+completed_rows: 300000
 completed_orders: 125000
 ```
 
@@ -547,10 +547,10 @@ Run:
 
 ```sql
 SELECT
-    region_id,
-    count() AS rows,
-    uniqExact(order_id) AS orders,
-    sum(sales_amount) AS revenue
+ region_id,
+ count() AS rows,
+ uniqExact(order_id) AS orders,
+ sum(sales_amount) AS revenue
 FROM training.v_lab_orders
 WHERE status = 'Completed'
 GROUP BY region_id

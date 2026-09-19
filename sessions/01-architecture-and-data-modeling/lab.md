@@ -27,11 +27,11 @@ You will work with:
 
 ```mermaid
 erDiagram
-    REGIONS ||--o{ PLANTS : contains
-    PLANTS ||--o{ ORDERS : fulfills
-    CUSTOMERS ||--o{ ORDERS : places
-    PRODUCTS ||--o{ ORDERS : includes
-    ORDERS ||--|{ ANALYSIS : sales_reporting
+ REGIONS ||--o{ PLANTS : contains
+ PLANTS ||--o{ ORDERS : fulfills
+ CUSTOMERS ||--o{ ORDERS : places
+ PRODUCTS ||--o{ ORDERS : includes
+ ORDERS ||--|{ ANALYSIS : sales_reporting
 ```
 
 Focus for this lab:
@@ -48,17 +48,17 @@ Focus for this lab:
 
 ```mermaid
 flowchart TB
-    Start[Connected in CloudBeaver] --> Choice{Write access?}
+ Start[Connected in CloudBeaver] --> Choice{Write access?}
 
-    Choice -->|No — training_ro| Explore[Explore path]
-    Explore --> E1[Sections 1, then 9–13]
-    E1 --> E2["SHOW / DESCRIBE training.*"]
-    E2 --> E3["Analytics on training.v_lab_orders"]
+ Choice -->|No — training_ro| Explore[Explore path]
+ Explore --> E1[Sections 1, then 9–13]
+ E1 --> E2["SHOW / DESCRIBE training.*"]
+ E2 --> E3["Analytics on training.v_lab_orders"]
 
-    Choice -->|Yes — training_rw| Sandbox[Sandbox path]
-    Sandbox --> S1[Sections 2–10 and 14]
-    S1 --> S2["Create tables in training_student_yourname"]
-    S2 --> S3[Insert sample rows / inspect parts]
+ Choice -->|Yes — training_rw| Sandbox[Sandbox path]
+ Sandbox --> S1[Sections 2–10 and 14]
+ S1 --> S2["Create tables in training_student_yourname"]
+ S2 --> S3[Insert sample rows / inspect parts]
 ```
 
 | Path | Access | What to do |
@@ -127,8 +127,8 @@ training_student_<yourname>.table_name
 ```sql
 CREATE TABLE IF NOT EXISTS training_student_<yourname>.regions
 (
-    region_id UInt32,
-    region_name String
+ region_id UInt32,
+ region_name String
 )
 ENGINE = MergeTree
 ORDER BY region_id;
@@ -137,15 +137,15 @@ ORDER BY region_id;
 ```sql
 INSERT INTO training_student_<yourname>.regions
 (
-    region_id,
-    region_name
+ region_id,
+ region_name
 )
 VALUES
-    (1, 'North'),
-    (2, 'South'),
-    (3, 'East'),
-    (4, 'West'),
-    (5, 'Central');
+ (1, 'North'),
+ (2, 'South'),
+ (3, 'East'),
+ (4, 'West'),
+ (5, 'Central');
 ```
 
 ```sql
@@ -161,9 +161,9 @@ ORDER BY region_id;
 ```sql
 CREATE TABLE IF NOT EXISTS training_student_<yourname>.plants
 (
-    plant_id UInt32,
-    plant_name String,
-    region_id UInt32
+ plant_id UInt32,
+ plant_name String,
+ region_id UInt32
 )
 ENGINE = MergeTree
 ORDER BY (region_id, plant_id);
@@ -172,19 +172,19 @@ ORDER BY (region_id, plant_id);
 ```sql
 INSERT INTO training_student_<yourname>.plants
 (
-    plant_id,
-    plant_name,
-    region_id
+ plant_id,
+ plant_name,
+ region_id
 )
 VALUES
-    (101, 'North Plant A', 1),
-    (102, 'North Plant B', 1),
-    (201, 'South Plant A', 2),
-    (202, 'South Plant B', 2),
-    (301, 'East Plant A', 3),
-    (401, 'West Plant A', 4),
-    (402, 'West Plant B', 4),
-    (501, 'Central Plant A', 5);
+ (101, 'North Plant A', 1),
+ (102, 'North Plant B', 1),
+ (201, 'South Plant A', 2),
+ (202, 'South Plant B', 2),
+ (301, 'East Plant A', 3),
+ (401, 'West Plant A', 4),
+ (402, 'West Plant B', 4),
+ (501, 'Central Plant A', 5);
 ```
 
 ```sql
@@ -200,10 +200,10 @@ ORDER BY region_id, plant_id;
 ```sql
 CREATE TABLE IF NOT EXISTS training_student_<yourname>.products
 (
-    product_id UInt32,
-    product_name String,
-    category_id UInt32,
-    price Decimal(12, 2)
+ product_id UInt32,
+ product_name String,
+ category_id UInt32,
+ price Decimal(12, 2)
 )
 ENGINE = MergeTree
 ORDER BY product_id;
@@ -212,18 +212,18 @@ ORDER BY product_id;
 ```sql
 INSERT INTO training_student_<yourname>.products
 (
-    product_id,
-    product_name,
-    category_id,
-    price
+ product_id,
+ product_name,
+ category_id,
+ price
 )
 VALUES
-    (1001, 'Industrial Pump', 10, 45000.00),
-    (1002, 'Control Panel', 20, 32000.00),
-    (1003, 'Electric Motor', 10, 28000.00),
-    (1004, 'Pressure Valve', 30, 12500.00),
-    (1005, 'Temperature Sensor', 40, 8500.00),
-    (1006, 'Flow Meter', 40, 15000.00);
+ (1001, 'Industrial Pump', 10, 45000.00),
+ (1002, 'Control Panel', 20, 32000.00),
+ (1003, 'Electric Motor', 10, 28000.00),
+ (1004, 'Pressure Valve', 30, 12500.00),
+ (1005, 'Temperature Sensor', 40, 8500.00),
+ (1006, 'Flow Meter', 40, 15000.00);
 ```
 
 ```sql
@@ -239,10 +239,10 @@ ORDER BY product_id;
 ```sql
 CREATE TABLE IF NOT EXISTS training_student_<yourname>.customers
 (
-    customer_id UInt32,
-    customer_name String,
-    region_id UInt32,
-    email Nullable(String)
+ customer_id UInt32,
+ customer_name String,
+ region_id UInt32,
+ email Nullable(String)
 )
 ENGINE = MergeTree
 ORDER BY customer_id;
@@ -259,18 +259,18 @@ That allows a missing email (`NULL`).
 ```sql
 INSERT INTO training_student_<yourname>.customers
 (
-    customer_id,
-    customer_name,
-    region_id,
-    email
+ customer_id,
+ customer_name,
+ region_id,
+ email
 )
 VALUES
-    (10001, 'Customer Alpha', 1, 'alpha@example.com'),
-    (10002, 'Customer Beta', 2, 'beta@example.com'),
-    (10003, 'Customer Gamma', 3, NULL),
-    (10004, 'Customer Delta', 4, 'delta@example.com'),
-    (10005, 'Customer Epsilon', 5, NULL),
-    (10006, 'Customer Zeta', 1, 'zeta@example.com');
+ (10001, 'Customer Alpha', 1, 'alpha@example.com'),
+ (10002, 'Customer Beta', 2, 'beta@example.com'),
+ (10003, 'Customer Gamma', 3, NULL),
+ (10004, 'Customer Delta', 4, 'delta@example.com'),
+ (10005, 'Customer Epsilon', 5, NULL),
+ (10006, 'Customer Zeta', 1, 'zeta@example.com');
 ```
 
 ```sql
@@ -288,15 +288,15 @@ This is a **denormalized teaching table** in *your* sandbox — useful for learn
 ```sql
 CREATE TABLE IF NOT EXISTS training_student_<yourname>.orders
 (
-    order_id UInt64,
-    order_date Date,
-    region_id UInt32,
-    plant_id UInt32,
-    customer_id UInt32,
-    product_id UInt32,
-    quantity UInt32,
-    sales_amount Decimal(12, 2),
-    status String
+ order_id UInt64,
+ order_date Date,
+ region_id UInt32,
+ plant_id UInt32,
+ customer_id UInt32,
+ product_id UInt32,
+ quantity UInt32,
+ sales_amount Decimal(12, 2),
+ status String
 )
 ENGINE = MergeTree
 PARTITION BY toYYYYMM(order_date)
@@ -307,15 +307,15 @@ Design choices for **your sandbox table**:
 
 ```text
 Engine
-  -> MergeTree
+ -> MergeTree
 
 Partition
-  -> Month based on order_date
+ -> Month based on order_date
 
 Sorting key (sandbox teaching example)
-  -> region_id
-  -> order_date
-  -> order_id
+ -> region_id
+ -> order_date
+ -> order_id
 ```
 
 > **Sort key reminder**
@@ -330,27 +330,27 @@ Sorting key (sandbox teaching example)
 ```sql
 INSERT INTO training_student_<yourname>.orders
 (
-    order_id,
-    order_date,
-    region_id,
-    plant_id,
-    customer_id,
-    product_id,
-    quantity,
-    sales_amount,
-    status
+ order_id,
+ order_date,
+ region_id,
+ plant_id,
+ customer_id,
+ product_id,
+ quantity,
+ sales_amount,
+ status
 )
 VALUES
-    (100001, '2023-01-05', 1, 101, 10001, 1001, 10, 450000.00, 'Completed'),
-    (100002, '2023-01-08', 2, 201, 10002, 1003, 8, 224000.00, 'Completed'),
-    (100003, '2023-01-12', 3, 301, 10003, 1002, 5, 160000.00, 'Open'),
-    (100004, '2023-01-18', 4, 401, 10004, 1004, 6, 75000.00, 'Completed'),
-    (100005, '2023-02-02', 5, 501, 10005, 1005, 12, 102000.00, 'Completed'),
-    (100006, '2023-02-06', 1, 102, 10006, 1006, 7, 105000.00, 'Completed'),
-    (100007, '2023-02-15', 2, 202, 10002, 1001, 4, 180000.00, 'Open'),
-    (100008, '2023-02-20', 4, 402, 10004, 1003, 9, 252000.00, 'Completed'),
-    (100009, '2023-03-03', 3, 301, 10003, 1004, 10, 125000.00, 'Completed'),
-    (100010, '2023-03-10', 5, 501, 10005, 1002, 6, 192000.00, 'Completed');
+ (100001, '2023-01-05', 1, 101, 10001, 1001, 10, 450000.00, 'Completed'),
+ (100002, '2023-01-08', 2, 201, 10002, 1003, 8, 224000.00, 'Completed'),
+ (100003, '2023-01-12', 3, 301, 10003, 1002, 5, 160000.00, 'Open'),
+ (100004, '2023-01-18', 4, 401, 10004, 1004, 6, 75000.00, 'Completed'),
+ (100005, '2023-02-02', 5, 501, 10005, 1005, 12, 102000.00, 'Completed'),
+ (100006, '2023-02-06', 1, 102, 10006, 1006, 7, 105000.00, 'Completed'),
+ (100007, '2023-02-15', 2, 202, 10002, 1001, 4, 180000.00, 'Open'),
+ (100008, '2023-02-20', 4, 402, 10004, 1003, 9, 252000.00, 'Completed'),
+ (100009, '2023-03-03', 3, 301, 10003, 1004, 10, 125000.00, 'Completed'),
+ (100010, '2023-03-10', 5, 501, 10005, 1002, 6, 192000.00, 'Completed');
 ```
 
 ```sql
@@ -397,15 +397,15 @@ MergeTree stores data in parts. For **your** sandbox table:
 
 ```sql
 SELECT
-    database,
-    table,
-    partition,
-    name,
-    rows
+ database,
+ table,
+ partition,
+ name,
+ rows
 FROM system.parts
 WHERE database = 'training_student_<yourname>'
-  AND table = 'orders'
-  AND active
+ AND table = 'orders'
+ AND active
 ORDER BY partition, name;
 ```
 
@@ -438,7 +438,7 @@ FROM training.v_lab_orders;
 
 ```sql
 SELECT
-    sum(sales_amount) AS total_sales
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders;
 ```
 
@@ -446,7 +446,7 @@ FROM training.v_lab_orders;
 
 ```sql
 SELECT
-    sum(quantity) AS total_quantity
+ sum(quantity) AS total_quantity
 FROM training.v_lab_orders;
 ```
 
@@ -454,8 +454,8 @@ FROM training.v_lab_orders;
 
 ```sql
 SELECT
-    region_id,
-    sum(sales_amount) AS total_sales
+ region_id,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY region_id
 ORDER BY total_sales DESC;
@@ -465,8 +465,8 @@ ORDER BY total_sales DESC;
 
 ```sql
 SELECT
-    toYYYYMM(order_date) AS month,
-    sum(sales_amount) AS total_sales
+ toYYYYMM(order_date) AS month,
+ sum(sales_amount) AS total_sales
 FROM training.v_lab_orders
 GROUP BY month
 ORDER BY month;
@@ -488,11 +488,11 @@ Inspect the live key, then filter on the view:
 SHOW CREATE TABLE training.orders;
 
 SELECT
-    sum(sales_amount)
+ sum(sales_amount)
 FROM training.v_lab_orders
 WHERE region_id = 1
-  AND order_date >= '2023-01-01'
-  AND order_date < '2023-02-01';
+ AND order_date >= '2023-01-01'
+ AND order_date < '2023-02-01';
 ```
 
 Discuss:
@@ -515,15 +515,15 @@ Do not benchmark yet — optimization comes later.
 
 ```sql
 SELECT
-    customer_id,
-    customer_name,
-    email
+ customer_id,
+ customer_name,
+ email
 FROM training.customers
 LIMIT 20;
 
 SELECT
-    customer_id,
-    customer_name
+ customer_id,
+ customer_name
 FROM training.customers
 WHERE email IS NULL
 LIMIT 20;
@@ -542,8 +542,8 @@ This is why a column may be declared as `Nullable(String)`.
 ```sql
 CREATE TABLE IF NOT EXISTS training_student_<yourname>.categories
 (
-    category_id UInt32,
-    category_name String
+ category_id UInt32,
+ category_name String
 )
 ENGINE = MergeTree
 ORDER BY category_id;
@@ -552,14 +552,14 @@ ORDER BY category_id;
 ```sql
 INSERT INTO training_student_<yourname>.categories
 (
-    category_id,
-    category_name
+ category_id,
+ category_name
 )
 VALUES
-    (10, 'Pumps and Motors'),
-    (20, 'Control Systems'),
-    (30, 'Valves'),
-    (40, 'Sensors');
+ (10, 'Pumps and Motors'),
+ (20, 'Control Systems'),
+ (30, 'Valves'),
+ (40, 'Sensors');
 ```
 
 ```sql
@@ -576,11 +576,11 @@ No joins yet — that comes later.
 
 ```text
 ╔══════════════════════════════════════════════════════════════════╗
-║  NEVER run DROP on the `training` database.                   ║
-║  That database is used by the whole class.                       ║
-║                                                                  ║
-║  Cleanup applies ONLY to tables you created in                   ║
-║  training_student_<yourname>.                                    ║
+║ NEVER run DROP on the `training` database. ║
+║ That database is used by the whole class. ║
+║ ║
+║ Cleanup applies ONLY to tables you created in ║
+║ training_student_<yourname>. ║
 ╚══════════════════════════════════════════════════════════════════╝
 ```
 

@@ -1,19 +1,20 @@
 # Session 5 — ClickHouse Query Optimization
 
-## Connect (do this first)
+**Duration:** 4 hours
+
+## Connect
 
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
 | Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
-| User | `training_ro` / `TrainingReadOnly!2026` |
-| Tailscale fallback | `100.86.105.24:8123` |
+| User | `training_ro` |
 
-## Session Overview
+## Overview
 
-This session focuses on identifying and improving slow ClickHouse queries.
+Improve analytical query performance using sort keys, partitions, skipping indexes, filters, and `EXPLAIN`.
 
-The emphasis is on understanding how query execution, table design, sorting keys, partitioning, data types, filtering, aggregation, and joins affect analytical query performance.
+![Optimization loop](./assets/optimize-loop.svg)
 
 **Live sort key** (confirm with `SHOW CREATE TABLE training.orders`):
 
@@ -21,74 +22,24 @@ The emphasis is on understanding how query execution, table design, sorting keys
 ORDER BY (order_date, plant_id, order_id)
 ```
 
-Date- and plant-aligned filters benefit most. Region filters still work, but `region_id` is **not** leading in the sort key.
-
 ## Topics
 
-* ClickHouse query execution
-* Sorting keys and query performance
-* Partitioning
-* Data skipping
-* Data types and storage
-* Filtering and aggregation
-* JOIN performance
-* `EXPLAIN`
-* Query profiling
-* `system.query_log`
-* Identifying bottlenecks
-* Query rewriting
-* Table design considerations
+* Sort keys, partitions, data skipping
+* Filter/aggregate/join habits
+* `EXPLAIN` and basic profiling
 
-## Practical Work
+## What you will do
 
-Participants will:
+**Core:** compare filter alignment to the sort key → `EXPLAIN` → rewrite one slow pattern  
 
-* Run representative analytical queries
-* Establish a baseline
-* Inspect query execution
-* Use `EXPLAIN`
-* Review query statistics
-* Identify performance bottlenecks
-* Rewrite inefficient queries
-* Compare before-and-after results
-* Review table design choices
+**Stretch:** deeper `system.query_log` / skipping demos
 
-## Optimization Flow
-
-<!-- training-diagrams:v1 -->
-![Optimization loop](./assets/optimize-loop.svg)
-
-
-```text
-Query
-  |
-  v
-Measure Baseline
-  |
-  v
-Inspect Execution
-  |
-  v
-Identify Bottleneck
-  |
-  v
-Rewrite / Adjust Design
-  |
-  v
-Run Again
-  |
-  v
-Compare Results
-```
+**Seed:** Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**
 
 ## Files
 
-Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
-
-
-| File           | Purpose                            |
-| -------------- | ---------------------------------- |
-| `README.md`    | Session overview                   |
-| `notes.md`     | Query optimization concepts        |
-| `lab.md`       | Guided optimization lab            |
-| `assets/`      | Supporting files, if required      |
+| File | Purpose |
+|------|---------|
+| `notes.md` | Concepts |
+| `lab.md` | Guided lab |
+| `assets/` | Diagrams |

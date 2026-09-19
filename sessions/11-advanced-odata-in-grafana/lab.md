@@ -870,7 +870,7 @@ Valid query with unexpected filter values
 
 ---
 
-# Final Integration Exercise
+## Final Integration Exercise
 
 Build the final interactive OData table using:
 

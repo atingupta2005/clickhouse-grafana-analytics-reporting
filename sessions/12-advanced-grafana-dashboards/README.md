@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![Dashboard reading order](./assets/dashboard-reading-order.svg)
+
+
 This session turns a working variables dashboard into a clearer reporting layout: KPI stats, trends, comparisons, a limited detail table, formatting, one transformation, and simple drill-down navigation.
 
 ```text

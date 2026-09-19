@@ -2,6 +2,20 @@
 
 ## 1. SQL Server and ClickHouse
 
+<!-- training-diagrams:v1 -->
+![SQL Server to ClickHouse migration](./assets/migration-pipeline.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Identify] --> B[Map types]
+    B --> C[Rewrite]
+    C --> D[Run]
+    D --> E[Validate]
+```
+
+
 SQL Server and ClickHouse both support SQL, but they are designed for different workloads.
 
 SQL Server is commonly used for transactional systems and general-purpose relational workloads. ClickHouse is designed primarily for high-volume analytical queries.
@@ -23,6 +37,10 @@ Common migration areas include:
 ---
 
 ## 2. Common Syntax Differences
+
+<!-- training-diagrams:v1 -->
+![Common dialect swaps](./assets/dialect-cheats.svg)
+
 
 ### TOP vs LIMIT
 
@@ -442,6 +460,10 @@ A query that executes successfully can still produce different results because o
 ---
 
 ## 13. Query Validation
+
+<!-- training-diagrams:v1 -->
+![Session 04 lab topology](./assets/dual-engine-lab.svg)
+
 
 A migrated query should be validated at more than the syntax level.
 

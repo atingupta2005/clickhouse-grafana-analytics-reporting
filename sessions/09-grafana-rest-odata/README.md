@@ -51,6 +51,10 @@ Participants will:
 
 ## Reporting Flow
 
+<!-- training-diagrams:v1 -->
+![API data into Grafana Infinity](./assets/infinity-architecture.svg)
+
+
 ```text
 Grafana
    |
@@ -81,6 +85,9 @@ TOC: **4 hours**. Feasible with Infinity plugin pre-installed.
 Seed: Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**. Training API has **no auth**. Do not use REST `top`/`skip`.
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 * `README.md` — Session overview
 * `notes.md` — Concepts and technical notes

@@ -2,6 +2,20 @@
 
 ## 1. Why Query Performance Matters
 
+<!-- training-diagrams:v1 -->
+![Optimization loop](./assets/optimize-loop.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Baseline] --> B[EXPLAIN]
+    B --> C[Bottleneck]
+    C --> D[Rewrite]
+    D --> E[Compare]
+```
+
+
 Analytical queries may process millions or billions of rows. A query can return the correct result but still use excessive:
 
 * CPU
@@ -84,6 +98,10 @@ LIMIT 100;
 
 ## 3. Sorting Keys
 
+<!-- training-diagrams:v1 -->
+![Sort key alignment](./assets/sortkey-alignment.svg)
+
+
 The `ORDER BY` definition of a MergeTree table determines its sorting key.
 
 On the live lab table (`SHOW CREATE TABLE training.orders`):
@@ -146,6 +164,10 @@ Avoid creating excessive numbers of partitions.
 ---
 
 ## 5. Data Skipping
+
+<!-- training-diagrams:v1 -->
+![Data skipping concept](./assets/data-skipping.svg)
+
 
 ClickHouse stores data in parts and uses indexes and metadata to avoid reading data that cannot satisfy a query.
 

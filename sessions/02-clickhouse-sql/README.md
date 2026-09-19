@@ -14,6 +14,10 @@ Open CloudBeaver, pick that connection, and run `SELECT version();` to confirm y
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![ClickHouse SELECT clause order](./assets/sql-clause-pipeline.svg)
+
+
 This session focuses on the SQL used for common analytical and reporting requirements in ClickHouse.
 
 The examples use the manufacturing and sales data created in Session 1.
@@ -54,6 +58,9 @@ Participants will create analytical queries for:
 Labs use `training.v_lab_orders` (lab reporting view).
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 | File           | Purpose                            |
 | -------------- | ---------------------------------- |

@@ -2,6 +2,20 @@
 
 ## 1. Why Kafka?
 
+<!-- training-diagrams:v1 -->
+![Kafka into ClickHouse analytics](./assets/kafka-to-clickhouse.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Producer] --> B[Topic]
+    B --> C[Consumer]
+    C --> D[(ClickHouse)]
+    D --> E[Grafana]
+```
+
+
 Kafka is used when applications need to move a continuous stream of events between systems.
 
 A typical example is an application producing order events:
@@ -114,6 +128,10 @@ Topic names should reflect the event stream and its ownership or business meanin
 ---
 
 ## 4. Partitions
+
+<!-- training-diagrams:v1 -->
+![Topic and partitions](./assets/topic-partitions.svg)
+
 
 A topic can contain multiple partitions.
 
@@ -576,6 +594,10 @@ Kafka is discussed as a possible upstream event-ingestion mechanism.
 ---
 
 ## 15. When Kafka Is Required
+
+<!-- training-diagrams:v1 -->
+![When Kafka helps](./assets/when-kafka.svg)
+
 
 Kafka becomes relevant when requirements include several of the following:
 

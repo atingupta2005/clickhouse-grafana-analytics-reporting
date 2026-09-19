@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 250" role="img">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="12" fill="#f8fafc"/>
+<text x="460" y="32" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Explore vs Dashboard</text>
+<rect x="40" y="56" width="400" height="150" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="56" width="400" height="40" rx="12" fill="#2563eb"/>
+<rect x="40" y="80" width="400" height="16" fill="#2563eb"/>
+<text x="240" y="82" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Explore</text>
+<text x="60" y="120" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Ad-hoc queries</text>
+<text x="60" y="144" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Quick checks</text>
+<text x="60" y="168" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Not the final report</text>
+<rect x="480" y="56" width="400" height="150" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="480" y="56" width="400" height="40" rx="12" fill="#059669"/>
+<rect x="480" y="80" width="400" height="16" fill="#059669"/>
+<text x="680" y="82" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Dashboard</text>
+<text x="500" y="120" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Saved panels</text>
+<text x="500" y="144" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Shared layout</text>
+<text x="500" y="168" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Classroom deliverable</text>
+<text x="460" y="230" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Prototype in Explore; publish as a dashboard</text>
+</svg>

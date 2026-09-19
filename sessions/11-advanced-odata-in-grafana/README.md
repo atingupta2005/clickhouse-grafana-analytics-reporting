@@ -2,6 +2,10 @@
 
 ## Overview
 
+<!-- training-diagrams:v1 -->
+![Build a dynamic OData URL](./assets/odata-url-build.svg)
+
+
 This session builds on OData querying from Session 07, Infinity + OData from Session 09, and Grafana variables from Session 10.
 
 The focus is using Grafana variables to construct dynamic OData queries and control filtering, selected fields, sorting, and pagination.
@@ -149,7 +153,10 @@ With slower PAX (~2× hands-on):
 
 Seed: Completed regions **1 / 3 / 5**; include region **2** in the variable only for the empty demo; dates **2023-01-01** … **2025-06-18**.
 
-## Files in This Session
+## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+ in This Session
 
 ```text
 README.md       Session overview and scope

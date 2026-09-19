@@ -63,6 +63,10 @@ TOC: **4 hours**.
 
 ## Migration Approach
 
+<!-- training-diagrams:v1 -->
+![SQL Server to ClickHouse migration](./assets/migration-pipeline.svg)
+
+
 The session follows a simple migration process:
 
 ```text
@@ -85,6 +89,9 @@ Validate Result
 ```
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 | File           | Purpose                         |
 | -------------- | ------------------------------- |

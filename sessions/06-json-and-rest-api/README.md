@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![REST JSON into a report shape](./assets/rest-json-report.svg)
+
+
 This session introduces JSON data and REST APIs as data sources for analytics and reporting.
 
 The focus is on understanding JSON structures, extracting useful fields, consuming REST APIs, handling parameters and responses, and preparing API data for reporting.
@@ -68,6 +72,9 @@ TOC: **4 hours**. Do **not** attempt the full lab + all exercises in class.
 Seed facts: Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**. Live `/api/orders` is **flat** (no nested customer/plant, no `product_id`). Training API has **no auth**. Students are **`training_ro`** (no CREATE/INSERT).
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 | File           | Purpose                       |
 | -------------- | ----------------------------- |

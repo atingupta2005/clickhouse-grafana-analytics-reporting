@@ -2,6 +2,20 @@
 
 ## 1. Grafana Alerting Overview
 
+<!-- training-diagrams:v1 -->
+![Alert lifecycle](./assets/alert-lifecycle.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Query] --> B[Rule]
+    B --> C[Evaluate]
+    C --> D[Contact]
+    D --> E[Webhook]
+```
+
+
 Grafana alerting allows a query result to be evaluated against a condition and converted into an alert state.
 
 The basic flow is:
@@ -164,6 +178,10 @@ The rule may be evaluated frequently while notification behavior is controlled s
 ---
 
 ## 6. Pending State
+
+<!-- training-diagrams:v1 -->
+![Alert states](./assets/alert-states.svg)
+
 
 An alert does not always need to fire immediately when its condition becomes true.
 
@@ -449,6 +467,10 @@ Explain the difference clearly:
 ---
 
 ## 13. Generic Webhooks
+
+<!-- training-diagrams:v1 -->
+![Webhook notification path](./assets/webhook-path.svg)
+
 
 A webhook allows Grafana to send alert information to an HTTP endpoint.
 

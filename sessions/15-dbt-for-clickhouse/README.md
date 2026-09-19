@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![dbt workflow](./assets/dbt-workflow.svg)
+
+
 This session introduces **dbt (data build tool)** as an analytics engineering workflow for transforming and testing data in ClickHouse.
 
 The session uses the existing `training_dbt` project to show how dbt projects are structured, how ClickHouse source tables are declared, how SQL models are created, and how transformations can be managed outside application code.
@@ -78,6 +82,9 @@ The Core path is designed to fit within the 3-hour session while allowing time f
 - Do not invent Snowflake/BigQuery targets
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 - `README.md` — Session overview and timing
 - `notes.md` — dbt and ClickHouse teaching notes

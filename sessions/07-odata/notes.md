@@ -2,6 +2,20 @@
 
 ## 1. What is OData?
 
+<!-- training-diagrams:v1 -->
+![OData query pipeline](./assets/odata-pipeline.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Service] --> B[Entity set]
+    B --> C[Query options]
+    C --> D[JSON value]
+    D --> E[App]
+```
+
+
 OData (Open Data Protocol) is a standard for exposing and querying structured data over HTTP.
 
 It builds on REST concepts and defines a standard query syntax.
@@ -21,6 +35,10 @@ https://example.com/odata/Orders?$filter=Status eq 'Completed'
 ---
 
 ## 2. OData and REST
+
+<!-- training-diagrams:v1 -->
+![REST vs OData](./assets/rest-vs-odata.svg)
+
 
 REST describes an architectural approach for working with resources over HTTP.
 
@@ -402,6 +420,10 @@ If
 ---
 
 ## 17. Combining Query Options
+
+<!-- training-diagrams:v1 -->
+![OData option toolbox](./assets/odata-options.svg)
+
 
 OData becomes particularly useful when query options are combined.
 

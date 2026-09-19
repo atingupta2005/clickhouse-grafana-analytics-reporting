@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" role="img">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="12" fill="#f8fafc"/>
+<text x="460" y="32" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">ClickHouse SELECT clause order</text>
+<rect x="36" y="70" width="126.33333333333333" height="90" rx="10" fill="#475569"/>
+<text x="99.16666666666666" y="109.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">FROM</text>
+<text x="99.16666666666666" y="131.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">table / view</text>
+<path d="M164.33333333333331 115.0 H178.33333333333331" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="180.33333333333331" y="70" width="126.33333333333333" height="90" rx="10" fill="#2563eb"/>
+<text x="243.49999999999997" y="109.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">WHERE</text>
+<text x="243.49999999999997" y="131.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">filter rows</text>
+<path d="M308.66666666666663 115.0 H322.66666666666663" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="324.66666666666663" y="70" width="126.33333333333333" height="90" rx="10" fill="#ea580c"/>
+<text x="387.8333333333333" y="109.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">GROUP BY</text>
+<text x="387.8333333333333" y="131.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">buckets</text>
+<path d="M452.99999999999994 115.0 H466.99999999999994" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="468.99999999999994" y="70" width="126.33333333333333" height="90" rx="10" fill="#7c3aed"/>
+<text x="532.1666666666666" y="109.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">HAVING</text>
+<text x="532.1666666666666" y="131.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">filter groups</text>
+<path d="M597.3333333333333 115.0 H611.3333333333333" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="613.3333333333333" y="70" width="126.33333333333333" height="90" rx="10" fill="#059669"/>
+<text x="676.4999999999999" y="109.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">ORDER BY</text>
+<text x="676.4999999999999" y="131.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">sort</text>
+<path d="M741.6666666666666 115.0 H755.6666666666666" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="757.6666666666665" y="70" width="126.33333333333333" height="90" rx="10" fill="#0f766e"/>
+<text x="820.8333333333331" y="109.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">LIMIT</text>
+<text x="820.8333333333331" y="131.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">top N</text>
+<text x="460" y="220" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Lab analytics use training.v_lab_orders</text>
+</svg>

@@ -2,6 +2,20 @@
 
 ## 1. JSON
 
+<!-- training-diagrams:v1 -->
+![REST JSON into a report shape](./assets/rest-json-report.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Client] --> B[REST API]
+    B --> C[JSON]
+    C --> D[Extract]
+    D --> E[Report]
+```
+
+
 JSON (JavaScript Object Notation) is a common format for exchanging data between applications.
 
 A JSON object contains key-value pairs:
@@ -26,6 +40,10 @@ A JSON value can be:
 ---
 
 ## 2. JSON Objects
+
+<!-- training-diagrams:v1 -->
+![JSON envelope vs flat rows](./assets/json-envelope.svg)
+
 
 Objects contain named properties.
 
@@ -380,6 +398,10 @@ Reporting Application
 ---
 
 ## 16. Pagination
+
+<!-- training-diagrams:v1 -->
+![Pagination walk](./assets/pagination.svg)
+
 
 This training API paginates with:
 

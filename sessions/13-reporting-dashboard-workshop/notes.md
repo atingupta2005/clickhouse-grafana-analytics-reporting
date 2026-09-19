@@ -2,6 +2,21 @@
 
 ## 1. Reporting Requirements → Dashboard Design
 
+<!-- training-diagrams:v1 -->
+![Workshop pipeline](./assets/workshop-pipeline.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Requirements] --> B[KPIs]
+    B --> C[Queries]
+    C --> D[Variables]
+    D --> E[Panels]
+    E --> F[Validate]
+```
+
+
 A reporting dashboard should start with the questions the report needs to answer.
 
 For this workshop, the reporting questions are:
@@ -57,6 +72,10 @@ Keep the workshop focused on the reporting view. Students do not need to reconst
 ---
 
 ## 3. KPI Design
+
+<!-- training-diagrams:v1 -->
+![Core KPI set](./assets/kpi-card-set.svg)
+
 
 The three Core KPIs represent different measures.
 
@@ -455,6 +474,10 @@ Avoid adding navigation simply because Grafana provides the capability.
 ---
 
 ## 14. Validation
+
+<!-- training-diagrams:v1 -->
+![Validation checklist](./assets/validation-checklist.svg)
+
 
 Validation should compare the dashboard with known seed facts.
 

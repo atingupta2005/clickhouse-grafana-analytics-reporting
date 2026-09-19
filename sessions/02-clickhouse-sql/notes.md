@@ -2,6 +2,21 @@
 
 ## 1. SELECT
 
+<!-- training-diagrams:v1 -->
+![ClickHouse SELECT clause order](./assets/sql-clause-pipeline.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[FROM] --> B[WHERE]
+    B --> C[GROUP BY]
+    C --> D[HAVING]
+    D --> E[ORDER BY]
+    E --> F[LIMIT]
+```
+
+
 `SELECT` is used to retrieve data from a ClickHouse table.
 
 ```sql
@@ -28,6 +43,10 @@ Selecting only required columns is especially useful in a column-oriented databa
 ---
 
 ## 2. WHERE
+
+<!-- training-diagrams:v1 -->
+![WHERE vs HAVING](./assets/where-vs-having.svg)
+
 
 `WHERE` filters rows before the result is produced.
 
@@ -155,6 +174,10 @@ LIMIT 5;
 
 ## 5. DISTINCT
 
+<!-- training-diagrams:v1 -->
+![From rows to a KPI](./assets/aggregation-funnel.svg)
+
+
 `DISTINCT` returns unique values.
 
 For example, find the regions represented in the orders table:
@@ -177,7 +200,11 @@ FROM training.v_lab_orders;
 
 ---
 
-# 6. Aggregate Functions
+## 6. Aggregate Functions
+
+<!-- training-diagrams:v1 -->
+![From rows to a KPI](./assets/aggregation-funnel.svg)
+
 
 Aggregate functions calculate a result from multiple rows.
 
@@ -238,7 +265,7 @@ FROM training.v_lab_orders;
 
 ---
 
-# 7. GROUP BY
+## 7. GROUP BY
 
 `GROUP BY` is used to calculate aggregates for different groups.
 
@@ -284,7 +311,7 @@ flowchart LR
 
 ---
 
-# 8. HAVING
+## 8. HAVING
 
 `WHERE` filters rows before grouping.
 
@@ -338,7 +365,7 @@ Here:
 
 ---
 
-# 9. String Functions
+## 9. String Functions
 
 String functions are commonly required when preparing reporting data.
 
@@ -379,7 +406,7 @@ String functions are useful for filtering, formatting and preparing values for r
 
 ---
 
-# 10. Date and Time Functions
+## 10. Date and Time Functions
 
 Reporting frequently groups data by date or time period.
 
@@ -438,7 +465,7 @@ Using a start date and an exclusive end date is a useful pattern for date-range 
 
 ---
 
-# 11. Conditional Expressions
+## 11. Conditional Expressions
 
 Conditional expressions allow a query to classify or calculate values based on conditions.
 
@@ -473,7 +500,7 @@ LIMIT 100;
 
 ---
 
-# 12. NULL Handling
+## 12. NULL Handling
 
 A `NULL` value means that a value is missing or unknown.
 
@@ -518,7 +545,7 @@ This is useful when preparing data for reports where displaying `NULL` directly 
 
 ---
 
-# 13. KPI Calculations
+## 13. KPI Calculations
 
 Analytical reports commonly calculate KPIs from raw data.
 
@@ -559,7 +586,7 @@ This is useful for KPI queries because the condition and aggregation can be expr
 
 ---
 
-# 14. Daily Reporting
+## 14. Daily Reporting
 
 A daily sales report can be created using:
 
@@ -584,7 +611,7 @@ This type of query will later become the basis for Grafana visualizations.
 
 ---
 
-# 15. Monthly Reporting
+## 15. Monthly Reporting
 
 Monthly reporting can use `toYYYYMM()`:
 
@@ -612,7 +639,7 @@ Month     Orders     Quantity     Sales
 
 ---
 
-# 16. Putting the Concepts Together
+## 16. Putting the Concepts Together
 
 A typical reporting query may combine several concepts.
 
@@ -648,7 +675,7 @@ This is the type of SQL pattern commonly used to prepare data for reports and da
 
 ---
 
-# 17. Query Structure to Remember
+## 17. Query Structure to Remember
 
 For the SQL covered in this session, a useful mental model is:
 
@@ -677,7 +704,7 @@ needs only `SELECT`, `FROM` and `LIMIT`.
 
 ---
 
-# Key Points
+## Key Points
 
 * Use `SELECT` to retrieve required columns.
 * Use `WHERE` to filter rows.

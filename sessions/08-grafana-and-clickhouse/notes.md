@@ -2,6 +2,20 @@
 
 ## 1. What is Grafana?
 
+<!-- training-diagrams:v1 -->
+![ClickHouse to Grafana panel](./assets/grafana-ch-flow.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[(ClickHouse)] --> B[Data source]
+    B --> C[SQL panel]
+    C --> D[Visualization]
+    D --> E[Dashboard]
+```
+
+
 Grafana is a visualization and observability platform that can connect to different data sources and display the data through dashboards.
 
 For this course, Grafana is used as the reporting layer over ClickHouse.
@@ -170,6 +184,10 @@ Start with a simple query before creating a more complex panel.
 
 ## 8. Time Ranges
 
+<!-- training-diagrams:v1 -->
+![Seed-friendly time range](./assets/time-range-seed.svg)
+
+
 Grafana dashboards commonly use a time range to control the reporting period.
 
 **For this training dataset, always start with an absolute range:**
@@ -223,6 +241,10 @@ The query should return a time field and one or more values that can be plotted.
 ---
 
 ## 10. Explore
+
+<!-- training-diagrams:v1 -->
+![Explore vs Dashboard](./assets/explore-vs-dashboard.svg)
+
 
 Grafana Explore provides a way to work with queries and inspect data without first building a complete dashboard.
 

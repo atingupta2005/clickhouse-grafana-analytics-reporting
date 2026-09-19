@@ -2,6 +2,10 @@
 
 ## 1. Session Flow
 
+<!-- training-diagrams:v1 -->
+![Build a dynamic OData URL](./assets/odata-url-build.svg)
+
+
 The practical pattern for this session is:
 
 Grafana Dashboard
@@ -142,6 +146,10 @@ If the fixed query works, investigate the variable configuration rather than the
 ---
 
 ## 5. Multiple Filter Conditions
+
+<!-- training-diagrams:v1 -->
+![Combine filter clauses](./assets/filter-and-or.svg)
+
 
 OData supports logical conditions using `and` and `or`.
 
@@ -436,6 +444,10 @@ before changing the OData URL.
 ---
 
 ## 13. Empty Results
+
+<!-- training-diagrams:v1 -->
+![Intentional empty result Region 2](./assets/empty-region2.svg)
+
 
 A successful query does not necessarily return records.
 

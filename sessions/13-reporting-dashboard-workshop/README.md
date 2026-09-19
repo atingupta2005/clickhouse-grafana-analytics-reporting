@@ -2,6 +2,10 @@
 
 ## Overview
 
+<!-- training-diagrams:v1 -->
+![Workshop pipeline](./assets/workshop-pipeline.svg)
+
+
 This session is a practical workshop for building one complete reporting dashboard in Grafana.
 
 Students move through the reporting workflow:
@@ -145,6 +149,9 @@ Use the provisioned **ClickHouse** datasource. Do not recreate the datasource.
 - REST/OData variable syntax is different and must not be copied from ClickHouse examples
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 | File | Purpose |
 |---|---|

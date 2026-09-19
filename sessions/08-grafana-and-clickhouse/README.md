@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![ClickHouse to Grafana panel](./assets/grafana-ch-flow.svg)
+
+
 This session introduces Grafana for analytics and reporting and connects Grafana to ClickHouse.
 
 The focus is on the Grafana interface, data sources, ClickHouse connectivity, SQL queries, time ranges, refresh, Explore, panels, and basic dashboards.
@@ -65,6 +69,9 @@ TOC: **4 hours**. Borderline feasible if Grafana + ClickHouse datasource are pre
 Use Q1 **2023** and Completed regions **1 / 3 / 5**. Seed dates **2023-01-01** … **2025-06-18**.
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 | File           | Purpose                         |
 | -------------- | ------------------------------- |

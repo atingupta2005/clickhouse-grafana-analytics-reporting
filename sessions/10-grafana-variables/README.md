@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![Variables drive the panel query](./assets/variable-to-panel.svg)
+
+
 This session makes dashboards interactive. Students define Grafana variables, cascade them (region → plant), and use them in ClickHouse SQL and Infinity REST/OData URLs.
 
 ```text

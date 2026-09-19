@@ -2,6 +2,20 @@
 
 ## 1. Working with Multiple Tables
 
+<!-- training-diagrams:v1 -->
+![Joins build a reporting row](./assets/join-to-report.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    O[Orders] --> J[JOIN]
+    C[Customers] --> J
+    P[Products] --> J
+    J --> R[Report row]
+```
+
+
 Reporting usually requires information from more than one table.
 
 For example, the `orders` table contains IDs:
@@ -41,6 +55,10 @@ ORDER BY total_sales DESC;
 ---
 
 ## 2. INNER JOIN
+
+<!-- training-diagrams:v1 -->
+![INNER JOIN vs LEFT JOIN](./assets/inner-vs-left.svg)
+
 
 `INNER JOIN` returns rows where matching data exists in both tables.
 
@@ -118,6 +136,10 @@ LEFT JOIN
 
 ## 4. Join Considerations
 
+<!-- training-diagrams:v1 -->
+![Window function mental model](./assets/window-frame.svg)
+
+
 Joins are powerful, but analytical queries should use them carefully.
 
 Before joining tables, understand:
@@ -148,7 +170,7 @@ Detailed join performance optimization is outside this session.
 
 ---
 
-# 5. CTEs
+## 5. CTEs
 
 A Common Table Expression (CTE) allows a query to define a temporary named result that can then be used by the main query.
 
@@ -207,7 +229,7 @@ The query is divided into logical steps instead of putting everything into one l
 
 ---
 
-# 6. Subqueries
+## 6. Subqueries
 
 A subquery is a query used inside another query.
 
@@ -246,7 +268,11 @@ Subqueries are useful when one calculation is required before another calculatio
 
 ---
 
-# 7. Window Functions
+## 7. Window Functions
+
+<!-- training-diagrams:v1 -->
+![Window function mental model](./assets/window-frame.svg)
+
 
 A window function performs a calculation across related rows while keeping the individual rows in the result.
 
@@ -296,7 +322,7 @@ This distinction is important when building detailed reports.
 
 ---
 
-# 8. Ranking
+## 8. Ranking
 
 Window functions can be used for ranking.
 
@@ -345,7 +371,7 @@ They differ mainly in how they handle ties.
 
 ---
 
-# 9. Running Totals
+## 9. Running Totals
 
 A running total calculates a cumulative value as rows progress.
 
@@ -380,7 +406,7 @@ Running totals are commonly used in:
 
 ---
 
-# 10. Period Calculations
+## 10. Period Calculations
 
 Date-based reporting often requires comparing one period with another.
 
@@ -429,7 +455,7 @@ This allows a report to compare the current period with the previous period.
 
 ---
 
-# 11. Conditional Aggregation
+## 11. Conditional Aggregation
 
 Conditional aggregation can calculate multiple business measures in one query.
 
@@ -455,7 +481,7 @@ Statuses in the seed are `Open`, `Shipped`, `Completed`, and `Cancelled` — not
 
 ---
 
-# 12. Arrays
+## 12. Arrays
 
 ClickHouse supports array data types and array functions.
 
@@ -497,7 +523,7 @@ Only basic array concepts are needed in this course.
 
 ---
 
-# 13. Combining Advanced SQL Techniques
+## 13. Combining Advanced SQL Techniques
 
 The concepts can be combined to create practical analytical reports.
 
@@ -544,7 +570,7 @@ This is the type of query that becomes useful when basic reporting queries are n
 
 ---
 
-# Key Points
+## Key Points
 
 * Use `INNER JOIN` when matching rows are required.
 * Use `LEFT JOIN` when all rows from the left table must be retained.

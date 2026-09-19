@@ -35,7 +35,7 @@
     <rect x="580" y="55" width="300" height="38" rx="12" fill="#059669"/>
     <rect x="580" y="77" width="300" height="16" fill="#059669"/>
     <text x="730" y="80" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Sandbox  training_rw</text>
-    <text x="600" y="120" fill="#065f46" font-family="Segoe UI, Arial, sans-serif" font-size="13">CREATE in training_student_&</text>
+    <text x="600" y="120" fill="#065f46" font-family="Segoe UI, Arial, sans-serif" font-size="13">CREATE in training_student_&amp;</text>
     <text x="600" y="146" fill="#065f46" font-family="Segoe UI, Arial, sans-serif" font-size="13">INSERT / inspect parts</text>
     <text x="600" y="168" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Never DROP training.*</text>
   </g>

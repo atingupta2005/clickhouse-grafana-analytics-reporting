@@ -2,6 +2,19 @@
 
 ## 1. Dashboard Organization
 
+<!-- training-diagrams:v1 -->
+![Dashboard reading order](./assets/dashboard-reading-order.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[KPI row] --> B[Trend]
+    B --> C[Compare]
+    C --> D[Detail]
+```
+
+
 A dashboard should answer a reporting question quickly. Organize panels so that users can move from summary to detail:
 
 1. KPI/stat panels
@@ -19,6 +32,10 @@ Start with the question the dashboard should answer, then decide which panel typ
 ---
 
 ## 2. Choosing Panel Types
+
+<!-- training-diagrams:v1 -->
+![Match viz to the question](./assets/panel-purpose-map.svg)
+
 
 ### Stat
 
@@ -201,6 +218,10 @@ The database values remain unchanged. Grafana controls their presentation.
 ---
 
 ## 7. Transformations
+
+<!-- training-diagrams:v1 -->
+![Transform pipeline](./assets/transform-pipeline.svg)
+
 
 Transformations modify the data returned to a panel before visualization.
 

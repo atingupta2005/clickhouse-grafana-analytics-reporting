@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![Kafka into ClickHouse analytics](./assets/kafka-to-clickhouse.svg)
+
+
 This session introduces Kafka as an event-streaming and data-movement platform and explains where it fits in an analytics architecture.
 
 The focus is on understanding Kafka concepts and the typical Kafka → ClickHouse flow rather than operating a Kafka cluster. Students work through event-flow examples, topic and partition behavior, consumer groups, and Kafka job concepts.
@@ -65,6 +69,9 @@ Kafka is an architecture / data-movement topic. Reporting still reads ClickHouse
 Per course TOC: a dedicated Kafka produce/consume hands-on lab is **not** part of this course.
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 - `README.md` — Session overview and timing
 - `notes.md` — Kafka concepts, architecture and teaching notes

@@ -2,6 +2,20 @@
 
 ## 1. dbt and Analytics Engineering
 
+<!-- training-diagrams:v1 -->
+![dbt workflow](./assets/dbt-workflow.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Sources] --> B[Models]
+    B --> C[dbt run]
+    C --> D[Tests]
+    D --> E[Validate]
+```
+
+
 dbt is used to manage SQL-based data transformations as a development workflow.
 
 Instead of putting transformation logic directly into an application, reporting tool, or manually maintained SQL scripts, dbt organizes the logic into:
@@ -124,6 +138,10 @@ Do not ask students to create a new warehouse profile during the Core walkthroug
 ---
 
 ## 4. Sources
+
+<!-- training-diagrams:v1 -->
+![Source vs model](./assets/source-vs-model.svg)
+
 
 A dbt source represents data that already exists outside the dbt models.
 
@@ -458,6 +476,10 @@ This is not a rule that every system must follow. Transformation location should
 ---
 
 ## 14. Where Should Transformation Happen?
+
+<!-- training-diagrams:v1 -->
+![Where transforms should live](./assets/transform-layers.svg)
+
 
 A transformation can be placed in different layers.
 

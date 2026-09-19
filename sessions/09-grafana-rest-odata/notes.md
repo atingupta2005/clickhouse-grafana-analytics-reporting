@@ -2,6 +2,20 @@
 
 ## 1. API-Based Reporting
 
+<!-- training-diagrams:v1 -->
+![API data into Grafana Infinity](./assets/infinity-architecture.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[API] --> B[JSON]
+    B --> C[Infinity DS]
+    C --> D[Root path]
+    D --> E[Panel]
+```
+
+
 Grafana can use data returned by APIs in addition to databases such as ClickHouse.
 
 For this session, the reporting flow is:
@@ -30,6 +44,10 @@ This approach is useful when reporting data is exposed by an application rather 
 ---
 
 ## 2. REST API and OData
+
+<!-- training-diagrams:v1 -->
+![Root selector fork](./assets/root-data-vs-value.svg)
+
 
 REST and OData are both commonly used for exposing application data over HTTP.
 
@@ -538,6 +556,10 @@ Check:
 ---
 
 ## 22. End-to-End Reporting Flow
+
+<!-- training-diagrams:v1 -->
+![Same KPI two sources](./assets/same-kpi-two-sources.svg)
+
 
 The complete integration for this session is:
 

@@ -55,6 +55,10 @@ Participants will:
 
 ## Optimization Flow
 
+<!-- training-diagrams:v1 -->
+![Optimization loop](./assets/optimize-loop.svg)
+
+
 ```text
 Query
   |
@@ -78,6 +82,9 @@ Compare Results
 ```
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 | File           | Purpose                            |
 | -------------- | ---------------------------------- |

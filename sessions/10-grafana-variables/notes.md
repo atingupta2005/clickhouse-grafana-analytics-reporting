@@ -2,6 +2,20 @@
 
 ## 1. Why variables?
 
+<!-- training-diagrams:v1 -->
+![Variables drive the panel query](./assets/variable-to-panel.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Variable] --> B[UI pick]
+    B --> C[Expand]
+    C --> D[Query]
+    D --> E[Panel]
+```
+
+
 Hard-coded filters force a new panel for every region or status. Variables put the filter in the dashboard header. One panel query serves many selections.
 
 ```text
@@ -107,6 +121,10 @@ That matches how labs filter `training.v_lab_orders` (view maps stored `Closed` 
 
 ## 6. Multi-value and the All option
 
+<!-- training-diagrams:v1 -->
+![Multi-value expansion](./assets/multivalue-ch-vs-odata.svg)
+
+
 **Multi-value** lets the user pick more than one item (e.g. regions 1 and 3).
 
 **Include All option** adds an All entry. When All is selected, Grafana expands to every value from the variable’s option list (or a custom “all value” if you set one).
@@ -179,6 +197,10 @@ WHERE v.region_id IN (${region})
 ---
 
 ## 9. Dependencies and cascading
+
+<!-- training-diagrams:v1 -->
+![Cascading variables](./assets/cascade-region-plant.svg)
+
 
 A **cascading** (dependent) variable uses another variable in its query.
 

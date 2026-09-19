@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![Alert lifecycle](./assets/alert-lifecycle.svg)
+
+
 This session introduces Grafana alerting for operational and business reporting scenarios. The focus is on the complete alerting flow:
 
 **Query → Alert Rule → Evaluation → Contact Point → Notification Policy → Webhook**
@@ -94,6 +98,9 @@ Student permissions may not allow saving alert rules or contact points. This is 
 - Lab home: https://vmclickhouse.canadacentral.cloudapp.azure.com/
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 - `README.md` — Session overview, topics, practical work and timing
 - `notes.md` — Alerting concepts and teaching notes

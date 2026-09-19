@@ -2,6 +2,10 @@
 
 ## Session Overview
 
+<!-- training-diagrams:v1 -->
+![OData query pipeline](./assets/odata-pipeline.svg)
+
+
 This session introduces OData as a standard way to query application data over HTTP.
 
 The focus is on understanding OData services, entities, metadata, query options, filtering, sorting, pagination, relationships, and JSON responses.
@@ -84,6 +88,9 @@ TOC: **4 hours**. Highest overrun risk in Modules 1–4.
 Seed facts: PascalCase properties on `Orders`; `Status eq 'Completed'`; Completed regions **1 / 3 / 5**; names `Customer-N` / `Industrial-N`. No real `$expand` / `$search` / key lookup.
 
 ## Files
+
+Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown.
+
 
 | File           | Purpose                           |
 | -------------- | --------------------------------- |

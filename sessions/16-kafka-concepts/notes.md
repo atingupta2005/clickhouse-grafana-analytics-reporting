@@ -282,6 +282,14 @@ The two groups can process the same event stream for different purposes.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Kafka concepts**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-basics
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 8. Events and Messages
 
 Kafka transports events or messages.
@@ -457,6 +465,14 @@ Grafana
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Kafka vs ClickHouse reporting**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-vs-reporting
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 12. Kafka Jobs / Processing Concepts
 
 A Kafka job is a processing workload that consumes events and performs some operation.
@@ -596,6 +612,14 @@ Grafana
 Kafka is discussed as a possible upstream event-ingestion mechanism.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Architecture wrap**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-wrap
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 15. When Kafka Is Required
 

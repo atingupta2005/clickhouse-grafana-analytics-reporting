@@ -28,6 +28,17 @@ Introduce Grafana and connect it to ClickHouse for basic reporting panels and a 
 
 **Seed:** Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**
 
+## Checkpoint quizzes
+
+After each topic block in `notes.md`, open the matching quiz and submit once. Class login is shared in class. Prefer **Login**. One attempt.
+
+| After topic | Quiz |
+|-------------|------|
+| Grafana UI and data sources | [ch-grafana-s08-grafana-basics](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-grafana-basics) |
+| ClickHouse queries and time ranges | [ch-grafana-s08-ch-query-time](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-ch-query-time) |
+| Panels and KPIs | [ch-grafana-s08-panels-kpi](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-panels-kpi) |
+| Dashboard refresh | [ch-grafana-s08-dashboard-refresh](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-dashboard-refresh) |
+
 ## Files
 
 | File | Purpose |

@@ -164,6 +164,14 @@ Detailed join performance optimization is outside this session.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Joins**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s03-joins
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 5. CTEs
 
 ![CTE vs subquery](./assets/cte-vs-subquery.svg)
@@ -264,6 +272,14 @@ Orders Above Average
 Subqueries are useful when one calculation is required before another calculation can be performed.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**CTEs and subqueries**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s03-cte-subquery
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 7. Window Functions
 
@@ -469,6 +485,14 @@ This allows a report to compare the current period with the previous period.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Window functions and ranking**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s03-windows
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 11. Conditional Aggregation
 
 Conditional aggregation can calculate multiple business measures in one query.
@@ -583,6 +607,14 @@ Window Function
 This is the type of query that becomes useful when basic reporting queries are no longer sufficient.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Conditional aggregation and arrays**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s03-conditional-arrays
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## Summary
 

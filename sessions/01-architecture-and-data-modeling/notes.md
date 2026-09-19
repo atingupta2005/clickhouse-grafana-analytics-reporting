@@ -98,6 +98,14 @@ flowchart LR
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**OLTP vs OLAP**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-oltp-olap
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 3. SQL Server and ClickHouse
 
 SQL looks familiar; design thinking does not always transfer.
@@ -201,6 +209,14 @@ In short, ClickHouse:
 That level is enough for this session.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Columnar storage and architecture**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-columnar-architecture
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 6. Databases, tables and table engines
 
@@ -358,6 +374,14 @@ Deeper sorting-key choice and optimization come in a later session.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**MergeTree and ORDER BY**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-mergetree-orderby
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 9. Partitioning
 
 Example:
@@ -463,6 +487,14 @@ customer_email -> may be optional
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Partitioning and data types**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-partition-types
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 12. Basic data model
 
 ```mermaid
@@ -567,6 +599,14 @@ flowchart TB
 Detailed cluster setup is outside this session — know the terms.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Modeling checkpoint**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-lab-modeling
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## Summary
 

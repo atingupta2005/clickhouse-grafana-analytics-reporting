@@ -164,6 +164,14 @@ Avoid creating excessive numbers of partitions.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Sort keys and partitions**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-sortkey-partition
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 5. Data Skipping
 
 ![Data skipping concept](./assets/data-skipping.svg)
@@ -335,6 +343,14 @@ Do not change join semantics merely for performance.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Skipping, filters, aggregation**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-skipping-filters
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 11. EXPLAIN
 
 ![EXPLAIN mental model](./assets/explain-layers.svg)
@@ -432,6 +448,14 @@ This can help identify:
 When investigating a particular query, narrow the search rather than reviewing the entire log.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**EXPLAIN and profiling**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-explain-profile
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 14. Identifying Bottlenecks
 
@@ -583,6 +607,14 @@ Then verify that the result is still correct.
 Performance improvement without result validation is not sufficient.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Bottlenecks lab checkpoint**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-bottlenecks-lab
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## Summary
 

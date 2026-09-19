@@ -162,6 +162,14 @@ What relationships exist?
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**What is OData?**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-odata-intro
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 6. `$filter`
 
 `$filter` restricts the returned records.
@@ -309,6 +317,14 @@ This is useful for reporting because the client receives only the required field
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**$filter and $select**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-filter-select
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 12. `$orderby`
 
 `$orderby` controls result ordering.
@@ -406,6 +422,14 @@ The
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**$top, $skip, $count**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-top-skip-count
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 16. `$search` (stretch / theory only)
 
 **Not supported by this lab OData service** for real results. Do not require `$search` in Core work.
@@ -457,6 +481,14 @@ JSON Response
 ```
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Combining OData options**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-combine-lab
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 18. Relationships
 

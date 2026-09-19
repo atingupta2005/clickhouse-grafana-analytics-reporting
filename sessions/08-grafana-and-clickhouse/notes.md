@@ -134,6 +134,14 @@ If the connection fails, check:
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Grafana UI and data sources**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-grafana-basics
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 6. ClickHouse SQL in Grafana
 
 Once the data source is configured, a panel can execute ClickHouse SQL.
@@ -271,6 +279,14 @@ Explore is useful for:
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**ClickHouse queries and time ranges**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-ch-query-time
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 11. Create a Panel
 
 A panel combines a query with a visualization.
@@ -365,6 +381,14 @@ The query should provide a clear category field and a numeric measure.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Panels and KPIs**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-panels-kpi
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 15. Dashboard
 
 A dashboard combines multiple panels into a single reporting view.
@@ -425,6 +449,14 @@ Refresh:    Every 5 minutes
 means that Grafana repeatedly retrieves data for that seed window.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Dashboard refresh**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-dashboard-refresh
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 18. Query Validation
 

@@ -119,6 +119,14 @@ Do not use a table to display thousands of rows when a summary or chart answers 
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Dashboard organization**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-layout
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 3. Thresholds
 
 Thresholds help users identify values that need attention without reading every number.
@@ -181,6 +189,14 @@ For multiple regional series, the legend should clearly identify the region.
 Avoid displaying unnecessary statistical information in the legend when it does not help the dashboard user.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Thresholds and units**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-thresholds-units
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 6. Field Configuration
 
@@ -249,6 +265,14 @@ Use SQL for database-level filtering, aggregation, and calculations when practic
 This keeps the query easier to understand and usually reduces unnecessary dashboard processing.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Field config and transformations**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-transforms
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 8. Calculated Values
 
@@ -401,6 +425,14 @@ Example:
 This creates a useful reporting flow without requiring additional applications.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Advanced dashboard lab checkpoint**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-lab-checkpoint
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 13. Annotations
 

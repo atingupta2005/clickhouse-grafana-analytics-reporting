@@ -197,6 +197,14 @@ FROM training.v_lab_orders;
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**SELECT, WHERE, ORDER BY, LIMIT**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-select-filter
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 6. Aggregate Functions
 
 ![From rows to a KPI](./assets/aggregation-funnel.svg)
@@ -360,6 +368,14 @@ Here:
 5. `ORDER BY` sorts the result.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Aggregates and GROUP BY**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-groupby-agg
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 9. String Functions
 
@@ -552,6 +568,14 @@ This is useful when preparing data for reports where displaying `NULL` directly 
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Strings, dates, conditionals**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-strings-dates
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 13. KPI Calculations
 
 Analytical reports commonly calculate KPIs from raw data.
@@ -681,6 +705,14 @@ LIMIT
 This is the type of SQL pattern commonly used to prepare data for reports and dashboards.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**KPI and period reporting**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-kpi-reporting
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 17. Query Structure to Remember
 

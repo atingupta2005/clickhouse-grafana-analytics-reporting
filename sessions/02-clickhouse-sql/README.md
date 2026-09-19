@@ -31,6 +31,17 @@ Analytical SQL on `training.v_lab_orders`: filters, aggregates, dates, and KPI-s
 
 **Seed:** dates **2023-01-01** … **2025-06-18**
 
+## Checkpoint quizzes
+
+After each topic block in `notes.md`, open the matching quiz and submit once. Class login is shared in class. Prefer **Login**. One attempt.
+
+| After topic | Quiz |
+|-------------|------|
+| SELECT, WHERE, ORDER BY, LIMIT | [ch-grafana-s02-select-filter](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-select-filter) |
+| Aggregates and GROUP BY | [ch-grafana-s02-groupby-agg](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-groupby-agg) |
+| Strings, dates, conditionals | [ch-grafana-s02-strings-dates](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-strings-dates) |
+| KPI and period reporting | [ch-grafana-s02-kpi-reporting](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-kpi-reporting) |
+
 ## Files
 
 | File | Purpose |

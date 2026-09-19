@@ -126,6 +126,14 @@ A single order can contain multiple reporting rows. Therefore, `count()` and `un
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Workshop goals**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-workshop-plan
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 4. Status Handling
 
 The workshop uses:
@@ -381,6 +389,14 @@ High-Value Lines
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**KPI build**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-kpi-build
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 11. Dimension Panels
 
 A dimension panel explains how a measure is distributed.
@@ -425,6 +441,14 @@ Plant → Order Count
 Keep the number of dimensions limited. The workshop is about building a usable report, not exposing every field in the dataset.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Filters and layout**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-filters-layout
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 12. Transformations
 
@@ -517,6 +541,14 @@ Visualization
 ```
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Validation wrap**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-validate-wrap
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 15. Query Performance
 

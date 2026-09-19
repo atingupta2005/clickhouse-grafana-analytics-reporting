@@ -25,3 +25,12 @@ Logins are provided at the start of the course.
 | Date range | 2023-01-01 … 2025-06-18 |
 
 In Grafana, use an **absolute** time range for that date window when panels look empty.
+
+## Checkpoint quizzes
+
+| Item | Value |
+|------|-------|
+| Quiz host | https://vmreact.eastus2.cloudapp.azure.com:18094 |
+| Example quiz URL | https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-oltp-olap |
+
+Links for each topic are in the session `notes.md` files. Login IDs and password are provided in class.

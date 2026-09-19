@@ -96,6 +96,14 @@ When consuming API data, identify:
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**JSON objects and arrays**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-json-basics
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 4. Nested JSON (theory)
 
 JSON objects can contain other objects. That pattern appears in many real APIs.
@@ -222,6 +230,14 @@ Not Available
 ```
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**JSON extraction**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-json-extract
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 8. JSON Arrays in Reporting (stretch / theory)
 
@@ -373,6 +389,14 @@ When an API integration fails, check the status code before investigating the JS
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**REST and HTTP**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-rest-http
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 15. Request and Response
 
 ```text
@@ -443,6 +467,14 @@ data
 ```
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Pagination and JSON responses**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-pagination
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 18. Error Handling
 

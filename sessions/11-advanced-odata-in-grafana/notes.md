@@ -144,6 +144,14 @@ If the fixed query works, investigate the variable configuration rather than the
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**OData setup and variables**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-setup-vars
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 5. Multiple Filter Conditions
 
 ![Combine filter clauses](./assets/filter-and-or.svg)
@@ -243,6 +251,14 @@ Use a small, controlled set of values. Prefer proving a fixed `or` filter before
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Multi-value OData filters**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-multifilter
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 7. Date and Time Filtering
 
 The training seed contains order dates from:
@@ -330,6 +346,14 @@ A controlled Grafana variable can allow the dashboard user to choose from predef
 Start with a fixed `$orderby` expression. Introduce the variable only after the fixed query works.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Dates, $select, $orderby**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-dates-select
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 10. `$top` and `$skip`
 
@@ -476,6 +500,14 @@ Use Region 2 + Completed deliberately as the empty-result test.
 Do not present it as a normal successful Region filter.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Advanced OData lab checkpoint**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-lab-checkpoint
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 14. Reducing Unnecessary API Data
 

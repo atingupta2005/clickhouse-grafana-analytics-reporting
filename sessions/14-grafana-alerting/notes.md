@@ -152,6 +152,14 @@ You should understand the difference between:
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Alerting flow**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s14-alert-flow
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 5. Evaluation Interval
 
 An alert rule is evaluated repeatedly.
@@ -508,6 +516,14 @@ Do not assume a particular third-party request-bin service is available.
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Contact points and webhooks**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s14-contacts-webhook
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 14. Webhook Payloads
 
 A webhook request normally contains structured alert information.
@@ -570,6 +586,14 @@ You can observe:
 A student does **not** need to successfully send a webhook from their own laptop to complete the Core session.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Alerting lab checkpoint**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s14-lab-checkpoint
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 16. Grafana Time Range for This Lab
 

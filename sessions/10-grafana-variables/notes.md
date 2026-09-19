@@ -118,6 +118,14 @@ That matches how labs filter `training.v_lab_orders` (view maps stored `Closed` 
 
 ---
 
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Why variables**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-why-variables
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+
 ## 6. Multi-value and the All option
 
 ![Multi-value equals vs IN](./assets/equals-vs-in.svg)
@@ -176,6 +184,14 @@ WHERE region_id = ${region}
 ```
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Multi-value and formatting**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-multivalue-format
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 8. Dynamic filtering on `training.v_lab_orders`
 
@@ -291,6 +307,14 @@ Many ClickHouse panels simply rely on the dashboard time picker plus a time colu
 > **Expected result:** With absolute seed window and `status = Completed`, Completed regions **1 / 3 / 5** return rows. Region **2** + Completed returns **empty**.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Cascading and time variables**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-cascade-time
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 11. Variables in ClickHouse SQL
 
@@ -426,6 +450,14 @@ Recommended dashboard defaults for Core:
 Save the dashboard after setting defaults so reloads behave the same for every student.
 
 ---
+
+### Checkpoint quiz
+
+Open this short quiz after the topic above (**Variables lab checkpoint**):
+
+https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-lab-defaults
+
+Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
 
 ## 16. Hands-on filter map
 

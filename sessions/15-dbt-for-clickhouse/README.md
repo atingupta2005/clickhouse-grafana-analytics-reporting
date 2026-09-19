@@ -23,6 +23,16 @@ See how dbt structures analytics transformations for ClickHouse (sources → mod
 
 **Stretch:** optional `dbt run` / `dbt test` if shown in class
 
+## Checkpoint quizzes
+
+After each topic block in `notes.md`, open the matching quiz and submit once. Class login is shared in class. Prefer **Login**. One attempt.
+
+| After topic | Quiz |
+|-------------|------|
+| Why dbt appears | [ch-grafana-s15-dbt-role](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s15-dbt-role) |
+| Sources and models | [ch-grafana-s15-models](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s15-models) |
+| dbt lab checkpoint | [ch-grafana-s15-lab-checkpoint](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s15-lab-checkpoint) |
+
 ## Files
 
 | File | Purpose |

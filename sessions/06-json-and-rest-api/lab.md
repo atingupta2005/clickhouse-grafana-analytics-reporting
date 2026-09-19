@@ -28,7 +28,7 @@ https://vmclickhouse.canadacentral.cloudapp.azure.com/api/regions
 https://vmclickhouse.canadacentral.cloudapp.azure.com/api/orders?page=1&page_size=10
 ```
 
-List endpoints return JSON shaped like `{ "data": [ ... ], "count": N }`.
+List endpoints return JSON shaped like `{ "data": [... ], "count": N }`.
 
 `status=Completed` is accepted as an alias for stored status `Closed`.
 
@@ -392,7 +392,7 @@ The **training REST API has no authentication**. Do not expect `401` when callin
 [ ] N/A — training API has no auth (skip credential drills)
 ```
 
-Optional stretch (theory only): list auth types you might see in production (API key, Basic, Bearer). Do not invent lab credentials.
+Optional stretch (theory only): list auth types you might see in production (API key, Basic, Bearer). 
 
 ---
 

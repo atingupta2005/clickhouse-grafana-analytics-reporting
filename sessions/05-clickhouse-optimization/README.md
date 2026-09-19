@@ -7,7 +7,7 @@
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
+| Connection | **ClickHouse training** |
 | User | `training_ro` |
 
 ## Overview
@@ -28,7 +28,7 @@ ORDER BY (order_date, plant_id, order_id)
 * Filter/aggregate/join habits
 * `EXPLAIN` and basic profiling
 
-## What you will do
+## Hands-on
 
 **Core:** compare filter alignment to the sort key → `EXPLAIN` → rewrite one slow pattern 
 

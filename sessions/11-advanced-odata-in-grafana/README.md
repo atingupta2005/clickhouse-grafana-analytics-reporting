@@ -19,10 +19,10 @@ Builds on Sessions 07, 09, and 10.
 * Troubleshooting Infinity/OData panels
 * `$expand` / `$search` / key URLs — theory only (not supported on the lab OData service)
 
-## What you will do
+## Hands-on
 
 * Sign in (`student` / `StudentLab!2026`)
-* Use provisioned Infinity; root selector **`value`**
+* Use **Infinity**; root selector **`value`**
 * Absolute time **2023-01-01** → **2025-06-18**
 * Build dashboard `Session 11 - Advanced OData Lab`
 

@@ -15,10 +15,9 @@ Use the existing:
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
 | SQL Server connection | **Session 04 — SQL Server TrainingDB** |
-| ClickHouse connection | **Session 01–05 — ClickHouse training (LAN RO)** |
+| ClickHouse connection | **ClickHouse training** |
 | ClickHouse user | `training_ro` / `TrainingReadOnly!2026` |
-| Alternate host (if LAN fails) | `100.86.105.24` (same ports: SQL `1433`, CH `8123`) |
-
+| 
 **Important:** SQL Server is a **compact sample**; ClickHouse has the **full seed**. Expect SQL Server counts to be **much smaller**. Compare query **shape and logic** (columns, filters, aggregates), not identical row counts.
 
 Statuses in ClickHouse: `Open`, `Shipped`, `Completed`, `Cancelled` — there is no `Pending`.

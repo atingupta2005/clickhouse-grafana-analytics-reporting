@@ -174,8 +174,8 @@ A Common Table Expression (CTE) allows a query to define a temporary named resul
 The syntax is:
 
 ```sql
-WITH ...
-SELECT ...
+WITH...
+SELECT...
 ```
 
 Example:
@@ -584,7 +584,7 @@ This is the type of query that becomes useful when basic reporting queries are n
 
 ---
 
-## Key Points
+## Summary
 
 * Use `INNER JOIN` when matching rows are required.
 * Use `LEFT JOIN` when all rows from the left table must be retained.

@@ -13,7 +13,7 @@ Rewrite common SQL Server reporting patterns for ClickHouse and compare results 
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| ClickHouse | **Session 01–05 — ClickHouse training (LAN RO)** / `training_ro` |
+| ClickHouse | **ClickHouse training** (`training_ro`) |
 | SQL Server | Lab SQL Server connection (as provided in class) |
 
 Compare **logic and shape**, not identical row counts (SQL Server sample is smaller than the ClickHouse seed).
@@ -23,7 +23,7 @@ Compare **logic and shape**, not identical row counts (SQL Server sample is smal
 * `TOP` → `LIMIT`, `ISNULL` → `COALESCE`, `CASE`, dates, aggregates
 * Dialect differences that affect reporting SQL
 
-## What you will do
+## Hands-on
 
 **Core:** rewrite and run TOP→LIMIT, ISNULL/COALESCE, CASE, one date pattern, one aggregate on both engines 
 

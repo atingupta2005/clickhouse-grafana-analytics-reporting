@@ -132,7 +132,7 @@ profiles.yml
 
 ### Tip
 
-Do not expose or copy sensitive connection secrets into student notes or chat. The purpose of this step is to understand the profile structure and target.
+Focus on the profile structure and target — not on copying secrets.
 
 ---
 
@@ -241,7 +241,7 @@ You should understand the separation between source data and dbt-managed analyti
 
 ### Tip
 
-This separation is useful for keeping shared seed data safe. Do not use `DROP` or `TRUNCATE` against `training.*` objects.
+This separation is  Do not use `DROP` or `TRUNCATE` against `training.*` objects.
 
 ---
 

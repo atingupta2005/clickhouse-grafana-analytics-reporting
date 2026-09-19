@@ -87,11 +87,9 @@ The exact settings depend on how ClickHouse is exposed in the training environme
 
 ---
 
-## 4. ClickHouse Data Source (already provisioned)
+## 4. ClickHouse Data Source 
 
-The **ClickHouse** data source is **already provisioned** for students. Select it in Explore and panels — do not create another one.
-
-**Stretch (optional):** “Add data source” / connection form can be shown once on a shared screen. Skip adding a second ClickHouse source.
+Select the **ClickHouse** data source in Explore and panels. **Stretch (optional):** “Add data source” / connection form can be shown once on a shared screen. Skip adding a second ClickHouse source.
 
 Typical connection fields (for understanding, not student setup):
 
@@ -99,7 +97,7 @@ Typical connection fields (for understanding, not student setup):
 Grafana
    |
    v
-ClickHouse Data Source (provisioned)
+ClickHouse data source
    |
    +-- Server
    +-- Port
@@ -118,7 +116,7 @@ Do not place administrator credentials in dashboards or queries.
 
 ## 5. Test the Connection
 
-Confirm the provisioned ClickHouse data source works (Explore query or the data-source Test button if visible).
+Confirm the ClickHouse data source works (Explore query or the data-source Test button if visible).
 
 If the connection fails, ask for help before changing any settings.
 
@@ -545,10 +543,10 @@ Validate the query directly against ClickHouse before changing the panel configu
 
 ---
 
-## Key Points
+## Summary
 
 * Grafana provides the visualization and reporting layer.
-* Prefer the **provisioned** ClickHouse data source (do not add a new one).
+* Use the **ClickHouse** data source.
 * Panels contain queries and visualizations.
 * Explore is useful for testing and investigating queries.
 * Use ClickHouse SQL on `training.v_lab_orders`.

@@ -20,7 +20,7 @@ The lab focuses on:
 - Query troubleshooting
 - Reducing unnecessary data retrieval
 
-The lab uses the provisioned Grafana Infinity datasource and the lab OData service.
+The lab uses Grafana Infinity and the lab OData service.
 
 **Core:** Steps 1–14. **Stretch** (Part 2) is optional / homework.
 
@@ -51,8 +51,7 @@ Orders entity set:
 
 ## Grafana Datasource
 
-Use the provisioned:
-
+Use:
 - Datasource: `Infinity`
 - UID: `infinity`
 - Query type: JSON
@@ -94,7 +93,7 @@ Use the absolute dashboard time range:
  `Session 11 - Advanced OData Lab`
 
 4. Add a new panel.
-5. Select the provisioned `Infinity` datasource.
+5. Select the **Infinity** data source.
 
 ### Expected Result
 
@@ -402,7 +401,7 @@ With `region = 1` (or 3/5) and `status = Completed`, the panel returns Completed
 
 First prove this URL works with a fixed region (for example `RegionId eq 3`) in the browser or Infinity. Then restore `${region}` / `${status}`.
 
-Do not invent other date literal formats — this lab service accepts `YYYY-MM-DD` as in Session 07.
+Use date literals as `YYYY-MM-DD` as in Session 07.
 
 ---
 
@@ -994,7 +993,6 @@ Also apply an appropriate `$filter`.
 
 This is expected for the student Core workflow.
 
-Do not recreate the datasource or change the lab infrastructure.
 
 ---
 
@@ -1003,7 +1001,7 @@ Do not recreate the datasource or change the lab infrastructure.
 The Core lab is complete when the student can:
 
 - [ ] Create `Session 11 - Advanced OData Lab`
-- [ ] Use the provisioned Infinity datasource
+- [ ] Use the Infinity data source
 - [ ] Query the OData `Orders` entity set
 - [ ] Configure the OData JSON root selector as `value`
 - [ ] Create a Region variable

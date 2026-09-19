@@ -69,11 +69,11 @@ The detailed OData query syntax was covered in Session 7.
 
 ---
 
-## 3. Grafana API Data Sources — Infinity (provisioned)
+## 3. Grafana API data sources — Infinity
 
 ![ClickHouse DS vs Infinity DS](./assets/ch-vs-infinity.svg)
 
-This lab uses the **provisioned Infinity** data source (uid **`infinity`**). Do **not** create a new Infinity source.
+This lab uses the **Infinity** data source (uid **`infinity`**). 
 
 **REST panels**
 
@@ -151,7 +151,7 @@ Common examples include:
 Accept: application/json
 ```
 
-Training APIs do **not** require `Authorization`. Do not invent tokens for the lab.
+Training APIs do **not** require `Authorization`. 
 
 ---
 
@@ -616,9 +616,9 @@ CMF Application
 
 The key point is that Grafana is consuming application/API data rather than querying ClickHouse directly for that panel.
 
-## Key Points
+## Summary
 
-* Use provisioned **Infinity** ; full HTTPS URLs; parser JSON.
+* Use **Infinity** ; full HTTPS URLs; parser JSON.
 * REST root selector **`data`**; OData root selector **`value`**.
 * REST pagination: **`page` / `page_size`**. Date aliases: `date_from`/`date_to`.
 * Training APIs have **no auth** — no 401 drill.

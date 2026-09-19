@@ -11,13 +11,13 @@ Introduce Grafana and connect it to ClickHouse for basic reporting panels and a 
 ## Topics
 
 * Grafana UI, dashboards, panels, Explore
-* Provisioned ClickHouse data source
+* ClickHouse data source
 * SQL in Grafana, time ranges, refresh
 
-## What you will do
+## Hands-on
 
 * Sign in (`student` / `StudentLab!2026`)
-* Use the provisioned ClickHouse data source (do not create a new one)
+* Use the **ClickHouse** data source
 * Absolute time **2023-01-01** → **2025-06-18**
 * Build KPI / trend / by-region panels on `training.v_lab_orders`
 * Save one dashboard

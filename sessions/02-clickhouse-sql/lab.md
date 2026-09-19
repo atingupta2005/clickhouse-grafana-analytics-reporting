@@ -24,10 +24,10 @@ Use the `training` database.
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
+| Connection | **ClickHouse training** |
 | User | `training_ro` |
 
-Open CloudBeaver → pick the LAN RO connection → run `SELECT version();`.
+Open CloudBeaver → pick **ClickHouse training** → run `SELECT version();`.
 
 For reporting queries in this session, use the lab view **`training.v_lab_orders`**. 
 It joins orders + line items + plants and exposes:

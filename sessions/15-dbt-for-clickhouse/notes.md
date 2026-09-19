@@ -465,10 +465,10 @@ Raw / operational data
    Analytical models
           |
      +----+----+
-     |         |
+
      v         v
    REST      OData
-     |         |
+
      +----+----+
           |
           v

@@ -16,10 +16,10 @@ Dashboard name: **`Session 13 - Reporting Workshop`**
 * ClickHouse queries on `training.v_lab_orders`
 * Variables, panels, filtering, validation
 
-## What you will do
+## Hands-on
 
 * Sign in (`student` / `StudentLab!2026`)
-* Use provisioned ClickHouse
+* Use the **ClickHouse** data source
 * Absolute time **2023-01-01** → **2025-06-18**
 * Build Core KPIs (orders, revenue, high-value lines) plus region/plant views
 * Filters: Region, Plant, Status (default Completed)

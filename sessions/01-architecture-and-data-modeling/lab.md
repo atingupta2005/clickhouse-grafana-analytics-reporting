@@ -5,8 +5,8 @@
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
-| User | `training_ro` (read-only) |
+| Connection | **ClickHouse training** |
+| User | `training_ro` |
 
 Confirm with:
 
@@ -15,7 +15,7 @@ SELECT version();
 SELECT currentDatabase();
 ```
 
-> **Need CREATE / INSERT?** Default access is read-only. For DDL practice you receive `training_rw` and you will use your own database `training_student_<yourname>`. Do **not** write into the `training` database.
+> For CREATE practice (when provided in class), use `training_rw` and database `training_student_<yourname>`.
 
 ---
 
@@ -118,7 +118,7 @@ Use fully qualified names for the rest of the sandbox lab:
 training_student_<yourname>.table_name
 ```
 
-> Do **not** create or recreate the `training` database. It is already provisioned for class.
+> The `training` database already exists — use it for exploration.
 
 ---
 
@@ -417,7 +417,7 @@ Discuss:
 * What happens when March data is inserted?
 * When are monthly partitions useful?
 
-> **Explore path:** you can run a similar query with `database = 'training'` and `table = 'orders'` to see real seed parts — read-only is enough.
+> **Explore path:** you can run a similar query with `database = 'training'` and `table = 'orders'` to see real seed parts.
 
 ---
 
@@ -577,7 +577,7 @@ No joins yet — that comes later.
 ```text
 ╔══════════════════════════════════════════════════════════════════╗
 ║ NEVER run DROP on the `training` database. ║
-║ That database is shared by everyone in the lab. ║
+║ Use only your own `training_student_<yourname>` database for DDL. ║
 ║ ║
 ║ Cleanup applies ONLY to tables you created in ║
 ║ training_student_<yourname>. ║

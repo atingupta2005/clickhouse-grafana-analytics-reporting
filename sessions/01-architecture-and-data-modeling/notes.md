@@ -5,8 +5,8 @@
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
-| User | `training_ro` (read-only) |
+| Connection | **ClickHouse training** |
+| User | `training_ro` |
 
 Shared analytics use **`training.v_lab_orders`**. DDL practice uses **`training_student_<yourname>`** with `training_rw` when write access is provided.
 
@@ -296,7 +296,7 @@ flowchart LR
 
 > MergeTree is built for efficient storage and processing of large analytical datasets.
 
-**Live seed check** (read-only is enough):
+**Live seed check** :
 
 ```sql
 SHOW CREATE TABLE training.orders;
@@ -568,7 +568,7 @@ Detailed cluster setup is outside this session — know the terms.
 
 ---
 
-## Key points to remember
+## Summary
 
 * ClickHouse is mainly an analytical, column-oriented database
 * MergeTree is the main engine family in this course
@@ -577,5 +577,5 @@ Detailed cluster setup is outside this session — know the terms.
 * Use **`training.v_lab_orders`** for lab analytics with `sales_amount` / `region_id` / `quantity`
 * `PARTITION BY` and `ORDER BY` do different jobs
 * Use `Nullable` only where missing values matter
-* Never DROP the `training` database — clean up only your `training_student_<yourname>` tables
+* Clean up only your `training_student_<yourname>` tables
 * Shards and replicas matter for larger deployments

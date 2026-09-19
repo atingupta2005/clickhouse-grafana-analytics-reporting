@@ -14,7 +14,7 @@ Work with JSON structures and REST APIs as inputs for analytics and reporting.
 * REST requests, parameters, pagination, status codes
 * Transforming API JSON for reporting
 
-## What you will do
+## Hands-on
 
 * Call training REST endpoints in the browser
 * Inspect JSON envelopes (`data` / `count`)

@@ -30,7 +30,7 @@ User picks Region / Status / Plant
            Panel updates
 ```
 
-This session uses the live lab: Grafana + provisioned ClickHouse + provisioned Infinity.
+This session uses Grafana with the ClickHouse and Infinity data sources.
 
 ---
 
@@ -79,7 +79,7 @@ ORDER BY region_id
 
 In the variable editor:
 
-* Data source: **ClickHouse** (provisioned)
+* Data source: **ClickHouse**
 * Query: as above
 * Typically **value** = `region_id`, **text** = `region_name` (set in the variable UI / Refresh options)
 
@@ -346,7 +346,7 @@ Use visualization **Time series** and map the `time` field.
 
 ## 12. Variables in REST (Infinity)
 
-Provisioned data source: **Infinity** .
+Data source: **Infinity**.
 
 | Setting | Value |
 | ------- | ----- |
@@ -469,7 +469,7 @@ Dashboard variables (Region, Plant, Status, …)
      Stat / Table / Time series panels
 ```
 
-## Key Points
+## Summary
 
 * Variables belong on the dashboard; panels reference `${name}`.
 * Query variables for dimensions; Custom for Status (default **Completed**).

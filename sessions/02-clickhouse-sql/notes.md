@@ -639,9 +639,9 @@ For example:
 
 ```text
 Month     Orders     Quantity     Sales
-202601      ...         ...        ...
-202602      ...         ...        ...
-202603      ...         ...        ...
+202601     ...        ...       ...
+202602     ...        ...       ...
+202603     ...        ...       ...
 ```
 
 ---
@@ -711,7 +711,7 @@ needs only `SELECT`, `FROM` and `LIMIT`.
 
 ---
 
-## Key Points
+## Summary
 
 * Use `SELECT` to retrieve required columns.
 * Use `WHERE` to filter rows.

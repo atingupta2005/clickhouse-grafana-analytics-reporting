@@ -24,7 +24,7 @@ Build a compact interactive dashboard containing:
 - Status filter
 - Absolute time range
 
-Use the provisioned **ClickHouse** datasource.
+Use the **ClickHouse** datasource.
 
 ---
 
@@ -635,7 +635,7 @@ Complete this section only after the Core dashboard is working.
 
 ## 17. Add an OData Panel
 
-Use the provisioned **Infinity** datasource.
+Use the **Infinity** datasource.
 
 OData base URL:
 

@@ -8,7 +8,7 @@ Build and enhance:
 
 The dashboard combines KPI cards, a trend chart, regional comparison, a detail table, formatting, a transformation, and dashboard navigation.
 
-Use the existing provisioned **ClickHouse** datasource. Prefer copying variables from **Session 10 - Variables Lab** (Session 11 is OData-focused).
+Use the existing **ClickHouse** datasource. Prefer copying variables from **Session 10 - Variables Lab** (Session 11 is OData-focused).
 
 ### Lab data
 
@@ -150,7 +150,7 @@ The panel displays total sales for the selected region, status, and dashboard ti
 
 ### Tip
 
-The dashboard time range is fixed for this lab, but the query also demonstrates explicit seed-date filtering. This protects the panel from accidentally scanning outside the training dataset.
+The dashboard time range is fixed for this lab, but the query also demonstrates explicit seed-date filtering. 
 
 ---
 
@@ -560,13 +560,12 @@ You should understand how event markers can be displayed against a time-series v
 
 ### Tip
 
-Do not invent operational incidents or fake production events for the training dataset.
 
 ---
 
 ## 18. Add an Infinity Panel
 
-Use the provisioned **Infinity** datasource . Do not recreate it.
+Use the **Infinity** datasource. 
 
 Example OData table (root selector **`value`**):
 
@@ -584,7 +583,7 @@ For REST, use root selector **`data`** and `page` / `page_size` (Session 09).
 
 ### Expected result
 
-You see how an Infinity panel can complement ClickHouse-based panels without changing the provisioned datasource configuration.
+You see how an Infinity panel can complement ClickHouse-based panels.
 
 ### Tip
 

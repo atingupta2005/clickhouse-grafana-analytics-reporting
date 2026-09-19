@@ -16,7 +16,7 @@ Improve dashboard layout, panel types, thresholds, transformations, and navigati
 * Links / drill-down
 * Performance habits (LIMIT, absolute time, Completed regions)
 
-## What you will do
+## Hands-on
 
 * Sign in (`student` / `StudentLab!2026`)
 * Reuse Session 10 variable patterns on ClickHouse panels

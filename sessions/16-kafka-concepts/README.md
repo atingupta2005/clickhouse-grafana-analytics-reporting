@@ -15,7 +15,7 @@ Understand Kafka as an event-streaming layer and where it fits before ClickHouse
 * Kafka → ClickHouse flow
 * When Kafka helps — and when it is not needed
 
-## What you will do
+## Hands-on
 
 * Walk through an order-event example end to end
 * Trace partitions and consumer groups

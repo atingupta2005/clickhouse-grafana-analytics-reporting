@@ -30,7 +30,7 @@ Sign in with the student credentials:
 
 Do not use infrastructure administrator credentials.
 
-The **ClickHouse** data source is already provisioned. Prefer that data source for all panels in this lab.
+Use the **ClickHouse** data source for panels in this lab.
 
 > **Stretch (optional):** “Add data source” is optional. Do **not** create a second ClickHouse data source.
 
@@ -424,7 +424,7 @@ Manufacturing Sales Dashboard
 ```text
 [ ] Accessed Grafana (student / StudentLab!2026)
 [ ] Explored Grafana interface
-[ ] Used Explore with provisioned ClickHouse DS
+[ ] Used Explore with the ClickHouse data source
 [ ] Set absolute time range 2023-01-01 → 2025-06-18
 [ ] Executed ClickHouse SQL on v_lab_orders
 [ ] Created KPI panels

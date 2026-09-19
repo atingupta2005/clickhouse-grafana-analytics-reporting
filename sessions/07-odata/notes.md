@@ -676,7 +676,7 @@ $expand
 
 This makes troubleshooting easier than creating a complex query in one step.
 
-## Key Points
+## Summary
 
 * OData provides standardized conventions for querying data over HTTP.
 * `$metadata` describes entities, properties, keys, types, and relationships.

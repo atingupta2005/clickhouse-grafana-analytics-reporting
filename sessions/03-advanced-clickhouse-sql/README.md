@@ -7,7 +7,7 @@
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
+| Connection | **ClickHouse training** |
 | User | `training_ro` |
 
 ## Overview
@@ -22,7 +22,7 @@ Joins, CTEs, window functions, and reporting-shaped queries on the lab seed.
 * Window functions and running totals
 * Building multi-step analytical queries
 
-## What you will do
+## Hands-on
 
 **Core:** joins + CTE + one window pattern with `LIMIT` for responsiveness 
 

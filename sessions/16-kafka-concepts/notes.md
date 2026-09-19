@@ -64,7 +64,7 @@ A simplified architecture is:
 ```text
                  Kafka Cluster
         +---------------------------+
-        |                           |
+
 Producer ---> Topic: orders         |
              +---------+---------+  |
              | Part 0  | Part 1  |  |
@@ -274,7 +274,7 @@ A second consumer group can independently consume the same topic:
                 /      \
                v        v
           Group A      Group B
-             |            |
+
           Analytics     Monitoring
 ```
 

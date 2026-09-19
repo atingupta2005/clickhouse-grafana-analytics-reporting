@@ -557,7 +557,7 @@ The business logic remains the same:
 
 The SQL syntax is adapted for ClickHouse.
 
-## Key Points
+## Summary
 
 * SQL Server queries often require changes before running in ClickHouse.
 * Map data types deliberately.

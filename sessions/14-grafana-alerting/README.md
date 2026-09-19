@@ -14,7 +14,7 @@ Learn the Grafana alerting flow: **Query → Alert Rule → Evaluation → Conta
 * Contact points and notification policies
 * Generic webhooks and testing
 
-## What you will do
+## Hands-on
 
 * Sign in as `student` / `StudentLab!2026` to inspect Alerting
 * admin steps with `admin` / `GrafanaLab!2026` for rule and webhook setup

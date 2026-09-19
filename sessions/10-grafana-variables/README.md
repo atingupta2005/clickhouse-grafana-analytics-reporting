@@ -14,10 +14,10 @@ Make dashboards interactive with Grafana variables (including region → plant c
 * Cascading variables
 * Variables in ClickHouse SQL and REST/OData
 
-## What you will do
+## Hands-on
 
 * Sign in (`student` / `StudentLab!2026`)
-* Use provisioned ClickHouse and Infinity data sources
+* Use the **ClickHouse** and **Infinity** data sources
 * Create `Session 10 - Variables Lab`
 * Wire Region, Plant, Status (and related filters) into panels
 * Confirm multi-value `IN (...)` patterns and Region 2 + Completed empty

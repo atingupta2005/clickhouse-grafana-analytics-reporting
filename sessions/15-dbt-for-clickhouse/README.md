@@ -14,7 +14,7 @@ See how dbt structures analytics transformations for ClickHouse (sources → mod
 * Where transforms belong (dbt vs app vs API vs Grafana)
 * Tests and docs (concepts; this project has no test YAML yet)
 
-## What you will do
+## Hands-on
 
 * Walk through the course dbt project (sources + `mart_sales_by_region`)
 * Trace source `training.*` → model schema `training_dbt`

@@ -351,7 +351,7 @@ Accept: application/json
 
 **Not applicable for the live training REST API** — `/api` has **no authentication**. Successful calls return `200` without tokens or Basic auth.
 
-In production you may see API keys, Basic auth, Bearer tokens, or OAuth. Treat that as general knowledge only in this session; do not invent credentials for the lab API.
+In production you may see API keys, Basic auth, Bearer tokens, or OAuth. Treat that as general knowledge only in this session; 
 
 ---
 
@@ -545,7 +545,7 @@ Steps:
 4. Map flat fields to the report columns.
 5. Page until done.
 
-## Key Points
+## Summary
 
 * JSON can contain objects, arrays, nested structures, and `null` values.
 * Live training lists use `{ "data": [...], "count": N }` — flat rows.

@@ -105,7 +105,7 @@ Username: admin
 Password: GrafanaLab!2026
 ```
 
-Use the provisioned **ClickHouse** datasource.
+Use the **ClickHouse** datasource.
 
 Do not create another ClickHouse datasource.
 
@@ -242,7 +242,7 @@ Use the training seed to explain a no-data / empty-result scenario.
 
 Completed data exists for regions **1, 3, 5**. Region **2** + `Completed` has none.
 
-Show a second query (still on the provisioned ClickHouse datasource):
+Show a second query (still on the ClickHouse data source):
 
 ```sql
 SELECT
@@ -434,7 +434,7 @@ You should be able to explain:
 
 ## 16. Create a Simplified Alert Rule
 
-Create a simplified version of the KPI alert from the admin steps using the provisioned ClickHouse datasource.
+Create a simplified version of the KPI alert from the admin steps using the ClickHouse data source.
 
 Use the same reporting source:
 

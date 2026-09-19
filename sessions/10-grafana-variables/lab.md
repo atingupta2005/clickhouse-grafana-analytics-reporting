@@ -19,8 +19,7 @@ Sign in:
 * User: `student`
 * Password: `StudentLab!2026`
 
-Use provisioned data sources only:
-
+Use these data sources:
 * **ClickHouse** 
 * **Infinity**  — Stretch panels
 

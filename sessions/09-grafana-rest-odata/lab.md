@@ -2,7 +2,7 @@
 
 ## Lab Objective
 
-Connect Grafana to the training REST and OData APIs using the **provisioned Infinity** data source, and build API-based reporting panels.
+Connect Grafana to the training REST and OData APIs using the **Infinity** data source, and build API-based reporting panels.
 
 **Core vs Stretch:** Core steps are marked. Stretch items are optional / homework.
 
@@ -44,7 +44,7 @@ Public base: `https://vmclickhouse.canadacentral.cloudapp.azure.com`
 /odata/Orders
 ```
 
-List REST responses use `{ "data": [ ... ], "count": N }`. 
+List REST responses use `{ "data": [... ], "count": N }`. 
 OData collections use a `value` array.
 
 Training `/api` and `/odata` have **no authentication**.
@@ -83,19 +83,19 @@ Records live under **`data`**.
 
 ---
 
-## 4. Use the Provisioned Infinity Data Source (Core)
+## 4. Use the Infinity data source (Core)
 
 ![Infinity request anatomy](./assets/request-anatomy.svg)
 
 ![REST vs OData roots](./assets/rest-vs-odata-roots.svg)
 
-Do **not** create a new Infinity data source. Use the existing provisioned one (named **Infinity**).
+Use the **Infinity** data source.
 
 ### Infinity panel settings (REST)
 
 | Setting | Value |
 | -------- | ----- |
-| Data source | **Infinity** (provisioned) |
+| Data source | **Infinity** |
 | Type | URL / API |
 | Parser | **JSON** |
 | Source | URL |
@@ -206,7 +206,7 @@ https://vmclickhouse.canadacentral.cloudapp.azure.com/api/sales/by-region
 
 Infinity: parser JSON, root selector **`data`**.
 
-If that endpoint is unavailable in your environment, use the provisioned **ClickHouse** data source with `training.v_lab_orders` grouped by `region_id` (Completed filter) — still valid for this session’s regional panel.
+If that endpoint is unavailable in your environment, use the **ClickHouse** data source with `training.v_lab_orders` grouped by `region_id` (Completed filter) — still valid for this session’s regional panel.
 
 ---
 
@@ -297,7 +297,7 @@ Optional Infinity panel (inspect JSON structure first; selector may differ from 
 
 ```text
 [ ] Grafana login works (student)
-[ ] Infinity provisioned DS used (not recreated)
+[ ] Infinity data source used
 [ ] REST URL is full HTTPS
 [ ] REST root_selector = data
 [ ] OData root_selector = value

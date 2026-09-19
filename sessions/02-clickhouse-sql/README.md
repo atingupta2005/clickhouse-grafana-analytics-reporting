@@ -7,7 +7,7 @@
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
+| Connection | **ClickHouse training** |
 | User | `training_ro` |
 
 **Tip:** Use `/cloudbeaver/` (not site-root `/#/` alone).
@@ -23,7 +23,7 @@ Analytical SQL on `training.v_lab_orders`: filters, aggregates, dates, and KPI-s
 * `SELECT` / `WHERE` / `ORDER BY` / `LIMIT` / `GROUP BY` / `HAVING`
 * Aggregates, strings, dates, `CASE`, `NULL` handling
 
-## What you will do
+## Hands-on
 
 **Core:** explore the view → filter Completed + regions **1/3/5** → aggregates and simple KPIs 
 

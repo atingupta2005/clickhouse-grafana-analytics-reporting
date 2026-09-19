@@ -7,23 +7,23 @@
 | Item | Value |
 |------|--------|
 | CloudBeaver | https://vmclickhouse.canadacentral.cloudapp.azure.com/cloudbeaver/ |
-| Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
-| User | `training_ro` (read-only) |
+| Connection | **ClickHouse training** |
+| User | `training_ro` |
 
-Open CloudBeaver, pick that connection, and run `SELECT version();`.
+Open CloudBeaver, select that connection, and run `SELECT version();`.
 
-> **DDL:** default path is read-only. Sandbox DDL uses `training_rw` and `training_student_<yourname>` when write access is provided. Never DROP `training`.
+For CREATE practice (when provided in class), use database `training_student_<yourname>`.
 
 ## Overview
 
-How ClickHouse stores and queries analytical data, and how to explore the lab model (or build a small sandbox).
+How ClickHouse stores and queries analytical data, and how to explore the lab model.
 
 ![Explore vs sandbox paths](./assets/explore-vs-sandbox.svg)
 
 | Path | What you do |
 |------|-------------|
 | **Explore** | `SHOW` / `DESCRIBE` on `training.*`, analytics on `training.v_lab_orders` |
-| **Sandbox** | Create tables only in `training_student_<yourname>` |
+| **Sandbox** | Create tables in `training_student_<yourname>` |
 
 ## Topics
 
@@ -31,11 +31,11 @@ How ClickHouse stores and queries analytical data, and how to explore the lab mo
 * `ORDER BY`, `PARTITION BY`, basic types
 * Shards/replicas (overview)
 
-## What you will do
+## Hands-on
 
-**Core:** explore lab tables/views → simple analytics on `training.v_lab_orders` 
+**Core:** explore lab tables/views → simple analytics on `training.v_lab_orders`
 
-**Stretch:** sandbox DDL if you have write access
+**Stretch:** sandbox DDL when the write login is available
 
 **Seed:** Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**
 

@@ -14,7 +14,7 @@ Query the training OData service with `$filter`, `$select`, `$orderby`, `$top`, 
 * `$filter` / `$select` / `$orderby` / `$top` / `$skip` / `$count`
 * Unsupported lab features (`$expand`, `$search`, key URLs) — theory only
 
-## What you will do
+## Hands-on
 
 * Open `/odata/Orders` in the browser
 * Build filtered and projected queries

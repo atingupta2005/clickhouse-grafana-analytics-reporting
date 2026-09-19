@@ -39,7 +39,7 @@ The suggested dashboard name is:
 Session 11 - Advanced OData Lab
 ```
 
-Use the provisioned **Infinity** datasource.
+Use the **Infinity** datasource.
 
 Do not create another datasource as part of the Core lab.
 
@@ -279,7 +279,7 @@ Example (Region 3 + Completed + Q1 2023):
 
 ### Tip
 
-Start with that fixed Q1 2023 filter, then introduce `${region}` / `${status}`. Do not invent other date literal formats for this lab service.
+Start with that fixed Q1 2023 filter, then introduce `${region}` / `${status}`. 
 
 ---
 
@@ -640,7 +640,7 @@ Use:
 2023-01-01 → 2025-06-18
 ```
 
-### Provisioned datasource
+### Data source
 
 Use the existing Infinity datasource. You do not need to create a datasource for the Core lab.
 

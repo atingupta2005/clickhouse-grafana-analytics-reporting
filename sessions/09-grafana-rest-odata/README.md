@@ -4,7 +4,7 @@
 
 ## Overview
 
-Connect Grafana to the training REST and OData APIs with the provisioned **Infinity** data source, and build API-based panels.
+Connect Grafana to the training REST and OData APIs with the **Infinity** data source, and build API-based panels.
 
 ![API data into Grafana Infinity](./assets/infinity-architecture.svg)
 
@@ -16,10 +16,10 @@ Connect Grafana to the training REST and OData APIs with the provisioned **Infin
 * Empty results vs errors
 * Basic troubleshooting
 
-## What you will do
+## Hands-on
 
 * Sign in to Grafana (`student` / `StudentLab!2026`)
-* Use provisioned Infinity (do not create a new data source)
+* Use the **Infinity** data source
 * Build REST panels on `/api/sales` (root **`data`**)
 * Build an OData panel on `/odata/Orders` (root **`value`**)
 * Add a regional panel (`/api/sales/by-region` or ClickHouse)

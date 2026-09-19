@@ -366,7 +366,6 @@ For example, a regional dashboard can receive a selected region through a dashbo
 
 Keep drill-down paths short. The user should always understand where the link will take them.
 
-Do not invent links to external systems that are not part of the lab.
 
 ---
 
@@ -506,9 +505,9 @@ An empty panel does not necessarily mean the query is broken.
 
 ### Wrong datasource
 
-REST and OData panels should use the provisioned **Infinity** datasource.
+REST and OData panels should use the **Infinity** datasource.
 
-ClickHouse SQL panels should use the provisioned **ClickHouse** datasource.
+ClickHouse SQL panels should use the **ClickHouse** datasource.
 
 ### Wrong Infinity root selector
 
@@ -537,7 +536,7 @@ inside an OData `$filter`.
 
 ### Student permissions
 
-You use the provisioned environment and you should not create datasources or change server configuration.
+Use the existing Grafana data sources.
 
 ### Large tables
 

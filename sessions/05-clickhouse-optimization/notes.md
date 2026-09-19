@@ -584,7 +584,7 @@ Performance improvement without result validation is not sufficient.
 
 ---
 
-## Key Points
+## Summary
 
 * Measure before optimizing.
 * Read only the columns required by the report.

@@ -126,13 +126,10 @@ A single order can contain multiple reporting rows. Therefore, `count()` and `un
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Workshop goals**):
-
+**Workshop goals**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-workshop-plan
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 4. Status Handling
 
@@ -389,13 +386,10 @@ High-Value Lines
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**KPI build**):
-
+**KPI build**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-kpi-build
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 11. Dimension Panels
 
@@ -442,13 +436,10 @@ Keep the number of dimensions limited. The workshop is about building a usable r
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Filters and layout**):
-
+**Filters and layout**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-filters-layout
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 12. Transformations
 
@@ -542,13 +533,10 @@ Visualization
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Validation wrap**):
-
+**Validation wrap**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-validate-wrap
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 15. Query Performance
 

@@ -27,15 +27,6 @@ Understand Kafka as an event-streaming layer and where it fits before ClickHouse
 
 Reporting still reads ClickHouse; Grafana does not query Kafka in Core.
 
-## Checkpoint quizzes
-
-After each topic block in `notes.md`, open the matching quiz and submit once. Class login is shared in class. Prefer **Login**. One attempt.
-
-| After topic | Quiz |
-|-------------|------|
-| Kafka concepts | [ch-grafana-s16-kafka-basics](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-basics) |
-| Kafka vs ClickHouse reporting | [ch-grafana-s16-kafka-vs-reporting](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-vs-reporting) |
-| Architecture wrap | [ch-grafana-s16-wrap](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-wrap) |
 
 ## Files
 

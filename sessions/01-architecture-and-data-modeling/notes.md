@@ -98,13 +98,10 @@ flowchart LR
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**OLTP vs OLAP**):
-
+**OLTP vs OLAP**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-oltp-olap
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 3. SQL Server and ClickHouse
 
@@ -210,13 +207,10 @@ That level is enough for this session.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Columnar storage and architecture**):
-
+**Columnar storage and architecture**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-columnar-architecture
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 6. Databases, tables and table engines
 
@@ -374,13 +368,10 @@ Deeper sorting-key choice and optimization come in a later session.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**MergeTree and ORDER BY**):
-
+**MergeTree and ORDER BY**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-mergetree-orderby
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 9. Partitioning
 
@@ -487,13 +478,10 @@ customer_email -> may be optional
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Partitioning and data types**):
-
+**Partitioning and data types**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-partition-types
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 12. Basic data model
 
@@ -600,13 +588,10 @@ Detailed cluster setup is outside this session — know the terms.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Modeling checkpoint**):
-
+**Modeling checkpoint**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-lab-modeling
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## Summary
 

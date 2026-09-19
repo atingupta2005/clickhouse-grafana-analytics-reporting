@@ -134,13 +134,10 @@ If the connection fails, check:
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Grafana UI and data sources**):
-
+**Grafana UI and data sources**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-grafana-basics
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 6. ClickHouse SQL in Grafana
 
@@ -279,13 +276,10 @@ Explore is useful for:
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**ClickHouse queries and time ranges**):
-
+**ClickHouse queries and time ranges**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-ch-query-time
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 11. Create a Panel
 
@@ -381,13 +375,10 @@ The query should provide a clear category field and a numeric measure.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Panels and KPIs**):
-
+**Panels and KPIs**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-panels-kpi
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 15. Dashboard
 
@@ -450,13 +441,10 @@ means that Grafana repeatedly retrieves data for that seed window.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Dashboard refresh**):
-
+**Dashboard refresh**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-dashboard-refresh
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 18. Query Validation
 

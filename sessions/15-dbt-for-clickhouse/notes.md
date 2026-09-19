@@ -77,13 +77,10 @@ This separation is useful because transformation outputs can be developed and ma
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Why dbt appears**):
-
+**Why dbt appears**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s15-dbt-role
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 3. dbt Project Structure
 
@@ -219,13 +216,10 @@ This separates transformation logic from the process used to execute it.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Sources and models**):
-
+**Sources and models**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s15-models
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 6. Model Materialization
 
@@ -495,13 +489,10 @@ This is not a rule that every system must follow. Transformation location should
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**dbt lab checkpoint**):
-
+**dbt lab checkpoint**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s15-lab-checkpoint
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 14. Where Should Transformation Happen?
 

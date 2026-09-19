@@ -54,17 +54,8 @@ Each session folder has:
 ## How to use in class
 
 1. Open the session `README.md`.
-2. Follow `notes.md` for concepts.
-3. When you see a **Checkpoint quiz** link, open it and submit once.
-4. Complete the guided work in `lab.md`.
-
-## Checkpoint quizzes
-
-Short knowledge checks are linked inside each session `notes.md` after logical topics.
-
-Quiz host: https://vmreact.eastus2.cloudapp.azure.com:18094
-
-Use the class login shared by the trainer (prefer the Login tab). One attempt per quiz.
+2. Follow `notes.md` for concepts. Quiz links appear after topics — use the login ID your trainer provided.
+3. Complete the guided work in `lab.md`.
 
 ## Lab data reminders
 

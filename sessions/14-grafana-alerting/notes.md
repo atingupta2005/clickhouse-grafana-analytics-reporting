@@ -152,13 +152,10 @@ You should understand the difference between:
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Alerting flow**):
-
+**Alerting flow**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s14-alert-flow
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 5. Evaluation Interval
 
@@ -516,13 +513,10 @@ Do not assume a particular third-party request-bin service is available.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Contact points and webhooks**):
-
+**Contact points and webhooks**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s14-contacts-webhook
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 14. Webhook Payloads
 
@@ -587,13 +581,10 @@ A student does **not** need to successfully send a webhook from their own laptop
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Alerting lab checkpoint**):
-
+**Alerting lab checkpoint**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s14-lab-checkpoint
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 16. Grafana Time Range for This Lab
 

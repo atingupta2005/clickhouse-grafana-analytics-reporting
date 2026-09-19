@@ -119,13 +119,10 @@ Do not use a table to display thousands of rows when a summary or chart answers 
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Dashboard organization**):
-
+**Dashboard organization**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-layout
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 3. Thresholds
 
@@ -190,13 +187,10 @@ Avoid displaying unnecessary statistical information in the legend when it does 
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Thresholds and units**):
-
+**Thresholds and units**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-thresholds-units
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 6. Field Configuration
 
@@ -266,13 +260,10 @@ This keeps the query easier to understand and usually reduces unnecessary dashbo
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Field config and transformations**):
-
+**Field config and transformations**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-transforms
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 8. Calculated Values
 
@@ -426,13 +417,10 @@ This creates a useful reporting flow without requiring additional applications.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Advanced dashboard lab checkpoint**):
-
+**Advanced dashboard lab checkpoint**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-lab-checkpoint
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 13. Annotations
 

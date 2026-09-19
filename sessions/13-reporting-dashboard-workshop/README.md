@@ -30,16 +30,6 @@ Dashboard name: **`Session 13 - Reporting Workshop`**
 
 **Seed:** Completed regions **1 / 3 / 5**; Region 2 + Completed empty; `sales_amount >= 2000` for high-value lines
 
-## Checkpoint quizzes
-
-After each topic block in `notes.md`, open the matching quiz and submit once. Class login is shared in class. Prefer **Login**. One attempt.
-
-| After topic | Quiz |
-|-------------|------|
-| Workshop goals | [ch-grafana-s13-workshop-plan](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-workshop-plan) |
-| KPI build | [ch-grafana-s13-kpi-build](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-kpi-build) |
-| Filters and layout | [ch-grafana-s13-filters-layout](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-filters-layout) |
-| Validation wrap | [ch-grafana-s13-validate-wrap](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-validate-wrap) |
 
 ## Files
 

@@ -144,13 +144,10 @@ If the fixed query works, investigate the variable configuration rather than the
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**OData setup and variables**):
-
+**OData setup and variables**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-setup-vars
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 5. Multiple Filter Conditions
 
@@ -251,13 +248,10 @@ Use a small, controlled set of values. Prefer proving a fixed `or` filter before
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Multi-value OData filters**):
-
+**Multi-value OData filters**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-multifilter
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 7. Date and Time Filtering
 
@@ -347,13 +341,10 @@ Start with a fixed `$orderby` expression. Introduce the variable only after the 
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Dates, $select, $orderby**):
-
+**Dates, $select, $orderby**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-dates-select
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 10. `$top` and `$skip`
 
@@ -501,13 +492,10 @@ Do not present it as a normal successful Region filter.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Advanced OData lab checkpoint**):
-
+**Advanced OData lab checkpoint**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-lab-checkpoint
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 14. Reducing Unnecessary API Data
 

@@ -27,16 +27,6 @@ Work with JSON structures and REST APIs as inputs for analytics and reporting.
 
 **Seed:** Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**
 
-## Checkpoint quizzes
-
-After each topic block in `notes.md`, open the matching quiz and submit once. Class login is shared in class. Prefer **Login**. One attempt.
-
-| After topic | Quiz |
-|-------------|------|
-| JSON objects and arrays | [ch-grafana-s06-json-basics](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-json-basics) |
-| JSON extraction | [ch-grafana-s06-json-extract](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-json-extract) |
-| REST and HTTP | [ch-grafana-s06-rest-http](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-rest-http) |
-| Pagination and JSON responses | [ch-grafana-s06-pagination](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-pagination) |
 
 ## Files
 

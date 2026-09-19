@@ -67,13 +67,10 @@ The important difference is that `TOP` is replaced by `LIMIT`.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**TOP vs LIMIT and dialect basics**):
-
+**TOP vs LIMIT and dialect basics**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s04-dialect-top-limit
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 3. Data Type Mapping
 
@@ -171,13 +168,10 @@ For reporting queries, use the ClickHouse conversion function that best matches 
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Types, NULL, CAST**):
-
+**Types, NULL, CAST**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s04-types-null-cast
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 6. CASE Expressions
 
@@ -432,13 +426,10 @@ During migration, check the window definition carefully:
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Functions, JOINs, windows migration**):
-
+**Functions, JOINs, windows migration**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s04-functions-joins
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 12. Common Migration Issues
 
@@ -581,13 +572,10 @@ The business logic remains the same:
 
 The SQL syntax is adapted for ClickHouse.
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Migration lab checkpoint**):
-
+**Migration lab checkpoint**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s04-migration-lab
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## Summary
 

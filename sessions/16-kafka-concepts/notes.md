@@ -282,13 +282,10 @@ The two groups can process the same event stream for different purposes.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Kafka concepts**):
-
+**Kafka concepts**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-basics
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 8. Events and Messages
 
@@ -465,13 +462,10 @@ Grafana
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Kafka vs ClickHouse reporting**):
-
+**Kafka vs ClickHouse reporting**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-vs-reporting
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 12. Kafka Jobs / Processing Concepts
 
@@ -613,13 +607,10 @@ Kafka is discussed as a possible upstream event-ingestion mechanism.
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Architecture wrap**):
-
+**Architecture wrap**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-wrap
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 15. When Kafka Is Required
 

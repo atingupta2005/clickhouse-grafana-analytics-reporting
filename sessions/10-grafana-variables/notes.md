@@ -118,13 +118,10 @@ That matches how labs filter `training.v_lab_orders` (view maps stored `Closed` 
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Why variables**):
-
+**Why variables**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-why-variables
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 6. Multi-value and the All option
 
@@ -185,13 +182,10 @@ WHERE region_id = ${region}
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Multi-value and formatting**):
-
+**Multi-value and formatting**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-multivalue-format
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 8. Dynamic filtering on `training.v_lab_orders`
 
@@ -308,13 +302,10 @@ Many ClickHouse panels simply rely on the dashboard time picker plus a time colu
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Cascading and time variables**):
-
+**Cascading and time variables**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-cascade-time
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 11. Variables in ClickHouse SQL
 
@@ -451,13 +442,10 @@ Save the dashboard after setting defaults so reloads behave the same for every s
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Variables lab checkpoint**):
-
+**Variables lab checkpoint**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-lab-defaults
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 16. Hands-on filter map
 

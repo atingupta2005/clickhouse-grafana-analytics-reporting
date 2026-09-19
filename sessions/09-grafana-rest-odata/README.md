@@ -31,16 +31,6 @@ Connect Grafana to the training REST and OData APIs with the **Infinity** data s
 
 **Seed:** Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**; training API has no auth
 
-## Checkpoint quizzes
-
-After each topic block in `notes.md`, open the matching quiz and submit once. Class login is shared in class. Prefer **Login**. One attempt.
-
-| After topic | Quiz |
-|-------------|------|
-| API-based reporting | [ch-grafana-s09-api-reporting](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-api-reporting) |
-| Requests, headers, parameters | [ch-grafana-s09-request-shape](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-request-shape) |
-| JSON roots: data vs value | [ch-grafana-s09-json-roots](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-json-roots) |
-| Infinity lab checkpoint | [ch-grafana-s09-infinity-lab](https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-infinity-lab) |
 
 ## Files
 

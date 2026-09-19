@@ -162,13 +162,10 @@ What relationships exist?
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**What is OData?**):
-
+**What is OData?**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-odata-intro
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 6. `$filter`
 
@@ -317,13 +314,10 @@ This is useful for reporting because the client receives only the required field
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**$filter and $select**):
-
+**$filter and $select**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-filter-select
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 12. `$orderby`
 
@@ -422,13 +416,10 @@ The
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**$top, $skip, $count**):
-
+**$top, $skip, $count**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-top-skip-count
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 16. `$search` (stretch / theory only)
 
@@ -482,13 +473,10 @@ JSON Response
 
 ---
 
-### Checkpoint quiz
-
-Open this short quiz after the topic above (**Combining OData options**):
-
+**Combining OData options**
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-combine-lab
 
-Use your class login (shared in class). Prefer **Login**. One attempt. You only see a submit confirmation — not a score.
+Use the login ID your trainer provided.
 
 ## 18. Relationships
 

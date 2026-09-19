@@ -136,10 +136,6 @@ LEFT JOIN
 
 ## 4. Join Considerations
 
-<!-- training-diagrams:v1 -->
-![Window function mental model](./assets/window-frame.svg)
-
-
 Joins are powerful, but analytical queries should use them carefully.
 
 Before joining tables, understand:

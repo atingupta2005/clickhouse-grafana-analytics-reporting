@@ -79,14 +79,15 @@ def main() -> None:
         ("02-clickhouse-sql", "notes.md", "## 1. SELECT", "ClickHouse SELECT clause order", "sql-clause-pipeline.svg",
          "flowchart LR\n    A[FROM] --> B[WHERE]\n    B --> C[GROUP BY]\n    C --> D[HAVING]\n    D --> E[ORDER BY]\n    E --> F[LIMIT]"),
         ("02-clickhouse-sql", "notes.md", "## 2. WHERE", "WHERE vs HAVING", "where-vs-having.svg", None),
-        ("02-clickhouse-sql", "notes.md", "## 5. DISTINCT", "From rows to a KPI", "aggregation-funnel.svg", None),
         ("02-clickhouse-sql", "notes.md", "# 6. Aggregate Functions", "From rows to a KPI", "aggregation-funnel.svg", None),
+        ("02-clickhouse-sql", "notes.md", "## 6. Aggregate Functions", "From rows to a KPI", "aggregation-funnel.svg", None),
         ("02-clickhouse-sql", "README.md", "## Session Overview", "ClickHouse SELECT clause order", "sql-clause-pipeline.svg", None),
 
         ("03-advanced-clickhouse-sql", "notes.md", "## 1. Working with Multiple Tables", "Joins build a reporting row", "join-to-report.svg",
          "flowchart LR\n    O[Orders] --> J[JOIN]\n    C[Customers] --> J\n    P[Products] --> J\n    J --> R[Report row]"),
         ("03-advanced-clickhouse-sql", "notes.md", "## 2. INNER JOIN", "INNER JOIN vs LEFT JOIN", "inner-vs-left.svg", None),
-        ("03-advanced-clickhouse-sql", "notes.md", "## 4. Join Considerations", "Window function mental model", "window-frame.svg", None),
+        ("03-advanced-clickhouse-sql", "notes.md", "## 7. Window Functions", "Window function mental model", "window-frame.svg", None),
+        ("03-advanced-clickhouse-sql", "notes.md", "# 7. Window Functions", "Window function mental model", "window-frame.svg", None),
         ("03-advanced-clickhouse-sql", "README.md", "## Session Overview", "Joins build a reporting row", "join-to-report.svg", None),
 
         ("04-sql-server-to-clickhouse", "notes.md", "## 1. SQL Server and ClickHouse", "SQL Server to ClickHouse migration", "migration-pipeline.svg",

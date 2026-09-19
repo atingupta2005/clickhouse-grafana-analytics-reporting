@@ -174,10 +174,6 @@ LIMIT 5;
 
 ## 5. DISTINCT
 
-<!-- training-diagrams:v1 -->
-![From rows to a KPI](./assets/aggregation-funnel.svg)
-
-
 `DISTINCT` returns unique values.
 
 For example, find the regions represented in the orders table:

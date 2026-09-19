@@ -60,7 +60,7 @@ Use the existing provisioned **ClickHouse** datasource. Prefer copying variables
 
 The dashboard opens with the existing variables available and the time range covering the complete training dataset.
 
-### Trainer tip
+### Tip
 
 Do not use **Last 30 days**. The seed data ends in June 2025.
 
@@ -115,7 +115,7 @@ Configure:
 
 The Stat panel displays the number of completed orders for the selected region and status values.
 
-### Trainer tip
+### Tip
 
 If the status variable is configured for `Completed`, keep it selected. If multiple status values are available, the query uses the existing multi-value variable syntax.
 
@@ -148,7 +148,7 @@ Configure:
 
 The panel displays total sales for the selected region, status, and dashboard time range.
 
-### Trainer tip
+### Tip
 
 The dashboard time range is fixed for this lab, but the query also demonstrates explicit seed-date filtering. This protects the panel from accidentally scanning outside the training dataset.
 
@@ -191,7 +191,7 @@ A monthly sales trend appears across the training data period.
 
 Changing the existing region variable changes the displayed trend.
 
-### Trainer tip
+### Tip
 
 Do not return order-level rows for a time-series panel. Aggregate at the required reporting grain first.
 
@@ -232,7 +232,7 @@ Panel title:
 
 The chart displays sales totals for the selected regions.
 
-### Trainer tip
+### Tip
 
 With the normal Completed seed, regions `1`, `3`, and `5` contain data. Region `2` with Completed is intentionally empty.
 
@@ -252,7 +252,7 @@ Configure the panel so that different value ranges are visually distinguishable.
 
 The Stat panel changes its visual state according to the configured thresholds.
 
-### Trainer tip
+### Tip
 
 Explain that thresholds affect presentation. They do not modify the ClickHouse result.
 
@@ -274,7 +274,7 @@ Repeat appropriate formatting for the `sales` field in the regional bar chart.
 
 Sales values are easier to read and compare.
 
-### Trainer tip
+### Tip
 
 Use Grafana field configuration for presentation. Do not convert numeric database values to formatted strings in SQL when Grafana still needs the numeric value.
 
@@ -320,7 +320,7 @@ Sales Amount
 
 The table displays no more than 100 matching rows and responds to the existing region/status selections.
 
-### Trainer tip
+### Tip
 
 The `LIMIT 100` is intentional. Do not remove it from the Core dashboard.
 
@@ -351,7 +351,7 @@ Keep `status` available when it helps explain the selected filter.
 
 The table is easier for a reporting user to read without changing the underlying ClickHouse query.
 
-### Trainer tip
+### Tip
 
 This is a presentation transformation. Do not use it as a replacement for database filtering.
 
@@ -389,7 +389,7 @@ Display the calculated value with a suitable number format.
 
 The panel contains the original sales and quantity values plus a calculated average value.
 
-### Trainer tip
+### Tip
 
 The calculation should remain numeric. Avoid converting sales or quantity into display strings before the calculation.
 
@@ -451,7 +451,7 @@ Session 12 - Advanced Dashboard Lab
 
 Selecting a region/status context and opening the dashboard link takes the user to the regional detail dashboard with the relevant variable context.
 
-### Trainer tip
+### Tip
 
 Use Grafana dashboard navigation rather than inventing an external URL.
 
@@ -476,7 +476,7 @@ Verify:
 
 All Core panels respond consistently to the same dashboard filters.
 
-### Trainer tip
+### Tip
 
 If a panel does not change, first check whether its query actually references the variable.
 
@@ -497,7 +497,7 @@ If region `2` is missing from the dropdown, add it (Session 10’s query variabl
 
 The affected panels can show no data because Region `2` has no Completed rows in the training seed.
 
-### Trainer tip
+### Tip
 
 This is an intentional seed condition. Do not change the query simply to manufacture a result.
 
@@ -552,13 +552,13 @@ Before finishing, verify:
 
 If time permits, demonstrate Grafana annotations using an available Grafana-supported annotation mechanism.
 
-Keep this instructor-led if the student role cannot create or save the required annotation configuration.
+Keep this as a shared demo if the student role cannot create or save the required annotation configuration.
 
 ### Expected result
 
 Students understand how event markers can be displayed against a time-series visualization.
 
-### Trainer tip
+### Tip
 
 Do not invent operational incidents or fake production events for the training dataset.
 
@@ -586,7 +586,7 @@ For REST, use root selector **`data`** and `page` / `page_size` (Session 09).
 
 Students see how an Infinity panel can complement ClickHouse-based panels without changing the provisioned datasource configuration.
 
-### Trainer tip
+### Tip
 
 Keep this as Stretch. Do not make the dashboard dependent on the Infinity panel for Core completion.
 

@@ -31,7 +31,7 @@ For this workshop, the reporting questions are:
 
 A useful dashboard does not expose every available field. Select fields that directly support the reporting requirement.
 
-### Trainer Tip
+### Tip
 
 Ask students to identify the **business question first**, then decide:
 
@@ -46,6 +46,10 @@ Avoid starting with the Grafana visualization type.
 ---
 
 ## 2. Choosing the Reporting Data Source
+
+<!-- training-diagrams:v2 -->
+![ClickHouse vs OData chooser](./assets/ch-vs-odata-chooser.svg)
+
 
 For the Core dashboard, use:
 
@@ -65,7 +69,7 @@ region_id
 
 Those reporting fields are available through the reporting view.
 
-### Trainer Tip
+### Tip
 
 Keep the workshop focused on the reporting view. Students do not need to reconstruct the underlying joins during this session.
 
@@ -113,7 +117,7 @@ A high-value line count can therefore be calculated as:
 countIf(sales_amount >= 2000)
 ```
 
-### Trainer Tip
+### Tip
 
 Explain the difference between:
 
@@ -142,7 +146,7 @@ The lab data intentionally has:
 
 This makes Region 2 useful for demonstrating validation and filter behavior.
 
-### Trainer Tip
+### Tip
 
 If a student selects Region 2 and receives an empty panel, this is not automatically a query error.
 
@@ -174,7 +178,7 @@ For the Q1 2023 requirement, the relevant period is:
 
 when using an exclusive upper boundary in a query.
 
-### Trainer Tip
+### Tip
 
 Do not use Grafana's relative `Last 30 days` range as the primary workshop range.
 
@@ -251,7 +255,7 @@ The region variable must support the actual Completed regions:
 
 If Region 2 is deliberately included for validation, selecting it with Completed should produce an empty result.
 
-### Trainer Tip
+### Tip
 
 Do not create a variable option that the Core lab later asks students to use but cannot actually be selected.
 
@@ -330,7 +334,7 @@ For example:
 Status eq 'Completed' and (RegionId eq 1 or RegionId eq 3)
 ```
 
-### Trainer Tip
+### Tip
 
 Do not demonstrate:
 
@@ -360,7 +364,7 @@ Examples:
 
 Avoid putting multiple unrelated metrics into one KPI unless the comparison itself is useful.
 
-### Trainer Tip
+### Tip
 
 Use meaningful panel titles rather than technical names such as:
 
@@ -419,7 +423,7 @@ or:
 Plant → Order Count
 ```
 
-### Trainer Tip
+### Tip
 
 Keep the number of dimensions limited. The workshop is about building a usable report, not exposing every field in the dataset.
 
@@ -441,7 +445,7 @@ Use transformations when they make the visualization easier to consume.
 
 Do not use a transformation to compensate for a query that could be more efficiently aggregated in ClickHouse.
 
-### Trainer Tip
+### Tip
 
 A good rule is:
 
@@ -496,7 +500,7 @@ The exact number displayed by a panel depends on its filters and time range.
 
 For example, a Q1 2023 panel should not be expected to equal the full-seed count.
 
-### Trainer Tip
+### Tip
 
 Validate the underlying query before troubleshooting the visualization.
 
@@ -541,7 +545,7 @@ GROUP BY region_id
 
 before returning the result to Grafana.
 
-### Trainer Tip
+### Tip
 
 Do not turn this session into a ClickHouse performance-tuning session. Introduce practical dashboard-level habits only.
 

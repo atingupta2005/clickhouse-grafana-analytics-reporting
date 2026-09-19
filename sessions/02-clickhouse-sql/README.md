@@ -10,7 +10,7 @@
 
 Open CloudBeaver, pick that connection, and run `SELECT version();` to confirm you are in.
 
-**Trainer tip:** Use the path `/cloudbeaver/` (not site-root `/#/` alone). If the navigator is empty, hard-refresh the browser.
+**Tip:** Use the path `/cloudbeaver/` (not site-root `/#/` alone). If the navigator is empty, hard-refresh the browser.
 
 ## Session Overview
 

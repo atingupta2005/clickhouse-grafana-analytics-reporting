@@ -25,7 +25,7 @@ The project uses:
 
 ## Step 1 — Identify the dbt Project
 
-The instructor opens the existing project and shows:
+In the Core walkthrough, review the existing project:
 
 ```text
 stacks/app/dbt/
@@ -49,7 +49,7 @@ Students can identify:
 - The source definitions.
 - The example transformation model.
 
-### Trainer Tip
+### Tip
 
 Do not ask students to create another dbt project. The Core lab uses the existing project so that the class can focus on the dbt workflow.
 
@@ -80,7 +80,7 @@ training_dbt
 
 Students understand that `dbt_project.yml` defines the dbt project and its project-level configuration.
 
-### Trainer Tip
+### Tip
 
 Do not confuse the project name with the ClickHouse target schema. The project is named `training_dbt`; the configured target schema is also `training_dbt`, but they represent different concepts.
 
@@ -130,7 +130,7 @@ profiles.yml
         +-- defines the database connection
 ```
 
-### Trainer Tip
+### Tip
 
 Do not expose or copy sensitive connection secrets into student notes or chat. The purpose of this step is to understand the profile structure and target.
 
@@ -166,7 +166,7 @@ Discuss the role of each source:
 
 Students understand that these are existing ClickHouse tables used as inputs to dbt models.
 
-### Trainer Tip
+### Tip
 
 A dbt source definition does not create a copy of the source table. It describes an existing database object that the dbt project consumes.
 
@@ -211,7 +211,7 @@ mart_sales_by_region
 
 Students can explain the purpose of the model without needing to write the SQL themselves.
 
-### Trainer Tip
+### Tip
 
 Focus on **data flow**, not line-by-line SQL syntax. Students already have SQL experience from earlier sessions.
 
@@ -239,7 +239,7 @@ The model should not modify the shared source tables in `training`.
 
 Students understand the separation between source data and dbt-managed analytical outputs.
 
-### Trainer Tip
+### Tip
 
 Emphasize that this separation is particularly useful in a class lab environment. Do not use `DROP` or `TRUNCATE` against `training.*` objects.
 
@@ -309,7 +309,7 @@ dbt test
 
 Students understand that successful SQL execution (`dbt run`) and data-quality validation (`dbt test`) are different checks — even when this lab project has not added YAML tests yet.
 
-### Trainer Tip
+### Tip
 
 Do not invent fake test YAML for Core. Stretch `dbt test` may report that there is nothing to test; that is an honest outcome for this project.
 
@@ -344,15 +344,14 @@ Use the discussion to distinguish:
 
 ### Expected Result
 
-Students can explain why the same transformation should not automatically be duplicated in every consuming application.
+You should be able to explain why the same transformation should not automatically be duplicated in every consuming application.
 
 ---
 
-# Instructor Stretch
-
+# Stretch (optional) — shared demo
 ## Step 10 — Check the dbt Container
 
-If the App VM Compose stack can start the optional profile, the instructor runs (from the App compose directory):
+If the App VM Compose stack can start the optional profile, from the App compose directory run:
 
 ```bash
 docker compose --profile dbt up -d dbt
@@ -376,15 +375,14 @@ Working directory inside the container should be the mounted project (`/dbt`).
 
 The `lab-dbt` container is available and can reach ClickHouse at the host configured in `profiles.yml` (default LAN `192.168.29.4:8123` via `CH_HOST`).
 
-### Trainer Tip
+### Tip
 
 If the profile or container is not available, stop the execution path and continue with the Core walkthrough. Do not modify unrelated services (Grafana, ClickHouse seed, gateway) during the session.
 
 ---
 
-## Step 11 — Instructor Runs `dbt run`
-
-From the existing `lab-dbt` container, the instructor runs:
+## Step 11 — Shared demo: `dbt run`
+From the existing `lab-dbt` container, run:
 
 ```bash
 dbt run
@@ -400,15 +398,14 @@ The expected target area is:
 training_dbt
 ```
 
-### Trainer Tip
+### Tip
 
 Do not treat a successful command as proof that the data is correct. Follow it with testing and database validation.
 
 ---
 
-## Step 12 — Instructor Runs `dbt test`
-
-After the model run completes, the instructor runs:
+## Step 12 — Shared demo: `dbt test`
+After the model run completes, run:
 
 ```bash
 dbt test
@@ -420,7 +417,7 @@ If the project still has **no** test YAML, dbt may report that there is nothing 
 
 If tests were added later, configured assertions run against the built models.
 
-### Trainer Tip
+### Tip
 
 Do not invent or inventively “fix” missing tests by changing shared `training` data. Prefer discussing what a `not_null` / `unique` test on `region` would mean for `mart_sales_by_region`.
 
@@ -444,11 +441,11 @@ Review the resulting columns and sample records.
 
 ### Expected Result
 
-The instructor can show that the dbt model has produced an analytical object in the `training_dbt` schema without modifying the source tables in `training`.
+Confirm that the dbt model has produced an analytical object in the `training_dbt` schema without modifying the source tables in `training`.
 
-### Trainer Tip
+### Tip
 
-The CloudBeaver validation is an instructor Stretch activity. Do not make student access to CloudBeaver or direct database execution a prerequisite for completing Core.
+The CloudBeaver validation is an optional Stretch activity. Do not make student access to CloudBeaver or direct database execution a prerequisite for completing Core.
 
 ---
 

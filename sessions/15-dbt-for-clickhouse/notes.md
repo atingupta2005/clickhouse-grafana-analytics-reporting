@@ -40,7 +40,7 @@ A typical analytics workflow can contain many SQL transformations. Without a str
 
 dbt addresses these questions by treating SQL transformations as maintainable project artifacts.
 
-**Trainer tip:** Keep the distinction clear: **dbt is not the database and it is not an ETL engine that replaces ClickHouse.** dbt orchestrates SQL transformations that are executed by the target database.
+**Tip:** Keep the distinction clear: **dbt is not the database and it is not an ETL engine that replaces ClickHouse.** dbt orchestrates SQL transformations that are executed by the target database.
 
 ---
 
@@ -128,7 +128,7 @@ training_dbt
 
 The configured target uses ClickHouse HTTP and the `training_rw` user.
 
-**Trainer tip:** Explain the difference between the two similarly named concepts:
+**Tip:** Explain the difference between the two similarly named concepts:
 
 - `dbt_project.yml` describes the dbt project.
 - `profiles.yml` describes how dbt connects to the target environment.
@@ -176,7 +176,7 @@ It also makes dependencies more understandable than hard-coding every table refe
 | Located in `training` | Intended to land in `training_dbt` |
 | Starting point | Transformation result |
 
-**Trainer tip:** Emphasize that declaring a source does not copy the source table. It describes an existing database object that the dbt model can read.
+**Tip:** Emphasize that declaring a source does not copy the source table. It describes an existing database object that the dbt model can read.
 
 ---
 
@@ -215,6 +215,10 @@ This separates transformation logic from the process used to execute it.
 
 ## 6. Model Materialization
 
+<!-- training-diagrams:v2 -->
+![Materialization types](./assets/materialization-types.svg)
+
+
 A dbt model can be materialized in different ways.
 
 Common concepts include:
@@ -249,7 +253,7 @@ An incremental model updates only part of the target rather than rebuilding the 
 
 This becomes useful for larger datasets and recurring pipelines, but it introduces additional design considerations.
 
-**Trainer tip:** Do not turn this into a detailed incremental-model implementation exercise. The session is focused on understanding the dbt workflow.
+**Tip:** Do not turn this into a detailed incremental-model implementation exercise. The session is focused on understanding the dbt workflow.
 
 ---
 
@@ -279,6 +283,10 @@ dbt defines and manages the transformation workflow; ClickHouse executes the SQL
 
 ## 8. Transformation Example
 
+<!-- training-diagrams:v2 -->
+![dbt model DAG to mart](./assets/model-dag-mart.svg)
+
+
 The existing `mart_sales_by_region.sql` demonstrates a reporting transformation using the available source tables.
 
 A simplified conceptual flow is:
@@ -300,7 +308,7 @@ The transformation can combine operational data and reference data to create a s
 
 This is an example of a **mart**: a dataset shaped for a particular analytical use case.
 
-**Trainer tip:** Focus on reading the existing SQL rather than asking students to rewrite it. The purpose of the Core walkthrough is to understand how the model fits into the dbt workflow.
+**Tip:** Focus on reading the existing SQL rather than asking students to rewrite it. The purpose of the Core walkthrough is to understand how the model fits into the dbt workflow.
 
 ---
 
@@ -380,9 +388,9 @@ Test
 
 A successful model run does not automatically mean the resulting data is correct.
 
-**Lab honesty:** the `stacks/app/dbt/` project currently has **no** test YAML. Teach the concepts above; do not invent project tests for Core. Instructor Stretch may show `dbt test` with nothing configured.
+**Lab honesty:** the `stacks/app/dbt/` project currently has **no** test YAML. Learn the concepts above; do not invent project tests for Core. The optional Stretch may show `dbt test` with nothing configured.
 
-**Trainer tip:** Explain this distinction carefully. `dbt run` answers whether the transformation executed successfully. `dbt test` checks defined data-quality expectations.
+**Tip:** Explain this distinction carefully. `dbt run` answers whether the transformation executed successfully. `dbt test` checks defined data-quality expectations.
 
 ---
 
@@ -515,7 +523,7 @@ Useful for:
 - Aggregation required specifically for visualization
 - Presentation-oriented transformations
 
-**Trainer tip:** Avoid presenting these as mutually exclusive choices. Real systems often use more than one layer.
+**Tip:** Avoid presenting these as mutually exclusive choices. Real systems often use more than one layer.
 
 ---
 
@@ -539,7 +547,7 @@ Students should understand:
 
 ### Stretch
 
-The instructor may demonstrate:
+The optional Stretch may demonstrate:
 
 ```text
 dbt run

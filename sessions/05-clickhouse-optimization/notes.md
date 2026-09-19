@@ -135,6 +135,10 @@ The sorting key should therefore be designed according to important query patter
 
 ## 4. Partitioning
 
+<!-- training-diagrams:v2 -->
+![Partition prune vs sort-key skip](./assets/partition-prune-vs-skip.svg)
+
+
 The training `orders` table uses:
 
 ```sql
@@ -336,6 +340,20 @@ Do not change join semantics merely for performance.
 ---
 
 ## 11. EXPLAIN
+
+<!-- training-diagrams:v2 -->
+![EXPLAIN mental model](./assets/explain-layers.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Parts] --> B[Columns]
+    B --> C[Filter]
+    C --> D[Aggregate]
+    D --> E[Result]
+```
+
 
 `EXPLAIN` helps inspect how ClickHouse plans or executes a query.
 

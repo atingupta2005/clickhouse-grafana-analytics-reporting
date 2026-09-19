@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" role="img">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="12" fill="#f8fafc"/>
+<text x="460" y="28" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Prefer half-open date ranges</text>
+<rect x="28" y="70" width="277.3333333333333" height="95" rx="10" fill="#2563eb"/>
+<text x="166.66666666666666" y="111.5" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">&gt;= start</text>
+<text x="166.66666666666666" y="127.5" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">include start</text>
+<path d="M307.3333333333333 117.5 H319.3333333333333" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="321.3333333333333" y="70" width="277.3333333333333" height="95" rx="10" fill="#ea580c"/>
+<text x="460.0" y="111.5" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">&lt; end</text>
+<text x="460.0" y="127.5" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">exclude end</text>
+<path d="M600.6666666666666 117.5 H612.6666666666666" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+<rect x="614.6666666666666" y="70" width="277.3333333333333" height="95" rx="10" fill="#059669"/>
+<text x="753.3333333333333" y="111.5" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">No overlap</text>
+<text x="753.3333333333333" y="127.5" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">safe buckets</text>
+<text x="460" y="222" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Example: day &gt;= '2023-01-01' AND day &lt; '2023-02-01'</text>
+</svg>

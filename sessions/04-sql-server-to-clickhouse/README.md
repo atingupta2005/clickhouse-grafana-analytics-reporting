@@ -49,7 +49,7 @@ Participants will work with representative SQL Server reporting queries and:
 
 Open CloudBeaver at `/cloudbeaver/`. If the LAN connection fails, use **ClickHouse training (Tailscale fallback RO)** or create a connection to `100.86.105.24`.
 
-SQL Server holds a compact sample; ClickHouse holds the full seed. Compare **logic and shape**, not identical row counts, unless the instructor provides a matched extract.
+SQL Server holds a compact sample; ClickHouse holds the full seed. Compare **logic and shape**, not identical row counts, unless a matched extract is provided.
 
 **Expected result:** SQL Server row counts are **much smaller** than ClickHouse. That is normal — do not treat mismatched totals as a failed migration.
 

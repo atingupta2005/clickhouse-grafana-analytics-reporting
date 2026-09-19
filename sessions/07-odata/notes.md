@@ -357,6 +357,10 @@ This can be used to retrieve the highest-value orders.
 
 ## 14. `$skip`
 
+<!-- training-diagrams:v2 -->
+![$skip/$top on ordered rows](./assets/odata-skip-top-window.svg)
+
+
 `$skip` skips a specified number of records.
 
 Example:

@@ -23,7 +23,7 @@ Open:
 
 **https://vmclickhouse.canadacentral.cloudapp.azure.com/grafana/**
 
-Sign in with the student credentials provided by the instructor:
+Sign in with the student credentials:
 
 * User: `student`
 * Password: `StudentLab!2026`
@@ -32,7 +32,7 @@ Do not use infrastructure administrator credentials.
 
 The **ClickHouse** data source is already provisioned. Prefer that data source for all panels in this lab.
 
-> Instructor demo only: “Add data source” is optional for trainers. Students should **not** create a second ClickHouse data source.
+> **Stretch (optional):** “Add data source” is optional. Do **not** create a second ClickHouse data source.
 
 > Tip: For queries that need `sales_amount`, `quantity`, and `region_id` together, use the lab view `training.v_lab_orders` (it joins orders + items + plants and maps `Closed` → `Completed`).
 
@@ -367,7 +367,7 @@ Restore the correct table name.
 
 Next, remove the date range from the time-series query and inspect the result.
 
-Discuss with the instructor why query validation is important before changing visualization settings.
+Discuss why query validation is important before changing visualization settings.
 
 ---
 

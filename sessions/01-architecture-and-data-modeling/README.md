@@ -12,7 +12,7 @@
 
 Open CloudBeaver, pick that connection, and run `SELECT version();` to confirm you are in.
 
-> **DDL / CREATE / INSERT:** the default student path is read-only. To practice creating tables you need `training_rw` plus your own database `training_student_<yourname>`. The instructor will provide write access when needed.
+> **DDL / CREATE / INSERT:** the default student path is read-only. To practice creating tables you need `training_rw` plus your own database `training_student_<yourname>`. Write access is provided when needed.
 
 ## Session Overview
 
@@ -140,7 +140,7 @@ flowchart TB
 3. **Sandbox path (if write access):** create `training_student_<yourname>`, build small MergeTree tables, insert sample rows, inspect parts and definitions.
 4. Relate table design (`ORDER BY`, `PARTITION BY`) to simple analytical filters.
 
-> **Trainer tip:** Most of the class can stay on the explore path. Use sandbox DDL for students who have `training_rw`, or as an instructor demo.
+> **Tip:** Prefer the explore path. Use sandbox DDL if you have `training_rw`.
 
 ## Expected Outcome
 

@@ -48,7 +48,7 @@ Each variable has:
 * **Include All option** — special “All” choice
 * **Default** — initial selection when the dashboard opens
 
-> **Trainer tip:** Create variables before panels. Empty `${region}` in SQL is a common first-day failure.
+> **Tip:** Create variables before panels. Empty `${region}` in SQL is a common first-day failure.
 
 ---
 
@@ -121,6 +121,10 @@ That matches how labs filter `training.v_lab_orders` (view maps stored `Closed` 
 
 ## 6. Multi-value and the All option
 
+<!-- training-diagrams:v2 -->
+![Multi-value equals vs IN](./assets/equals-vs-in.svg)
+
+
 <!-- training-diagrams:v1 -->
 ![Multi-value expansion](./assets/multivalue-ch-vs-odata.svg)
 
@@ -139,11 +143,15 @@ WHERE region_id IN (${region})
 WHERE status IN (${status:sqlstring})
 ```
 
-> **Trainer tip:** If students write `status = ${status}` with multi-value on, the panel breaks or returns wrong results. Teach `IN` + formatting early.
+> **Tip:** If you write `status = ${status}` with multi-value on, the panel breaks or returns wrong results. Teach `IN` + formatting early.
 
 ---
 
 ## 7. Variable formatting
+
+<!-- training-diagrams:v2 -->
+![Variable expansion in ClickHouse](./assets/variable-expansion.svg)
+
 
 Grafana formats multi-value expansions differently depending on the suffix:
 
@@ -364,7 +372,7 @@ Live REST facts:
 * Filters: `region_id`, `status`, `date_from` / `date_to` (aliases `from_date` / `to_date` also work)
 * Multi-value `${region}` in a single `region_id=` parameter is **not** a full multi-select API — turn Multi off for that panel, or prefer ClickHouse for multi-region
 
-> **Trainer tip:** If the Infinity panel is empty but the same URL works in the browser, check root selector **`data`**.
+> **Tip:** If the Infinity panel is empty but the same URL works in the browser, check root selector **`data`**.
 
 ---
 

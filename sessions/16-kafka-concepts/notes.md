@@ -236,6 +236,14 @@ For this course, the important example is a consumer that moves or processes ord
 
 ## 7. Consumer Groups
 
+<!-- training-diagrams:v2 -->
+![Two consumer groups on one topic](./assets/two-consumer-groups.svg)
+
+
+<!-- training-diagrams:v2 -->
+![Consumer group partitions and offsets](./assets/consumer-group-offsets.svg)
+
+
 A consumer group allows multiple consumers to work together.
 
 ```text
@@ -652,13 +660,8 @@ The key question is:
 
 ---
 
-## 17. Trainer Tips
+## 17. Tips
 
-- Keep the discussion focused on architecture rather than Kafka administration.
-- Reinforce the difference between **topic**, **partition**, and **consumer group**.
-- Use the same order-event example throughout the session.
-- Explain that multiple consumer groups can independently consume the same topic.
-- Emphasize that ordering is within a partition, not automatically across the entire topic.
-- When discussing ClickHouse, keep the course flow clear: Kafka is upstream; ClickHouse remains the analytics store.
-- Do not turn the optional Redpanda environment into a mandatory student exercise.
-- If students ask about production Kafka configuration, treat broker sizing, replication, security, and cluster operations as beyond the Core scope.
+- Keep the focus on architecture rather than Kafka administration.
+- Grafana continues to query ClickHouse; Kafka sits upstream of the reporting layer.
+- Partition ordering is per partition — not one global order across all partitions.

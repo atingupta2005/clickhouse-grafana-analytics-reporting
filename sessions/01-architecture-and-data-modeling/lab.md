@@ -15,7 +15,7 @@ SELECT version();
 SELECT currentDatabase();
 ```
 
-> **Need CREATE / INSERT?** Default access is read-only. For DDL practice the instructor will give you `training_rw` and you will use your own database `training_student_<yourname>`. Do **not** write into the `training` database.
+> **Need CREATE / INSERT?** Default access is read-only. For DDL practice you receive `training_rw` and you will use your own database `training_student_<yourname>`. Do **not** write into the `training` database.
 
 ---
 
@@ -72,7 +72,7 @@ The lab already has a normalized `training` schema (`orders`, `order_items`, `pl
 * For analytics on the lab data, use **`training.v_lab_orders`** (`sales_amount`, `quantity`, `region_id`, `status = 'Completed'`)
 * The normalized fact table `training.orders` does **not** have `quantity`, `sales_amount`, or `region_id` as columns — those come from the view (and joins)
 
-> **Trainer tip:** Run the explore path with the whole class first. Demo sandbox DDL once if write accounts are ready.
+> **Tip:** Start with the explore path.
 
 ---
 
@@ -474,7 +474,7 @@ ORDER BY month;
 
 Keep these simple — the goal is to confirm analytical access works.
 
-> **Trainer tip:** Completed rows on the view are about **300000**. Unique completed *orders* are about **125000**. Both can be “right” depending on whether you count view rows or distinct `order_id`.
+> **Tip:** Completed rows on the view are about **300000**. Unique completed *orders* are about **125000**. Both can be “right” depending on whether you count view rows or distinct `order_id`.
 
 ---
 

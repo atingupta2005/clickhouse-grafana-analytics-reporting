@@ -94,7 +94,7 @@ Compare:
 * Order of rows by `sales_amount`
 * Column shape (`order_id`, `order_date`, `sales_amount`)
 
-**Trainer tip:** Do not expect the top-5 `order_id` values to match across engines — the datasets differ in size. Check that both return five rows sorted by sales descending.
+**Tip:** Do not expect the top-5 `order_id` values to match across engines — the datasets differ in size. Check that both return five rows sorted by sales descending.
 
 ---
 

@@ -39,7 +39,7 @@ Understand these components:
 | Contact point | Defines where notifications are sent |
 | Notification policy | Determines how alerts are routed |
 
-### Trainer Tip
+### Tip
 
 Keep the first explanation simple:
 
@@ -103,7 +103,7 @@ Completed sales < target
 
 The target should be chosen for the scenario being demonstrated. It should not be presented as an actual business target from the training seed.
 
-### Trainer Tip
+### Tip
 
 Do not describe an arbitrary training threshold as a production business requirement.
 
@@ -169,7 +169,7 @@ The evaluation interval affects how quickly Grafana can detect a change.
 
 A shorter interval can detect changes sooner, while a longer interval reduces evaluation frequency.
 
-### Trainer Tip
+### Tip
 
 Do not equate evaluation interval with notification frequency.
 
@@ -178,6 +178,10 @@ The rule may be evaluated frequently while notification behavior is controlled s
 ---
 
 ## 6. Pending State
+
+<!-- training-diagrams:v2 -->
+![Alert state transitions](./assets/alert-state-machine.svg)
+
 
 <!-- training-diagrams:v1 -->
 ![Alert states](./assets/alert-states.svg)
@@ -231,6 +235,10 @@ Pending periods help avoid notifications caused by short-lived fluctuations.
 
 ## 7. No-Data Handling
 
+<!-- training-diagrams:v2 -->
+![Zero vs NoData vs Error](./assets/zero-nodata-error.svg)
+
+
 A query can return no usable data.
 
 This is different from a metric returning zero.
@@ -270,7 +278,7 @@ This makes Region 2 useful for demonstrating the difference between:
 - a valid zero/low metric
 - no returned data
 
-### Trainer Tip
+### Tip
 
 Explicitly ask:
 
@@ -340,7 +348,7 @@ The query should use the reporting view because the view contains the normalized
 
 Do not use `training.orders` for quantity, sales amount, or region-based reporting calculations.
 
-### Trainer Tip
+### Tip
 
 Keep the first alert simple. One query and one threshold are enough to demonstrate the complete lifecycle.
 
@@ -426,13 +434,13 @@ Webhook endpoint
 
 ### Core
 
-Students should understand the role of a contact point and inspect the configuration during the instructor demonstration.
+Understand the role of a contact point and inspect the configuration during the watch-along.
 
 ### Permission Note
 
 The `student` account may not have permission to create or save contact points.
 
-Therefore, creating a contact point is an instructor demonstration, not a required student Core task.
+Therefore, creating a contact point is a watch-along demonstration, not a required Core task for the student account.
 
 ---
 
@@ -456,7 +464,7 @@ This separates the alert condition from the destination.
 
 For example, the same alerting logic can remain unchanged while its notification destination is changed through routing configuration.
 
-### Trainer Tip
+### Tip
 
 Explain the difference clearly:
 
@@ -495,11 +503,10 @@ Possible consumers include:
 
 The training lab does not require students to build a webhook receiver.
 
-### Instructor Demo
+### Watch-along (admin account)
+The watch-along may use:
 
-The instructor may use:
-
-- an instructor-provided webhook URL, or
+- a provided webhook URL, or
 - a clearly identified public demonstration request endpoint
 
 Do not assume a particular third-party request-bin service is available.
@@ -521,7 +528,7 @@ The useful concepts to inspect are:
 
 The exact payload structure should be inspected from the Grafana version and configuration used in the lab rather than invented in the training material.
 
-### Trainer Tip
+### Tip
 
 The goal is to teach students how to read and use the payload, not to turn the session into webhook application development.
 
@@ -554,7 +561,7 @@ Contact point
 Webhook
 ```
 
-The instructor should demonstrate the test using the available Grafana administrator account.
+Use the Grafana administrator account for the test demonstration.
 
 Students can observe:
 
@@ -608,7 +615,7 @@ with password:
 StudentLab!2026
 ```
 
-The instructor administrator account is:
+The Grafana administrator account is:
 
 ```text
 admin
@@ -624,8 +631,8 @@ The student account may not have permission to create or save alert rules or con
 
 Therefore:
 
-- Alert creation is an instructor Core demonstration.
-- Contact-point creation is an instructor Core demonstration.
+- Alert creation is a Core watch-along step (admin account).
+- Contact-point creation is a Core watch-along step (admin account).
 - Student recreation is Stretch only where permissions allow.
 - The session does not depend on students having administrator privileges.
 

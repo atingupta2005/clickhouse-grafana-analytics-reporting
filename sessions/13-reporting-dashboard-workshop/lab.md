@@ -55,7 +55,7 @@ Session 13 - Reporting Workshop
 
 A new empty dashboard is available for building the workshop report.
 
-### Trainer Tip
+### Tip
 
 Students should use the existing **ClickHouse** datasource. Do not create another ClickHouse datasource.
 
@@ -76,7 +76,7 @@ Use the absolute time range for the Core dashboard.
 
 The dashboard is working against the complete available seed period.
 
-### Trainer Tip
+### Tip
 
 Do not use **Last 30 days**. The seed ends on `2025-06-18`, so a current relative range can produce empty results.
 
@@ -133,7 +133,7 @@ The Completed lab data includes regions:
 
 Region `2` may be available as a selectable region and is useful for validation.
 
-### Trainer Tip
+### Tip
 
 Do not assume Region 2 should show Completed data. The seed intentionally has no Completed data for Region 2.
 
@@ -177,7 +177,7 @@ All
 
 The Plant variable lists plant IDs for the selected region(s). Changing Region refreshes Plant.
 
-### Trainer Tip
+### Tip
 
 Use the values returned by the lab data. Do not manually invent plant names. If Plant is empty, check that Region has a selection (or All).
 
@@ -209,7 +209,7 @@ Completed
 
 The dashboard displays a Status filter with `Completed` selected.
 
-### Trainer Tip
+### Tip
 
 The workshop reporting status is `Completed`. Do not substitute the stored source status.
 
@@ -250,7 +250,7 @@ The Stat panel displays approximately:
 
 with the default full-seed filters.
 
-### Trainer Tip
+### Tip
 
 The expected value is approximate because the seed validation target is approximately 125,000 distinct Completed orders.
 
@@ -289,7 +289,7 @@ Completed Revenue
 
 The panel displays the Completed revenue for the selected filters and dashboard time range.
 
-### Trainer Tip
+### Tip
 
 Do not hard-code a revenue value into the dashboard. The value must respond to the Region, Plant, Status, and dashboard time filters.
 
@@ -326,7 +326,7 @@ sales_amount >= 2000
 
 The value changes when dashboard filters change.
 
-### Trainer Tip
+### Tip
 
 This is a **line-level** metric. Do not describe it as the number of high-value orders.
 
@@ -372,7 +372,7 @@ With the default Completed selection, the meaningful Completed regions are:
 5
 ```
 
-### Trainer Tip
+### Tip
 
 If the Region filter is set to Region 2 with Status `Completed`, the panel should contain no Completed data.
 
@@ -410,7 +410,7 @@ Revenue by Plant
 
 The panel displays revenue grouped by plant and responds to the dashboard filters.
 
-### Trainer Tip
+### Tip
 
 Do not manually type plant names. The reporting view supplies the plant identifiers.
 
@@ -458,7 +458,7 @@ This is expected because:
 Region 2 + Completed = empty
 ```
 
-### Trainer Tip
+### Tip
 
 This test is useful for distinguishing a valid empty result from an incorrect query.
 
@@ -508,7 +508,7 @@ The dashboard now represents the Q1 2023 reporting period rather than the comple
 
 The KPI values should change because the time range has changed.
 
-### Trainer Tip
+### Tip
 
 Do not expect the Q1 2023 values to match the full-seed values.
 
@@ -569,7 +569,7 @@ Completed data is present for:
 
 Region `2` should not appear in this Completed result.
 
-### Trainer Tip
+### Tip
 
 This query is a useful troubleshooting query when students believe the Region variable is not working.
 
@@ -662,7 +662,7 @@ Root selector: value
 
 The panel receives OData records from the `Orders` entity set.
 
-### Trainer Tip
+### Tip
 
 This is Stretch because the Core dashboard is already complete using ClickHouse.
 
@@ -702,6 +702,6 @@ A combined filter can therefore look like:
 Status eq 'Completed' and (RegionId eq 1 or RegionId eq 3)
 ```
 
-### Trainer Tip
+### Tip
 
 Do not make multi-value OData variable construction a Core requirement. The purpose of this Stretch is to demonstrate the difference between ClickHouse SQL filtering and OData `$filter`.

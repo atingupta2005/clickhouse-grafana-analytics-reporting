@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 260" role="img">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="12" fill="#f8fafc"/>
+<text x="460" y="28" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">$skip is not a page number</text>
+<rect x="40" y="50" width="400" height="165" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="40" y="50" width="400" height="38" rx="12" fill="#ea580c"/>
+<rect x="40" y="72" width="400" height="16" fill="#ea580c"/>
+<text x="240" y="76" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Page thinking</text>
+<text x="60" y="112" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Page 3 of size 10</text>
+<text x="60" y="134" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Students may write skip=3</text>
+<rect x="480" y="50" width="400" height="165" rx="12" fill="#ffffff" stroke="#cbd5e1"/>
+<rect x="480" y="50" width="400" height="38" rx="12" fill="#059669"/>
+<rect x="480" y="72" width="400" height="16" fill="#059669"/>
+<text x="680" y="76" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Correct offset</text>
+<text x="500" y="112" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">skip = (page-1)*size</text>
+<text x="500" y="134" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Page 3 size 10 =&gt; skip=20</text>
+<text x="460" y="242" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Compute skip from page size; keep $orderby stable</text>
+</svg>

@@ -168,6 +168,10 @@ Detailed join performance optimization is outside this session.
 
 ## 5. CTEs
 
+<!-- training-diagrams:v2 -->
+![CTE vs subquery](./assets/cte-vs-subquery.svg)
+
+
 A Common Table Expression (CTE) allows a query to define a temporary named result that can then be used by the main query.
 
 The syntax is:
@@ -265,6 +269,23 @@ Subqueries are useful when one calculation is required before another calculatio
 ---
 
 ## 7. Window Functions
+
+<!-- training-diagrams:v2 -->
+![GROUP BY vs window](./assets/groupby-vs-window.svg)
+
+
+<!-- training-diagrams:v2 -->
+![Window function on sample rows](./assets/window-anatomy-rows.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart TB
+    R[Detail rows] --> P[PARTITION BY region]
+    P --> W[sum OVER window]
+    W --> O[Same rows + region_sales]
+```
+
 
 <!-- training-diagrams:v1 -->
 ![Window function mental model](./assets/window-frame.svg)
@@ -368,6 +389,10 @@ They differ mainly in how they handle ties.
 ---
 
 ## 9. Running Totals
+
+<!-- training-diagrams:v2 -->
+![Running total over dates](./assets/running-total.svg)
+
 
 A running total calculates a cumulative value as rows progress.
 

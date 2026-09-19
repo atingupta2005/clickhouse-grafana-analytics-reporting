@@ -100,7 +100,7 @@ Use the absolute dashboard time range:
 
 A new panel is available with the Infinity datasource selected.
 
-### Trainer Tip
+### Tip
 
 Do not create another datasource. The lab environment already contains the required Infinity datasource.
 
@@ -132,7 +132,7 @@ The panel receives the OData response and displays order records.
 
 The records are contained in the OData `value` collection.
 
-### Trainer Tip
+### Tip
 
 If no rows appear, check the following before changing anything else:
 
@@ -197,7 +197,7 @@ The panel changes when the selected region changes.
 
 The OData query is constructed from the Grafana variable rather than requiring the region value to be changed manually in the URL.
 
-### Trainer Tip
+### Tip
 
 The important pattern is:
 
@@ -247,7 +247,7 @@ Status eq 'Completed'
 
 The panel displays only matching records.
 
-### Trainer Tip
+### Tip
 
 `RegionId` is numeric, while `Status` is a string.
 
@@ -291,7 +291,7 @@ RegionId eq <region> and Status eq 'Completed'
 
 Each valid region returns matching `Completed` records.
 
-### Trainer Tip
+### Tip
 
 Use the query preview or inspector to verify the actual URL generated after Grafana substitutes the variables.
 
@@ -313,7 +313,7 @@ https://vmclickhouse.canadacentral.cloudapp.azure.com/odata/Orders?$filter=(Regi
 
 The query returns `Completed` records from Region 1 or Region 3.
 
-### Trainer Tip
+### Tip
 
 Parentheses make the intended logic clear:
 
@@ -349,7 +349,7 @@ The panel returns no matching records.
 
 This is an expected business-data result because Region 2 has no `Completed` records in the lab data.
 
-### Trainer Tip
+### Tip
 
 An empty result does not necessarily mean that the query failed.
 
@@ -398,7 +398,7 @@ and OrderDate lt 2023-04-01
 
 With `region = 1` (or 3/5) and `status = Completed`, the panel returns Completed orders in **Q1 2023** for that region.
 
-### Trainer Tip
+### Tip
 
 First prove this URL works with a fixed region (for example `RegionId eq 3`) in the browser or Infinity. Then restore `${region}` / `${status}`.
 
@@ -428,7 +428,7 @@ Combine `$select` with the existing filter when required.
 
 The response contains only the requested fields.
 
-### Trainer Tip
+### Tip
 
 `$select` is useful when the panel does not need every field returned by the entity set.
 
@@ -454,7 +454,7 @@ https://vmclickhouse.canadacentral.cloudapp.azure.com/odata/Orders?$select=Order
 
 The records are returned with the newest order dates first.
 
-### Trainer Tip
+### Tip
 
 Do not introduce arbitrary sort fields.
 
@@ -480,7 +480,7 @@ https://vmclickhouse.canadacentral.cloudapp.azure.com/odata/Orders?$select=Order
 
 The query returns no more than 20 records.
 
-### Trainer Tip
+### Tip
 
 `$top` is useful when a panel needs only a limited number of records.
 
@@ -528,7 +528,7 @@ $top=20
 $skip=40
 ```
 
-### Trainer Tip
+### Tip
 
 `$skip` is an OData query option.
 
@@ -572,7 +572,7 @@ and:
 Invalid query / response
 ```
 
-### Trainer Tip
+### Tip
 
 When a Grafana panel is empty, do not immediately change the panel visualization.
 
@@ -675,7 +675,7 @@ Use the variable in `$select`.
 
 Changing the variable changes the fields returned by the OData request.
 
-### Trainer Tip
+### Tip
 
 Use controlled values.
 
@@ -745,7 +745,7 @@ Build the final OData URL from controlled Grafana values.
 
 Changing the selected date values changes the OData result.
 
-### Trainer Tip
+### Tip
 
 Validate the generated URL before troubleshooting the panel.
 
@@ -940,8 +940,7 @@ Expected: records return.
 
 ---
 
-# Trainer Troubleshooting Guide
-
+# Troubleshooting guide
 ## Problem: Panel is completely empty
 
 Check:

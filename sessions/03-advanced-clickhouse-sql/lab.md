@@ -18,7 +18,7 @@ Use the existing `training` database.
 
 **Reporting view:** use **`training.v_lab_orders`** for order sales/quantity/region. Statuses in the seed: `Open`, `Shipped`, `Completed`, `Cancelled` (no `Pending`).
 
-**Trainer tip:** On large JOINs, add `LIMIT 100` (or filter by date/status) so CloudBeaver stays responsive.
+**Tip:** On large JOINs, add `LIMIT 100` (or filter by date/status) so CloudBeaver stays responsive.
 
 ---
 
@@ -173,7 +173,7 @@ HAVING order_rows < 1000
 ORDER BY order_rows;
 ```
 
-**Trainer tip:** If you only need to demo `LEFT JOIN` + `IS NULL`, create a tiny inline list of fictional IDs and left-join to `customers` — do not expect empty customers on the lab data.
+**Tip:** If you only need to try `LEFT JOIN` + `IS NULL`, create a tiny inline list of fictional IDs and left-join to `customers` — do not expect empty customers on the lab data.
 
 ### Discussion
 

@@ -79,7 +79,7 @@ Record:
 
 Discuss why selecting only required columns can reduce unnecessary data processing.
 
-**Trainer tip:** Region 2 is fine for any-status demos; for Completed use region 1 / 3 / 5.
+**Tip:** Region 2 is fine for any-status checks; for Completed use region 1 / 3 / 5.
 
 ---
 

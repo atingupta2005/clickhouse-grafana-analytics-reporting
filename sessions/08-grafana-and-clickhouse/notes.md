@@ -92,7 +92,7 @@ The exact settings depend on how ClickHouse is exposed in the training environme
 
 The **ClickHouse** data source is **already provisioned** for students. Select it in Explore and panels — do not create another one.
 
-**Instructor demo only:** “Add data source” / connection form can be shown by the trainer. Students should skip adding a second ClickHouse source.
+**Stretch (optional):** “Add data source” / connection form can be shown once on a shared screen. Skip adding a second ClickHouse source.
 
 Typical connection fields (for understanding, not student setup):
 
@@ -121,7 +121,7 @@ Do not place administrator credentials in dashboards or queries.
 
 Confirm the provisioned ClickHouse data source works (Explore query or the data-source Test button if visible).
 
-If the connection fails, check with the instructor before changing any settings.
+If the connection fails, ask for help before changing any settings.
 
 A successful connection confirms that Grafana can communicate with ClickHouse using the configured settings.
 
@@ -432,6 +432,10 @@ means that Grafana repeatedly retrieves data for that seed window.
 ---
 
 ## 18. Query Validation
+
+<!-- training-diagrams:v2 -->
+![Empty vs broken query](./assets/empty-vs-broken.svg)
+
 
 Before saving a panel, verify:
 

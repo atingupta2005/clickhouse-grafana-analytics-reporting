@@ -40,7 +40,7 @@ Completed rows exist for **region_id 1, 3, and 5** (not 2 / 4 / 6).
 
 **Statuses in the seed:** `Open`, `Shipped`, `Completed`, `Cancelled` — there is no `Pending`.
 
-**Trainer tip:** Prefer aggregates or `LIMIT` on detail queries. The view is large; unbounded `SELECT` can hit result-row limits.
+**Tip:** Prefer aggregates or `LIMIT` on detail queries. The view is large; unbounded `SELECT` can hit result-row limits.
 
 ---
 

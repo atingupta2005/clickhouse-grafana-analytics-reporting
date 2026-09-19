@@ -102,6 +102,10 @@ LIMIT 100;
 
 ## 3. ORDER BY
 
+<!-- training-diagrams:v2 -->
+![SQL ORDER BY vs MergeTree ORDER BY](./assets/orderby-sql-vs-mergetree.svg)
+
+
 `ORDER BY` controls the order of rows returned by a query.
 
 ```sql
@@ -403,6 +407,18 @@ String functions are useful for filtering, formatting and preparing values for r
 ---
 
 ## 10. Date and Time Functions
+
+<!-- training-diagrams:v2 -->
+![Half-open date ranges](./assets/date-half-open.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[">= start"] --> B["< end"]
+    B --> C[Safe month bucket]
+```
+
 
 Reporting frequently groups data by date or time period.
 

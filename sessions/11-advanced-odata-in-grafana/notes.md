@@ -51,7 +51,7 @@ Parser: JSON
 Root selector: value
 ```
 
-### Trainer tip
+### Tip
 
 If students can open an OData URL in the browser but the Grafana panel is empty, check the Infinity parser and root selector before changing the OData query.
 
@@ -97,7 +97,7 @@ If the selected value is `Completed`, the effective expression is:
 $filter=Status eq 'Completed'
 ```
 
-### Trainer tip
+### Tip
 
 The quotes around a string value are part of the OData expression.
 
@@ -125,7 +125,7 @@ Completed
 
 This keeps the generated OData expression predictable.
 
-### Trainer tip
+### Tip
 
 When troubleshooting, first replace the variable with a fixed value.
 
@@ -181,13 +181,17 @@ AND
 Completed
 ```
 
-### Trainer tip
+### Tip
 
 When combining `AND` and `OR`, use explicit parentheses. They make the intended business condition easier to understand and troubleshoot.
 
 ---
 
 ## 6. Multi-Value Variables
+
+<!-- training-diagrams:v2 -->
+![Multi-value to OData OR chain](./assets/odata-or-chain.svg)
+
 
 A multi-value Grafana variable can represent several selected regions.
 
@@ -236,9 +240,9 @@ The final substituted text must be valid OData syntax, such as:
 
 **Do not reuse Session 10 ClickHouse formats** (`IN (${region})`, `${status:sqlstring}`) inside OData `$filter`. Those formats are for SQL panels only. Verify the actual URL after Grafana substitution (query inspector).
 
-### Trainer tip
+### Tip
 
-Use a small, controlled set of values for classroom demonstrations. Prefer proving a fixed `or` filter before attempting multi-value format strings.
+Use a small, controlled set of values. Prefer proving a fixed `or` filter before attempting multi-value format strings.
 
 ---
 
@@ -276,7 +280,7 @@ Example (Region 3 + Completed + Q1 2023):
 /odata/Orders?$filter=RegionId eq 3 and Status eq 'Completed' and OrderDate ge 2023-01-01 and OrderDate lt 2023-04-01&$top=20
 ```
 
-### Trainer tip
+### Tip
 
 Start with that fixed Q1 2023 filter, then introduce `${region}` / `${status}`. Do not invent other date literal formats for this lab service.
 
@@ -300,7 +304,7 @@ The practical reason is simple:
 
 A controlled Grafana variable can also be used to select from predefined field sets.
 
-### Trainer tip
+### Tip
 
 Keep dynamic `$select` values controlled. Do not allow arbitrary query expressions from free-form user input.
 
@@ -324,13 +328,17 @@ $orderby=OrderDate desc
 
 A controlled Grafana variable can allow the dashboard user to choose from predefined sort fields.
 
-### Trainer tip
+### Tip
 
 Start with a fixed `$orderby` expression. Introduce the variable only after the fixed query works.
 
 ---
 
 ## 10. `$top` and `$skip`
+
+<!-- training-diagrams:v2 -->
+![$skip is not a page number](./assets/skip-vs-page.svg)
+
 
 `$top` limits the number of records returned.
 
@@ -358,9 +366,9 @@ Page 3 → $skip=40 & $top=20
 
 `$skip` is an offset, not a page number.
 
-### Trainer tip
+### Tip
 
-Keep the `$orderby` consistent when demonstrating pagination. Otherwise, the relationship between pages can become difficult to explain.
+Keep the `$orderby` consistent when testing pagination. Otherwise, the relationship between pages can become difficult to explain.
 
 ---
 
@@ -388,7 +396,7 @@ $top / $skip
 
 Grafana variables can replace controlled values within those components.
 
-### Trainer tip
+### Tip
 
 Build complex URLs incrementally:
 
@@ -430,7 +438,7 @@ individual records
 
 The panel should operate on the records inside `value`.
 
-### Trainer tip
+### Tip
 
 If the browser shows valid JSON but Grafana shows no rows, verify:
 
@@ -466,7 +474,7 @@ This demonstrates the difference between:
 - Failed HTTP request
 - Incorrect Infinity configuration
 
-### Trainer tip
+### Tip
 
 Use Region 2 + Completed deliberately as the empty-result test.
 
@@ -534,7 +542,7 @@ Therefore:
 
 The same principle applies to related-entity expansion in general.
 
-### Trainer tip
+### Tip
 
 Make the distinction explicit:
 
@@ -611,7 +619,7 @@ Do not use Last 30 days as the primary range.
 
 ---
 
-## 18. Trainer Tips — Common Issues
+## 18. Common issues
 
 ### Region 2 + Completed
 
@@ -639,9 +647,7 @@ Use:
 
 ### Provisioned datasource
 
-Use the existing Infinity datasource.
-
-Students do not need to create a datasource for the Core lab.
+Use the existing Infinity datasource. You do not need to create a datasource for the Core lab.
 
 ### Shared ClickHouse data
 
@@ -651,7 +657,7 @@ The ClickHouse lab user is:
 training_ro
 ```
 
-Students should not attempt DDL against the `training` database.
+Do not attempt DDL against the `training` database.
 
 ### Unsupported features
 
@@ -663,13 +669,11 @@ $search
 Orders(id)
 ```
 
----
-
-## 19. Teaching Emphasis
+## 19. What to take away
 
 The main lesson is not simply writing a longer OData URL.
 
-Students should understand the relationship:
+Understand the relationship:
 
 ```text
 Grafana variable
@@ -683,4 +687,4 @@ JSON response
 Grafana visualization
 ```
 
-The practical objective is to build dashboards where controlled user selections change the OData request without manually rewriting the query.
+The practical objective is to build dashboards where controlled selections change the OData request without manually rewriting the query.

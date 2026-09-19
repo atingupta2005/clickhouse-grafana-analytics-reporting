@@ -14,7 +14,6 @@ flowchart LR
     C --> D[Detail]
 ```
 
-
 A dashboard should answer a reporting question quickly. Organize panels so that users can move from summary to detail:
 
 1. KPI/stat panels
@@ -25,7 +24,7 @@ A dashboard should answer a reporting question quickly. Organize panels so that 
 
 Keep related panels together. Avoid placing many panels with different purposes in the same row.
 
-### Trainer tip
+### Tip
 
 Start with the question the dashboard should answer, then decide which panel type supports that question. Do not start by adding panels simply because Grafana provides them.
 
@@ -35,7 +34,6 @@ Start with the question the dashboard should answer, then decide which panel typ
 
 <!-- training-diagrams:v1 -->
 ![Match viz to the question](./assets/panel-purpose-map.svg)
-
 
 ### Stat
 
@@ -117,7 +115,7 @@ ORDER BY order_date DESC
 LIMIT 100
 ```
 
-### Trainer tip
+### Tip
 
 Do not use a table to display thousands of rows when a summary or chart answers the same question.
 
@@ -137,7 +135,7 @@ Examples:
 
 Do not select arbitrary thresholds simply to demonstrate the feature. When the business target is not defined, explain the threshold as a dashboard-formatting example rather than a business rule.
 
-### Trainer tip
+### Tip
 
 Threshold colors and ranges are presentation rules. They do not change the underlying query result.
 
@@ -168,7 +166,7 @@ is usually less useful to a reporting user than:
 125,000
 ```
 
-### Trainer tip
+### Tip
 
 Formatting should be applied at the Grafana field/panel level when the underlying numeric value is still needed for calculations.
 
@@ -222,7 +220,6 @@ The database values remain unchanged. Grafana controls their presentation.
 <!-- training-diagrams:v1 -->
 ![Transform pipeline](./assets/transform-pipeline.svg)
 
-
 Transformations modify the data returned to a panel before visualization.
 
 They are useful when the query already returns the required information but the dashboard needs additional shaping.
@@ -248,7 +245,7 @@ quantity
 
 A transformation can organize or rename these fields for presentation without changing the underlying ClickHouse query.
 
-### Trainer tip
+### Tip
 
 Use SQL for database-level filtering, aggregation, and calculations when practical. Use Grafana transformations for presentation-level shaping.
 
@@ -268,7 +265,7 @@ average value = sales / quantity
 
 The calculation can be performed using a Grafana transformation when appropriate.
 
-### Trainer tip
+### Tip
 
 Make sure the source fields are numeric and that division-by-zero cases are considered.
 
@@ -336,7 +333,7 @@ Do **not** write `status = ${status:sqlstring}` when Multi-value is on — that 
 
 The exact variable configuration should match the existing Session 10 dashboard pattern (ClickHouse panels only).
 
-### Trainer tip
+### Tip
 
 Do not copy ClickHouse variable syntax into Infinity OData queries.
 
@@ -368,7 +365,7 @@ The link should pass useful context when possible.
 
 For example, a regional dashboard can receive a selected region through a dashboard variable.
 
-### Trainer tip
+### Tip
 
 Keep drill-down paths short. The user should always understand where the link will take them.
 
@@ -377,6 +374,18 @@ Do not invent links to external systems that are not part of the lab.
 ---
 
 ## 12. Drill-Down Design
+
+<!-- training-diagrams:v2 -->
+![Drill-down navigation](./assets/drilldown-map.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    A[Overview] --> B[Click region]
+    B --> C[Detail dash]
+    C --> D[Table]
+```
 
 A drill-down should answer the next natural question.
 
@@ -411,7 +420,7 @@ They can be useful for marking events such as:
 
 For this course lab, annotations are Stretch because they depend on additional event data and are not required to demonstrate the core dashboard concepts.
 
-### Trainer tip
+### Tip
 
 Do not create artificial operational events simply to populate an annotation timeline.
 
@@ -540,26 +549,3 @@ A detail table without filtering or `LIMIT` can create unnecessary load and poor
 
 ---
 
-## 16. Live Teaching Flow
-
-Use the following progression during the session:
-
-```text
-Existing dashboard
-      ↓
-Organize layout
-      ↓
-Add KPI/stat panels
-      ↓
-Add trend and comparison charts
-      ↓
-Format fields and thresholds
-      ↓
-Apply transformation/calculated value
-      ↓
-Add navigation/drill-down
-      ↓
-Review query performance
-```
-
-Keep the dashboard focused on the reporting task rather than demonstrating every Grafana option.

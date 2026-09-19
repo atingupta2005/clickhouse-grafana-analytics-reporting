@@ -42,7 +42,7 @@ Set time range to **absolute**:
 
 > Do not leave **Last 30 days**. Seed data ends mid-2025; relative “last month” in 2026 is empty.
 
-> **Trainer tip:** Confirm the time picker shows absolute dates before anyone builds SQL panels.
+> **Tip:** Confirm the time picker shows absolute dates before you build SQL panels.
 
 ---
 
@@ -121,7 +121,7 @@ ORDER BY plant_id
 2. On the dashboard, change **Region** (e.g. 3 only, then 1 only).
 3. Confirm the **Plant** list changes.
 
-> **Trainer tip:** If Plant stays empty, Region has no selection, or the plant query is missing `WHERE region_id IN (${region})`.
+> **Tip:** If Plant stays empty, Region has no selection, or the plant query is missing `WHERE region_id IN (${region})`.
 
 **Expected result:** Plant options follow the selected region(s). Seed has 40 plants across 6 regions.
 

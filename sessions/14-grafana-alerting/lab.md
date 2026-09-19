@@ -1,14 +1,13 @@
 # Session 14 — Grafana Alerting and Generic Webhooks
 
-## Core Lab — Student Observation and Instructor Demonstration
-
+## Core Lab — Observation and watch-along
 ### Lab Scope
 
 The Core path is designed for all students, including students whose Grafana account cannot create or save alerting resources.
 
-Students observe the instructor's alert configuration and reproduce the reasoning behind each step.
+Watch the alert configuration (admin account) and reproduce the reasoning behind each step.
 
-The instructor performs configuration requiring administrator permissions.
+Configuration that requires administrator permissions is done in the watch-along.
 
 ---
 
@@ -29,11 +28,11 @@ Password: StudentLab!2026
 
 ### Expected Result
 
-The Grafana interface opens and the student can access the available dashboards and Grafana navigation.
+The Grafana interface opens and you can access the available dashboards and Grafana navigation.
 
-### Trainer Tip
+### Tip
 
-If a student cannot access alerting configuration or save an alert rule, do not troubleshoot permissions as a Core blocker. Continue with the instructor demonstration.
+If you cannot access alerting configuration or save an alert rule, do not treat permissions as a Core blocker. Continue with the watch-along demonstration.
 
 ---
 
@@ -52,7 +51,7 @@ Review the available sections for:
 
 Students can identify the main parts of the Grafana alerting interface.
 
-### Trainer Tip
+### Tip
 
 Explain that the exact options visible to a student depend on Grafana permissions.
 
@@ -95,11 +94,11 @@ Ask students to identify which component answers each question:
 
 ---
 
-# Instructor Demonstration — KPI Alert
+# Watch-along — KPI Alert
 
 ## 4. Open the ClickHouse Data Source
 
-The instructor signs in using:
+For the watch-along, sign in using:
 
 ```text
 Username: admin
@@ -112,7 +111,7 @@ Do not create another ClickHouse datasource.
 
 ### Expected Result
 
-The instructor can use the existing ClickHouse datasource for the alert demonstration.
+Use the existing ClickHouse datasource for the alert demonstration.
 
 ---
 
@@ -139,7 +138,7 @@ completed_sales
 
 This value represents completed sales for the seeded reporting data in the selected absolute date range.
 
-### Trainer Tip
+### Tip
 
 Explain why the reporting view is used:
 
@@ -152,7 +151,7 @@ Explain why the reporting view is used:
 
 Use the returned KPI as the input to the alert condition.
 
-**Concrete demo approach (instructor):**
+**Concrete demo approach (admin account):**
 
 1. Note the approximate `completed_sales` value returned by the query (full seed Completed sales is a large positive number).
 2. For a **firing** demonstration, configure a condition such as:
@@ -178,7 +177,7 @@ Condition becomes true or false
 
 Students can explain the difference between the query and the alert condition, and see at least one clear true/false demonstration.
 
-### Trainer Tip
+### Tip
 
 Do not ask students to treat the demonstration threshold as a production SLA or business target.
 
@@ -231,7 +230,7 @@ Normal
 
 Students understand why a temporary threshold violation does not necessarily produce an immediate firing notification.
 
-### Trainer Tip
+### Tip
 
 Do not require students to reproduce the timing manually. The objective is understanding the state transition.
 
@@ -259,9 +258,9 @@ WHERE status = 'Completed'
 
 This filtered query returns **no rows** or a null/empty metric suitable for discussing Grafana **No Data** handling versus a real zero KPI.
 
-Students can explain why no-data handling should be considered separately from a threshold condition.
+You should be able to explain why no-data handling should be considered separately from a threshold condition.
 
-### Trainer Tip
+### Tip
 
 Do not describe Region 2 + Completed as a normal successful KPI scenario. After the demo, return to the unfiltered Completed sales query for the main alert rule.
 
@@ -292,7 +291,7 @@ Students understand that a query error should not automatically be interpreted a
 
 ---
 
-# Instructor Demonstration — Contact Point and Webhook
+# Watch-along — Contact Point and Webhook
 
 ## 11. Open Contact Points
 
@@ -300,7 +299,7 @@ From Grafana Alerting, open **Contact points**.
 
 Explain that a contact point defines the notification destination.
 
-The instructor creates or demonstrates a **Generic Webhook** contact point.
+Create or demonstrate a **Generic Webhook** contact point (admin account).
 
 ### Expected Result
 
@@ -310,7 +309,7 @@ Students can identify:
 Alert Rule → Contact Point → Webhook
 ```
 
-### Trainer Tip
+### Tip
 
 Do not require students to create a contact point. The student account may not have sufficient permissions.
 
@@ -320,8 +319,8 @@ Do not require students to create a contact point. The student account may not h
 
 Use either:
 
-- an instructor-provided webhook URL, or
-- a clearly identified demonstration webhook endpoint available to the instructor.
+- a provided webhook URL, or
+- a clearly identified demonstration webhook endpoint available for the shared demo.
 
 Do not invent or require a specific public webhook service.
 
@@ -329,13 +328,13 @@ The configuration should demonstrate the destination concept without requiring s
 
 ### Expected Result
 
-The instructor can show where the webhook destination is configured.
+Note where the webhook destination is configured.
 
 ---
 
 ## 13. Review the Webhook Payload
 
-When the instructor tests or triggers the webhook, inspect the request received by the demonstration endpoint.
+When the webhook is tested or triggered, inspect the request received by the demonstration endpoint.
 
 Discuss the information carried by the notification, such as:
 
@@ -349,7 +348,7 @@ Discuss the information carried by the notification, such as:
 
 Students can identify the important information that a receiving application could use.
 
-### Trainer Tip
+### Tip
 
 Do not turn this step into webhook application development. The objective is to understand the integration boundary.
 
@@ -381,7 +380,7 @@ Students understand that the alert rule determines when an alert exists, while r
 
 ## 15. Test the Alerting Flow
 
-The instructor demonstrates the complete flow:
+the demonstration shows the complete flow:
 
 ```text
 ClickHouse
@@ -405,7 +404,7 @@ Review the resulting alert state and, where the demonstration endpoint supports 
 
 Students can describe the complete path from database metric to webhook notification.
 
-### Trainer Tip
+### Tip
 
 The Core requirement is observation and understanding. Students do not need to successfully fire a webhook from their own account.
 
@@ -435,7 +434,7 @@ Students should be able to explain:
 
 ## 16. Create a Simplified Alert Rule
 
-Create a simplified version of the instructor's KPI alert using the provisioned ClickHouse datasource.
+Create a simplified version of the KPI alert from the watch-along using the provisioned ClickHouse datasource.
 
 Use the same reporting source:
 
@@ -455,7 +454,7 @@ The query must evaluate completed data.
 
 The student can create and save an alert rule if their Grafana permissions allow it.
 
-If Grafana prevents saving the rule, return to the instructor demonstration. This is not a Core failure.
+If Grafana prevents saving the rule, return to the watch-along demonstration. This is not a Core failure.
 
 ---
 
@@ -481,7 +480,7 @@ The student can explain what each configuration controls.
 
 If the student's permissions allow access, inspect the available notification-policy and contact-point configuration.
 
-Do not modify instructor configuration unless specifically instructed.
+Do not modify shared alert configuration unless specifically instructed.
 
 ### Expected Result
 

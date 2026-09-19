@@ -58,7 +58,7 @@ TOC: **3 hours**.
 
 **Core (~90–120 min):** login → absolute time **2023-01-01→2025-06-18** → layout → 2 Stats + time series + bar + table → thresholds/formatting → transformation → calculated value → dashboard link → Region 2 empty check → performance checklist.
 
-**Stretch:** annotations (instructor if needed), Infinity REST/OData panel, extra drill-down.
+**Stretch:** annotations (shared demo if needed), Infinity REST/OData panel, extra drill-down.
 
 Seed: Completed regions **1 / 3 / 5**; dates **2023-01-01** … **2025-06-18**; reporting view **`training.v_lab_orders`**.
 

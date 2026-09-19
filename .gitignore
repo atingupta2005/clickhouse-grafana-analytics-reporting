@@ -33,6 +33,7 @@ node_modules/
 tmp/
 **/__pycache__/
 *.pyc
+docs/GITHUB_COMPAT_AUDIT_REPORT.json
 
 # --- Safety: never commit practice packs if dropped into sessions ---
 **/exercises.md

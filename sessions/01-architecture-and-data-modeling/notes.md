@@ -8,7 +8,7 @@
 | Connection | **Session 01–05 — ClickHouse training (LAN RO)** |
 | User | `training_ro` (read-only) |
 
-Shared analytics use **`training.v_lab_orders`**. DDL practice uses **`training_student_<yourname>`** with `training_rw` when the instructor provides it.
+Shared analytics use **`training.v_lab_orders`**. DDL practice uses **`training_student_<yourname>`** with `training_rw` when write access is provided.
 
 ---
 

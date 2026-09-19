@@ -149,7 +149,7 @@ FROM
 
 You can also parse with `JSONExtract` helpers on a string column expression. Match the function to the expected type (`JSONExtractString`, `JSONExtractUInt`, `JSONExtractFloat`, and so on).
 
-> Trainer note: if an instructor preloads a demo table, students may `SELECT` from it — still no student `CREATE`/`INSERT` on the `training` database.
+> **Tip:** If a demo table is preloaded, you may `SELECT` from it — still no `CREATE`/`INSERT` on the `training` database.
 
 ---
 

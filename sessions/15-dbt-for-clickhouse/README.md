@@ -46,7 +46,7 @@ Guided walkthrough of the existing dbt project:
 
 ### Stretch
 
-**Instructor Stretch:** If the dbt profile is available, run the existing project from the `lab-dbt` container and validate the resulting model in ClickHouse.
+**Stretch (optional):** If the dbt profile is available, run the existing project from the `lab-dbt` container and validate the resulting model in ClickHouse.
 
 - Run `dbt run`
 - Run `dbt test`
@@ -64,7 +64,7 @@ Students do not need SSH access to the App VM for the Core path.
 | dbt workflow, tests and documentation | 15 min |
 | Transformation architecture discussion | 10 min |
 | **Core guided path** | **~95 min** |
-| Instructor Stretch: `dbt run` / `dbt test` | Optional |
+| Stretch (optional): `dbt run` / `dbt test` | Optional |
 
 The Core path is designed to fit within the 3-hour session while allowing time for questions and discussion.
 
@@ -88,4 +88,4 @@ Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown
 
 - `README.md` — Session overview and timing
 - `notes.md` — dbt and ClickHouse teaching notes
-- `lab.md` — Guided Core walkthrough and Instructor Stretch
+- `lab.md` — Guided Core walkthrough and optional Stretch

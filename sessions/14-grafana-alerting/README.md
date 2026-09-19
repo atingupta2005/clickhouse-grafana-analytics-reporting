@@ -34,16 +34,15 @@ The session uses ClickHouse data from `training.v_lab_orders` and focuses on pra
 Students will:
 
 - Review the Grafana alerting interface and alert lifecycle
-- Observe the instructor create a KPI-based alert using ClickHouse
+- Watch a KPI-based alert created using ClickHouse (admin account)
 - Follow the query → condition → evaluation flow
 - Examine pending, no-data, and error states
 - Inspect contact points and notification policies
 - Review a generic webhook configuration and payload
 - Discuss how alerting can be applied to KPI, sales, volume, and data-availability scenarios
 
-### Instructor Demo
-
-The instructor will use the Grafana administrator account to demonstrate:
+### Watch-along (admin account)
+The Grafana administrator account is used for the watch-along to demonstrate:
 
 - Creating an alert rule
 - Defining a threshold
@@ -53,18 +52,18 @@ The instructor will use the Grafana administrator account to demonstrate:
 - Creating a notification policy
 - Testing the alerting flow
 
-The webhook destination is either an instructor-provided endpoint or a clearly identified demonstration endpoint. No student-owned webhook service is required.
+The webhook destination is either a provided endpoint or a clearly identified demonstration endpoint. No student-owned webhook service is required.
 
 ### Stretch
 
-Students whose Grafana account has sufficient alerting permissions may:
+If your Grafana account has sufficient alerting permissions, you may:
 
 - Recreate a simplified KPI alert
 - Configure the evaluation condition
 - Review or configure a contact point where permitted
 - Test the rule using the available lab data
 
-Student permissions may not allow saving alert rules or contact points. This is not a Core requirement.
+Your permissions may not allow saving alert rules or contact points. This is not a Core requirement.
 
 ## Timing
 
@@ -73,7 +72,7 @@ Student permissions may not allow saving alert rules or contact points. This is 
 **Core in-class path:** approximately 2–2.5 hours
 
 1. Alerting concepts and lifecycle — 30 min
-2. Watch instructor create a ClickHouse KPI alert — 35 min
+2. Watch-along: create a ClickHouse KPI alert — 35 min
 3. Conditions, thresholds, evaluation, pending and no-data behavior — 30 min
 4. Contact points, notification policies and webhook flow — 30 min
 5. Alert testing and troubleshooting discussion — 20 min
@@ -90,7 +89,7 @@ Student permissions may not allow saving alert rules or contact points. This is 
 - Grafana demonstrations use the absolute time range **2023-01-01 → 2025-06-18**.
 - Use the provisioned **ClickHouse** Grafana datasource; students do not recreate the datasource.
 - Grafana student login: `student` / `StudentLab!2026`.
-- Instructor Grafana administration: `admin` / `GrafanaLab!2026`.
+- Grafana administrator account (watch-along): `admin` / `GrafanaLab!2026`.
 
 ## Student Entry Points
 
@@ -104,4 +103,4 @@ Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown
 
 - `README.md` — Session overview, topics, practical work and timing
 - `notes.md` — Alerting concepts and teaching notes
-- `lab.md` — Guided Core and instructor demonstration steps
+- `lab.md` — Guided Core and watch-along steps

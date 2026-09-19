@@ -38,7 +38,7 @@ The focus is on understanding Kafka concepts and the typical Kafka → ClickHous
 
 ### Stretch
 
-- Instructor walkthrough of the optional Redpanda lab environment
+- Optional walkthrough of the Redpanda lab environment
 - Review broker/container status when the Kafka profile is available
 - Discuss example topic and consumer-group observations
 
@@ -53,7 +53,7 @@ A dedicated student produce/consume exercise is **not required**.
 | Kafka → ClickHouse flow and Kafka jobs | ~30 min |
 | Architecture walkthrough and discussion | ~10 min |
 | **Core guided work** | **~2 hours** |
-| Optional instructor Stretch/demo | Remaining time |
+| Optional Stretch walkthrough | Remaining time |
 
 ## Lab / Environment Reminder
 
@@ -62,7 +62,7 @@ The optional lab environment uses **Redpanda**, a Kafka-compatible broker, throu
 - Container: `lab-kafka`
 - Internal broker port: `9092`
 - Student-facing Kafka URL: **none**
-- Stretch only: `docker compose --profile kafka up -d redpanda` (instructor)
+- Stretch only: `docker compose --profile kafka up -d redpanda` (shared demo)
 
 Kafka is an architecture / data-movement topic. Reporting still reads ClickHouse (`training.v_lab_orders`); Grafana does not query Kafka in the Core path. The lab data is **not** presented as live Kafka output.
 
@@ -75,4 +75,4 @@ Diagrams live under `assets/` (SVG heroes) and as Mermaid blocks in the Markdown
 
 - `README.md` — Session overview and timing
 - `notes.md` — Kafka concepts, architecture and teaching notes
-- `lab.md` — Guided architecture walkthrough and optional instructor demo
+- `lab.md` — Guided architecture walkthrough and optional Stretch walkthrough

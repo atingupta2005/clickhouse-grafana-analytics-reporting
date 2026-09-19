@@ -134,10 +134,16 @@ If the connection fails, check:
 
 ---
 
-**Grafana UI and data sources**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Grafana UI and data sources
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-grafana-basics
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 6. ClickHouse SQL in Grafana
 
@@ -276,10 +282,16 @@ Explore is useful for:
 
 ---
 
-**ClickHouse queries and time ranges**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — ClickHouse queries and time ranges
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-ch-query-time
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 11. Create a Panel
 
@@ -375,10 +387,16 @@ The query should provide a clear category field and a numeric measure.
 
 ---
 
-**Panels and KPIs**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Panels and KPIs
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-panels-kpi
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 15. Dashboard
 
@@ -441,10 +459,16 @@ means that Grafana repeatedly retrieves data for that seed window.
 
 ---
 
-**Dashboard refresh**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Dashboard refresh
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s08-dashboard-refresh
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 18. Query Validation
 

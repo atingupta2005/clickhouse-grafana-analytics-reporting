@@ -118,10 +118,16 @@ That matches how labs filter `training.v_lab_orders` (view maps stored `Closed` 
 
 ---
 
-**Why variables**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Why variables
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-why-variables
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 6. Multi-value and the All option
 
@@ -182,10 +188,16 @@ WHERE region_id = ${region}
 
 ---
 
-**Multi-value and formatting**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Multi-value and formatting
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-multivalue-format
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 8. Dynamic filtering on `training.v_lab_orders`
 
@@ -302,10 +314,16 @@ Many ClickHouse panels simply rely on the dashboard time picker plus a time colu
 
 ---
 
-**Cascading and time variables**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Cascading and time variables
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-cascade-time
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 11. Variables in ClickHouse SQL
 
@@ -442,10 +460,16 @@ Save the dashboard after setting defaults so reloads behave the same for every s
 
 ---
 
-**Variables lab checkpoint**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Variables lab checkpoint
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s10-lab-defaults
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 16. Hands-on filter map
 

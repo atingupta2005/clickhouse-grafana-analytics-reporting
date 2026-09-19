@@ -96,10 +96,16 @@ Typical Infinity fields: URL, method GET, parser JSON, root selector, optional h
 
 ---
 
-**API-based reporting**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — API-based reporting
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-api-reporting
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 4. API Request
 
@@ -269,10 +275,16 @@ The API must support the options being used.
 
 ---
 
-**Requests, headers, parameters**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Requests, headers, parameters
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-request-shape
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 12. JSON Response
 
@@ -428,10 +440,16 @@ The exact response body and behavior depend on the API.
 
 ---
 
-**JSON roots: data vs value**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — JSON roots: data vs value
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-json-roots
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 17. Connecting Grafana to an API
 
@@ -495,10 +513,16 @@ This makes troubleshooting easier.
 
 ---
 
-**Infinity lab checkpoint**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Infinity lab checkpoint
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s09-infinity-lab
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 19. Example — Sales API
 

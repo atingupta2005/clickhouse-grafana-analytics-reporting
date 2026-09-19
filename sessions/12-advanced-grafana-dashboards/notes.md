@@ -119,10 +119,16 @@ Do not use a table to display thousands of rows when a summary or chart answers 
 
 ---
 
-**Dashboard organization**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Dashboard organization
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-layout
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 3. Thresholds
 
@@ -187,10 +193,16 @@ Avoid displaying unnecessary statistical information in the legend when it does 
 
 ---
 
-**Thresholds and units**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Thresholds and units
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-thresholds-units
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 6. Field Configuration
 
@@ -260,10 +272,16 @@ This keeps the query easier to understand and usually reduces unnecessary dashbo
 
 ---
 
-**Field config and transformations**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Field config and transformations
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-transforms
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 8. Calculated Values
 
@@ -417,10 +435,16 @@ This creates a useful reporting flow without requiring additional applications.
 
 ---
 
-**Advanced dashboard lab checkpoint**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Advanced dashboard lab checkpoint
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s12-lab-checkpoint
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 13. Annotations
 

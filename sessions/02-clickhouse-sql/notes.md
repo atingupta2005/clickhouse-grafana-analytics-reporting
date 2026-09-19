@@ -197,10 +197,16 @@ FROM training.v_lab_orders;
 
 ---
 
-**SELECT, WHERE, ORDER BY, LIMIT**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — SELECT, WHERE, ORDER BY, LIMIT
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-select-filter
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 6. Aggregate Functions
 
@@ -366,10 +372,16 @@ Here:
 
 ---
 
-**Aggregates and GROUP BY**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Aggregates and GROUP BY
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-groupby-agg
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 9. String Functions
 
@@ -562,10 +574,16 @@ This is useful when preparing data for reports where displaying `NULL` directly 
 
 ---
 
-**Strings, dates, conditionals**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Strings, dates, conditionals
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-strings-dates
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 13. KPI Calculations
 
@@ -697,10 +715,16 @@ This is the type of SQL pattern commonly used to prepare data for reports and da
 
 ---
 
-**KPI and period reporting**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — KPI and period reporting
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s02-kpi-reporting
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 17. Query Structure to Remember
 

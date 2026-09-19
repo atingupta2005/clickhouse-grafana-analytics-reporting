@@ -96,10 +96,16 @@ When consuming API data, identify:
 
 ---
 
-**JSON objects and arrays**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — JSON objects and arrays
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-json-basics
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 4. Nested JSON (theory)
 
@@ -228,10 +234,16 @@ Not Available
 
 ---
 
-**JSON extraction**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — JSON extraction
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-json-extract
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 8. JSON Arrays in Reporting (stretch / theory)
 
@@ -383,10 +395,16 @@ When an API integration fails, check the status code before investigating the JS
 
 ---
 
-**REST and HTTP**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — REST and HTTP
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-rest-http
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 15. Request and Response
 
@@ -459,10 +477,16 @@ data
 
 ---
 
-**Pagination and JSON responses**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Pagination and JSON responses
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s06-pagination
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 18. Error Handling
 

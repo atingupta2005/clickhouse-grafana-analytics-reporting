@@ -126,10 +126,16 @@ A single order can contain multiple reporting rows. Therefore, `count()` and `un
 
 ---
 
-**Workshop goals**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Workshop goals
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-workshop-plan
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 4. Status Handling
 
@@ -386,10 +392,16 @@ High-Value Lines
 
 ---
 
-**KPI build**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — KPI build
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-kpi-build
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 11. Dimension Panels
 
@@ -436,10 +448,16 @@ Keep the number of dimensions limited. The workshop is about building a usable r
 
 ---
 
-**Filters and layout**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Filters and layout
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-filters-layout
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 12. Transformations
 
@@ -533,10 +551,16 @@ Visualization
 
 ---
 
-**Validation wrap**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Validation wrap
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s13-validate-wrap
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 15. Query Performance
 

@@ -98,10 +98,16 @@ flowchart LR
 
 ---
 
-**OLTP vs OLAP**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — OLTP vs OLAP
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-oltp-olap
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 3. SQL Server and ClickHouse
 
@@ -207,10 +213,16 @@ That level is enough for this session.
 
 ---
 
-**Columnar storage and architecture**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Columnar storage and architecture
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-columnar-architecture
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 6. Databases, tables and table engines
 
@@ -368,10 +380,16 @@ Deeper sorting-key choice and optimization come in a later session.
 
 ---
 
-**MergeTree and ORDER BY**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — MergeTree and ORDER BY
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-mergetree-orderby
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 9. Partitioning
 
@@ -478,10 +496,16 @@ customer_email -> may be optional
 
 ---
 
-**Partitioning and data types**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Partitioning and data types
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-partition-types
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 12. Basic data model
 
@@ -588,10 +612,16 @@ Detailed cluster setup is outside this session — know the terms.
 
 ---
 
-**Modeling checkpoint**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Modeling checkpoint
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s01-lab-modeling
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## Summary
 

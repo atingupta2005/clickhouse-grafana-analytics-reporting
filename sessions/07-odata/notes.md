@@ -162,10 +162,16 @@ What relationships exist?
 
 ---
 
-**What is OData?**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — What is OData?
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-odata-intro
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 6. `$filter`
 
@@ -314,10 +320,16 @@ This is useful for reporting because the client receives only the required field
 
 ---
 
-**$filter and $select**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — $filter and $select
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-filter-select
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 12. `$orderby`
 
@@ -416,10 +428,16 @@ The
 
 ---
 
-**$top, $skip, $count**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — $top, $skip, $count
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-top-skip-count
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 16. `$search` (stretch / theory only)
 
@@ -473,10 +491,16 @@ JSON Response
 
 ---
 
-**Combining OData options**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Combining OData options
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s07-combine-lab
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 18. Relationships
 

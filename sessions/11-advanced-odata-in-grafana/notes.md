@@ -144,10 +144,16 @@ If the fixed query works, investigate the variable configuration rather than the
 
 ---
 
-**OData setup and variables**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — OData setup and variables
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-setup-vars
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 5. Multiple Filter Conditions
 
@@ -248,10 +254,16 @@ Use a small, controlled set of values. Prefer proving a fixed `or` filter before
 
 ---
 
-**Multi-value OData filters**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Multi-value OData filters
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-multifilter
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 7. Date and Time Filtering
 
@@ -341,10 +353,16 @@ Start with a fixed `$orderby` expression. Introduce the variable only after the 
 
 ---
 
-**Dates, $select, $orderby**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Dates, $select, $orderby
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-dates-select
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 10. `$top` and `$skip`
 
@@ -492,10 +510,16 @@ Do not present it as a normal successful Region filter.
 
 ---
 
-**Advanced OData lab checkpoint**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Advanced OData lab checkpoint
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s11-lab-checkpoint
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 14. Reducing Unnecessary API Data
 

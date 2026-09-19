@@ -164,10 +164,16 @@ Avoid creating excessive numbers of partitions.
 
 ---
 
-**Sort keys and partitions**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Sort keys and partitions
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-sortkey-partition
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 5. Data Skipping
 
@@ -340,10 +346,16 @@ Do not change join semantics merely for performance.
 
 ---
 
-**Skipping, filters, aggregation**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Skipping, filters, aggregation
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-skipping-filters
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 11. EXPLAIN
 
@@ -443,10 +455,16 @@ When investigating a particular query, narrow the search rather than reviewing t
 
 ---
 
-**EXPLAIN and profiling**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — EXPLAIN and profiling
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-explain-profile
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 14. Identifying Bottlenecks
 
@@ -599,10 +617,16 @@ Performance improvement without result validation is not sufficient.
 
 ---
 
-**Bottlenecks lab checkpoint**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Bottlenecks lab checkpoint
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s05-bottlenecks-lab
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## Summary
 

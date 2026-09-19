@@ -282,10 +282,16 @@ The two groups can process the same event stream for different purposes.
 
 ---
 
-**Kafka concepts**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Kafka concepts
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-basics
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 8. Events and Messages
 
@@ -462,10 +468,16 @@ Grafana
 
 ---
 
-**Kafka vs ClickHouse reporting**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Kafka vs ClickHouse reporting
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-kafka-vs-reporting
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 12. Kafka Jobs / Processing Concepts
 
@@ -607,10 +619,16 @@ Kafka is discussed as a possible upstream event-ingestion mechanism.
 
 ---
 
-**Architecture wrap**
+<table><tr><td bgcolor="#FEF3C7">
+
+### Quiz — Architecture wrap
+
 https://vmreact.eastus2.cloudapp.azure.com:18094/a/ch-grafana-s16-wrap
 
-Use the login ID your trainer provided.
+Each student must attempt this quiz. Use the login ID your trainer provided.
+
+</td></tr></table>
+
 
 ## 15. When Kafka Is Required
 

@@ -29,3 +29,7 @@ In Grafana, use an **absolute** time range for that date window when panels look
 ## Quizzes
 
 Topic quiz links are in each session `notes.md`. Host: https://vmreact.eastus2.cloudapp.azure.com:18094 — use the login ID your trainer provided.
+
+## Quizzes
+
+Topic quiz links are in each session `notes.md`. Host: https://vmreact.eastus2.cloudapp.azure.com:18094 — use the login ID your trainer provided.

@@ -1,8 +1,20 @@
 # Student-facing training repository
+# Allowed on GitHub: README, course-content.md, docs/ (student access), sessions/ (README/notes/lab + assets)
+# Authoring / infra / secrets: local only under /internal/ (ignored) — never push scripts or stacks.
 
-# --- Never push instructor workspace ---
+# --- Never push instructor / authoring workspace ---
 /internal/
 /.cursor/
+/scripts/
+/stacks/
+/config/
+/gateway/
+/labs/
+/prompts/
+/material/
+/tools/
+/tmp/
+/.tmp-azure/
 
 # --- Windows junk ---
 /nul
@@ -27,13 +39,18 @@ Thumbs.db
 .vscode/
 .idea/
 
-# --- Generated / deps ---
+# --- Generated / deps / local audit ---
 node_modules/
 *.log
-tmp/
 **/__pycache__/
 *.pyc
 docs/GITHUB_COMPAT_AUDIT_REPORT.json
+**/GITHUB_COMPAT_AUDIT_REPORT.json
+
+# --- Authoring helpers at repo root (must never land on student remote) ---
+/*.py
+/*.sh
+/*.ps1
 
 # --- Safety: never commit practice packs if dropped into sessions ---
 **/exercises.md

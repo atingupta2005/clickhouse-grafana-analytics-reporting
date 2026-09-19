@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 260" role="img">
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="100%" height="100%" rx="12" fill="#f8fafc"/>
+<text x="460" y="28" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Empty result vs broken request</text>
+<rect x="60" y="70" width="360" height="110" rx="10" fill="#059669"/>
+<text x="240.0" y="119.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">HTTP 200 + data: []</text>
+<text x="240.0" y="135.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Filter/date/region mismatch</text>
+<rect x="500" y="70" width="360" height="110" rx="10" fill="#dc2626"/>
+<text x="680.0" y="119.0" text-anchor="middle" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">4xx / 5xx / bad URL</text>
+<text x="680.0" y="135.0" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="11">Fix URL, params, root</text>
+<text x="460" y="230" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Region 2 + Completed is a deliberate empty demo - not a broken panel</text>
+</svg>

@@ -45,6 +45,9 @@ This approach is useful when reporting data is exposed by an application rather 
 
 ## 2. REST API and OData
 
+<!-- training-diagrams:v2 -->
+![REST vs OData roots in Infinity](./assets/rest-vs-odata-roots.svg)
+
 <!-- training-diagrams:v1 -->
 ![Root selector fork](./assets/root-data-vs-value.svg)
 
@@ -71,7 +74,10 @@ The detailed OData query syntax was covered in Session 7.
 
 ## 3. Grafana API Data Sources — Infinity (provisioned)
 
-This lab uses the **provisioned Infinity** data source (uid **`infinity`**). Students should **not** create a new Infinity source.
+<!-- training-diagrams:v2 -->
+![ClickHouse DS vs Infinity DS](./assets/ch-vs-infinity.svg)
+
+This lab uses the **provisioned Infinity** data source (uid **`infinity`**). Do **not** create a new Infinity source.
 
 **REST panels**
 
@@ -96,6 +102,9 @@ Typical Infinity fields: URL, method GET, parser JSON, root selector, optional h
 
 ## 4. API Request
 
+<!-- training-diagrams:v2 -->
+![Infinity request anatomy](./assets/request-anatomy.svg)
+
 A basic REST request can be represented as:
 
 ```text
@@ -107,8 +116,6 @@ A request may also contain query parameters:
 ```text
 /api/sales?region_id=3
 ```
-
->
 
 Example response:
 
@@ -162,6 +169,9 @@ In production you may see API keys, Basic auth, Bearer tokens, or app-specific s
 ---
 
 ## 8. Query Parameters
+
+<!-- training-diagrams:v2 -->
+![Stack region, status, dates, and page on /api/sales](./assets/rest-param-stack.svg)
 
 Query parameters allow a Grafana request to retrieve a specific subset of data.
 
@@ -293,6 +303,18 @@ The important reporting fields are:
 
 Not every API returns data in the same structure.
 
+```mermaid
+flowchart LR
+  subgraph REST
+    R1["{ data: [...] }"] --> R2["root = data"]
+  end
+  subgraph OData
+    O1["{ value: [...] }"] --> O2["root = value"]
+  end
+  R2 --> P[Grafana rows]
+  O2 --> P
+```
+
 For example:
 
 ```json
@@ -326,6 +348,9 @@ The Grafana data-source configuration must identify the relevant collection:
 
 ## 14. Pagination
 
+<!-- training-diagrams:v2 -->
+![REST page and page_size vs OData top/skip](./assets/rest-page-page-size.svg)
+
 **REST (this lab):**
 
 ```text
@@ -348,6 +373,9 @@ An OData service may also return `@odata.nextLink`. Do not assume Infinity autom
 ---
 
 ## 15. Empty Responses
+
+<!-- training-diagrams:v2 -->
+![Empty HTTP 200 vs HTTP errors](./assets/empty-vs-http-error.svg)
 
 An API can successfully respond but return no records.
 
@@ -423,7 +451,21 @@ After configuration, test the connection or execute a simple request before crea
 
 ## 18. API Query Workflow
 
+<!-- training-diagrams:v2 -->
+![Incremental API panel workflow](./assets/api-query-workflow.svg)
+
 Use an incremental approach:
+
+```mermaid
+flowchart TB
+  A[Open URL in browser] --> B[Inspect JSON shape]
+  B --> C[Paste full HTTPS into Infinity]
+  C --> D[Set root data or value]
+  D --> E[Add filters and dates]
+  E --> F[Build and save panel]
+```
+
+Text checklist:
 
 ```text
 1. Verify endpoint
@@ -505,6 +547,9 @@ The response should be inspected before configuring the Grafana visualization.
 
 ## 21. Troubleshooting API Integration
 
+<!-- training-diagrams:v2 -->
+![Empty result vs broken request](./assets/empty-vs-http-error.svg)
+
 ### Cannot connect to API
 
 Check:
@@ -534,13 +579,7 @@ Check:
 * Filters (especially `region_id=2` + Completed = empty)
 * Date range / seed window
 * `page` / `page_size`
-Check:
-
-* Parameters
-* Filters
-* Date range
-* Response structure
-* Whether matching records exist
+* Whether matching records exist for the filters you chose
 
 ### Grafana cannot display the response
 

@@ -25,17 +25,13 @@ A manufacturing company operates plants across several regions. Customers place 
 
 You will work with:
 
-```text
-Regions
-   |
-Plants
-   |
-Orders
-   |
-Sales Analysis
-
-Customers ----+
-Products  ----+
+```mermaid
+erDiagram
+    REGIONS ||--o{ PLANTS : contains
+    PLANTS ||--o{ ORDERS : fulfills
+    CUSTOMERS ||--o{ ORDERS : places
+    PRODUCTS ||--o{ ORDERS : includes
+    ORDERS ||--|{ ANALYSIS : sales_reporting
 ```
 
 Focus for this lab:
@@ -47,6 +43,23 @@ Focus for this lab:
 * Basic analytical queries
 
 ### Two paths
+
+![Explore path versus sandbox path](./assets/explore-vs-sandbox.svg)
+
+```mermaid
+flowchart TB
+    Start[Connected in CloudBeaver] --> Choice{Write access?}
+
+    Choice -->|No — training_ro| Explore[Explore path]
+    Explore --> E1[Sections 1, then 9–13]
+    E1 --> E2["SHOW / DESCRIBE training.*"]
+    E2 --> E3["Analytics on training.v_lab_orders"]
+
+    Choice -->|Yes — training_rw| Sandbox[Sandbox path]
+    Sandbox --> S1[Sections 2–10 and 14]
+    S1 --> S2["Create tables in training_student_yourname"]
+    S2 --> S3[Insert sample rows / inspect parts]
+```
 
 | Path | Access | What to do |
 |------|--------|------------|

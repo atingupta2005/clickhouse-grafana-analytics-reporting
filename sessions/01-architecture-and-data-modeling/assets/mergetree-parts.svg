@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" role="img" aria-labelledby="title desc">
+  <title id="title">MergeTree inserts parts and merges them</title>
+  <desc id="desc">INSERT creates data parts. Background merge combines parts. SELECT reads active parts.</desc>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+    <filter id="sh" x="-6%" y="-6%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="920" height="240" rx="12" fill="#f8fafc"/>
+  <text x="460" y="34" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">MergeTree mental model</text>
+
+  <g filter="url(#sh)">
+    <rect x="40" y="70" width="130" height="90" rx="12" fill="#2563eb"/>
+    <text x="105" y="112" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">INSERT</text>
+    <text x="105" y="134" text-anchor="middle" fill="#dbeafe" font-family="Segoe UI, Arial, sans-serif" font-size="12">new rows</text>
+  </g>
+  <path d="M178 115 H218" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <g filter="url(#sh)">
+    <rect x="230" y="60" width="100" height="50" rx="10" fill="#ea580c"/>
+    <text x="280" y="90" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Part A</text>
+    <rect x="230" y="120" width="100" height="50" rx="10" fill="#f97316"/>
+    <text x="280" y="150" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Part B</text>
+  </g>
+  <path d="M338 115 H378" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <g filter="url(#sh)">
+    <rect x="390" y="70" width="150" height="90" rx="12" fill="#7c3aed"/>
+    <text x="465" y="112" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Background</text>
+    <text x="465" y="134" text-anchor="middle" fill="#ede9fe" font-family="Segoe UI, Arial, sans-serif" font-size="12">merge</text>
+  </g>
+  <path d="M548 115 H588" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <g filter="url(#sh)">
+    <rect x="600" y="70" width="130" height="90" rx="12" fill="#059669"/>
+    <text x="665" y="112" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Larger part</text>
+    <text x="665" y="134" text-anchor="middle" fill="#d1fae5" font-family="Segoe UI, Arial, sans-serif" font-size="12">active data</text>
+  </g>
+  <path d="M738 115 H778" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <g filter="url(#sh)">
+    <rect x="790" y="70" width="90" height="90" rx="12" fill="#0f766e"/>
+    <text x="835" y="112" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">SELECT</text>
+    <text x="835" y="134" text-anchor="middle" fill="#ccfbf1" font-family="Segoe UI, Arial, sans-serif" font-size="11">reads parts</text>
+  </g>
+
+  <text x="460" y="210" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Parts are how MergeTree stores and evolves table data on disk</text>
+</svg>

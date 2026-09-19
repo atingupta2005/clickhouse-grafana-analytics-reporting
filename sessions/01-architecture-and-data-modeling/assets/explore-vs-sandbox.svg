@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 240" role="img" aria-labelledby="title desc">
+  <title id="title">Explore path versus sandbox path</title>
+  <desc id="desc">Read-only students explore training data. Write students create tables in their own database.</desc>
+  <defs>
+    <filter id="sh" x="-6%" y="-6%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="920" height="240" rx="12" fill="#f8fafc"/>
+  <text x="460" y="34" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Two paths in Session 01</text>
+
+  <g filter="url(#sh)">
+    <rect x="40" y="70" width="160" height="100" rx="12" fill="#475569"/>
+    <text x="120" y="115" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">CloudBeaver</text>
+    <text x="120" y="138" text-anchor="middle" fill="#e2e8f0" font-family="Segoe UI, Arial, sans-serif" font-size="12">connected</text>
+  </g>
+  <path d="M208 120 H248" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <g filter="url(#sh)">
+    <rect x="260" y="55" width="280" height="130" rx="12" fill="#fff" stroke="#93c5fd"/>
+    <rect x="260" y="55" width="280" height="38" rx="12" fill="#2563eb"/>
+    <rect x="260" y="77" width="280" height="16" fill="#2563eb"/>
+    <text x="400" y="80" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Explore  training_ro</text>
+    <text x="280" y="120" fill="#1e40af" font-family="Segoe UI, Arial, sans-serif" font-size="13">SHOW / DESCRIBE training.*</text>
+    <text x="280" y="146" fill="#1e40af" font-family="Segoe UI, Arial, sans-serif" font-size="13">Analytics on v_lab_orders</text>
+    <text x="280" y="168" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Most of the class</text>
+  </g>
+
+  <g filter="url(#sh)">
+    <rect x="580" y="55" width="300" height="130" rx="12" fill="#fff" stroke="#6ee7b7"/>
+    <rect x="580" y="55" width="300" height="38" rx="12" fill="#059669"/>
+    <rect x="580" y="77" width="300" height="16" fill="#059669"/>
+    <text x="730" y="80" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Sandbox  training_rw</text>
+    <text x="600" y="120" fill="#065f46" font-family="Segoe UI, Arial, sans-serif" font-size="13">CREATE in training_student_&</text>
+    <text x="600" y="146" fill="#065f46" font-family="Segoe UI, Arial, sans-serif" font-size="13">INSERT / inspect parts</text>
+    <text x="600" y="168" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Never DROP training.*</text>
+  </g>
+
+  <text x="460" y="220" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Pick the path that matches your access  both are valid for this session</text>
+</svg>

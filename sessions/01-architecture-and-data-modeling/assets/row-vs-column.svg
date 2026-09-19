@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 280" role="img" aria-labelledby="title desc">
+  <title id="title">Row-oriented vs column-oriented storage</title>
+  <desc id="desc">Row store packs whole rows together. Column store packs each column together for analytics.</desc>
+  <defs>
+    <filter id="sh" x="-6%" y="-6%" width="112%" height="112%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+  <rect width="920" height="280" rx="12" fill="#f8fafc"/>
+  <text x="460" y="36" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Storage layout: row vs column</text>
+
+  <!-- Row store -->
+  <g filter="url(#sh)">
+    <rect x="36" y="58" width="400" height="180" rx="12" fill="#fff" stroke="#cbd5e1"/>
+    <rect x="36" y="58" width="400" height="40" rx="12" fill="#2563eb"/>
+    <rect x="36" y="82" width="400" height="16" fill="#2563eb"/>
+    <text x="236" y="84" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Row-oriented</text>
+    <text x="56" y="128" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Row 1: id  /  date  /  region  /  amount</text>
+    <text x="56" y="156" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Row 2: id  /  date  /  region  /  amount</text>
+    <text x="56" y="184" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="13">Row 3: id  /  date  /  region  /  amount</text>
+    <text x="56" y="214" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Good for whole-row transactions</text>
+  </g>
+
+  <!-- Column store -->
+  <g filter="url(#sh)">
+    <rect x="484" y="58" width="400" height="180" rx="12" fill="#fff" stroke="#cbd5e1"/>
+    <rect x="484" y="58" width="400" height="40" rx="12" fill="#059669"/>
+    <rect x="484" y="82" width="400" height="16" fill="#059669"/>
+    <text x="684" y="84" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Column-oriented (ClickHouse)</text>
+    <rect x="510" y="118" width="78" height="72" rx="8" fill="#dbeafe"/>
+    <rect x="600" y="118" width="78" height="72" rx="8" fill="#ffedd5"/>
+    <rect x="690" y="118" width="78" height="72" rx="8" fill="#d1fae5"/>
+    <rect x="780" y="118" width="78" height="72" rx="8" fill="#ede9fe"/>
+    <text x="549" y="158" text-anchor="middle" fill="#1e3a8a" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">id</text>
+    <text x="639" y="158" text-anchor="middle" fill="#9a3412" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">date</text>
+    <text x="729" y="158" text-anchor="middle" fill="#065f46" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">region</text>
+    <text x="819" y="158" text-anchor="middle" fill="#5b21b6" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">amount</text>
+    <text x="510" y="214" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">Analytics often reads only a few columns</text>
+  </g>
+
+  <text x="460" y="262" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">ClickHouse stores data by column so SUM / GROUP BY scans stay efficient</text>
+</svg>

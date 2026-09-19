@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 320" role="img" aria-labelledby="title desc">
+  <title id="title">ClickHouse cluster with shards and replicas</title>
+  <desc id="desc">A BI client talks to a cluster entry point. Data is split across shards; each shard has a replica for availability.</desc>
+  <defs>
+    <filter id="sh" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-opacity="0.14"/>
+    </filter>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="920" height="320" rx="12" fill="#f8fafc"/>
+  <text x="460" y="32" text-anchor="middle" fill="#0f172a" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700">Distributed ClickHouse (high level)</text>
+
+  <!-- Client -->
+  <g filter="url(#sh)">
+    <rect x="350" y="48" width="220" height="52" rx="10" fill="#2563eb"/>
+    <text x="460" y="80" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">BI tool / application</text>
+  </g>
+  <path d="M460 100 V128" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Cluster frame -->
+  <rect x="60" y="136" width="800" height="156" rx="14" fill="#fff" stroke="#cbd5e1" stroke-width="2"/>
+  <text x="80" y="158" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="700">ClickHouse cluster</text>
+
+  <!-- Coordinator -->
+  <g filter="url(#sh)">
+    <rect x="300" y="168" width="320" height="44" rx="10" fill="#7c3aed"/>
+    <text x="460" y="196" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700">Coordinator / cluster entry</text>
+  </g>
+
+  <path d="M380 212 L260 236" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M540 212 L660 236" stroke="#64748b" stroke-width="2.5" fill="none" marker-end="url(#arr)"/>
+
+  <!-- Shard 1 -->
+  <g filter="url(#sh)">
+    <rect x="160" y="240" width="140" height="36" rx="8" fill="#ea580c"/>
+    <text x="230" y="263" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Shard 1</text>
+  </g>
+  <!-- Replica 1 cylinder -->
+  <g filter="url(#sh)">
+    <ellipse cx="230" cy="288" rx="42" ry="10" fill="#059669"/>
+    <rect x="188" y="288" width="84" height="18" fill="#059669"/>
+    <ellipse cx="230" cy="306" rx="42" ry="10" fill="#047857"/>
+    <text x="230" y="302" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">Replica</text>
+  </g>
+
+  <!-- Shard 2 -->
+  <g filter="url(#sh)">
+    <rect x="620" y="240" width="140" height="36" rx="8" fill="#f59e0b"/>
+    <text x="690" y="263" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">Shard 2</text>
+  </g>
+  <g filter="url(#sh)">
+    <ellipse cx="690" cy="288" rx="42" ry="10" fill="#0f766e"/>
+    <rect x="648" y="288" width="84" height="18" fill="#0f766e"/>
+    <ellipse cx="690" cy="306" rx="42" ry="10" fill="#115e59"/>
+    <text x="690" y="302" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700">Replica</text>
+  </g>
+
+  <text x="460" y="312" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="11">Shard = portion of data  /  Replica = copy for availability</text>
+</svg>

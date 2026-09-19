@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 220" role="img" aria-labelledby="title desc">
+  <title id="title">From OLTP operations to ClickHouse analytics</title>
+  <desc id="desc">Business apps write to an OLTP database. Data moves into ClickHouse for reports and dashboards.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f0f7ff"/>
+      <stop offset="100%" stop-color="#f7fafc"/>
+    </linearGradient>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 Z" fill="#64748b"/>
+    </marker>
+  </defs>
+  <rect width="920" height="220" rx="12" fill="url(#bg)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="24" y="60" width="150" height="100" rx="12" fill="#2563eb"/>
+    <text x="99" y="105" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Business App</text>
+    <text x="99" y="128" text-anchor="middle" fill="#dbeafe" font-family="Segoe UI, Arial, sans-serif" font-size="12">create order</text>
+  </g>
+  <path d="M182 110 H218" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="230" y="60" width="150" height="100" rx="12" fill="#ea580c"/>
+    <text x="305" y="100" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">OLTP Database</text>
+    <text x="305" y="122" text-anchor="middle" fill="#ffedd5" font-family="Segoe UI, Arial, sans-serif" font-size="12">transactions</text>
+    <text x="305" y="140" text-anchor="middle" fill="#ffedd5" font-family="Segoe UI, Arial, sans-serif" font-size="12">few rows / update</text>
+  </g>
+  <path d="M388 110 H424" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="436" y="60" width="130" height="100" rx="12" fill="#7c3aed"/>
+    <text x="501" y="105" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Load / Sync</text>
+    <text x="501" y="128" text-anchor="middle" fill="#ede9fe" font-family="Segoe UI, Arial, sans-serif" font-size="12">to analytics</text>
+  </g>
+  <path d="M574 110 H610" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="622" y="60" width="150" height="100" rx="12" fill="#059669"/>
+    <text x="697" y="100" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">ClickHouse</text>
+    <text x="697" y="122" text-anchor="middle" fill="#d1fae5" font-family="Segoe UI, Arial, sans-serif" font-size="12">OLAP / columnar</text>
+    <text x="697" y="140" text-anchor="middle" fill="#d1fae5" font-family="Segoe UI, Arial, sans-serif" font-size="12">many rows / SELECT</text>
+  </g>
+  <path d="M780 110 H816" stroke="#64748b" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="828" y="60" width="68" height="100" rx="12" fill="#0f766e"/>
+    <text x="862" y="100" text-anchor="middle" fill="#fff" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700">BI</text>
+    <text x="862" y="122" text-anchor="middle" fill="#ccfbf1" font-family="Segoe UI, Arial, sans-serif" font-size="11">reports</text>
+  </g>
+
+  <text x="460" y="40" text-anchor="middle" fill="#334155" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700">Operational systems feed analytical reporting</text>
+  <text x="460" y="200" text-anchor="middle" fill="#64748b" font-family="Segoe UI, Arial, sans-serif" font-size="12">ClickHouse is built for OLAP-style reporting workloads</text>
+</svg>

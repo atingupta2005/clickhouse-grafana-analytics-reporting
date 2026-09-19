@@ -77,14 +77,23 @@ This kind of workload is different from a day-to-day application transaction.
 
 ClickHouse is primarily an OLAP database.
 
+![From business apps and OLTP into ClickHouse for reports](./assets/oltp-olap-path.svg)
+
+Same idea as a Mermaid flowchart (GitHub theme colors; works in light and dark mode):
+
 ```mermaid
 flowchart LR
-    A[Business Application] --> B[OLTP Database]
-    B --> C[Operational Data]
+    subgraph Operational
+        A[Business application] --> B[(OLTP database)]
+        B --> C[Operational data]
+    end
 
-    C --> D[Analytics Data]
-    D --> E[ClickHouse]
-    E --> F[Reports / Dashboards]
+    subgraph Analytics
+        D[Analytics copy / load] --> E[(ClickHouse)]
+        E --> F[Reports / dashboards]
+    end
+
+    C --> D
 ```
 
 ---
@@ -108,14 +117,36 @@ SQL looks familiar; design thinking does not always transfer.
 
 ## 4. Columnar storage
 
-Row-oriented (conceptual):
+Row-oriented stores values for one row together. Column-oriented stores values for one column together.
+
+![Row-oriented versus column-oriented storage](./assets/row-vs-column.svg)
+
+Same idea in Mermaid (GitHub theme colors):
+
+```mermaid
+flowchart LR
+    subgraph RowStore["Row-oriented (concept)"]
+        R1["Row1: id, date, region, amount"]
+        R2["Row2: id, date, region, amount"]
+    end
+
+    subgraph ColStore["Column-oriented (concept)"]
+        C1["id: 1001, 1002, …"]
+        C2["date: …"]
+        C3["amount: …"]
+    end
+
+    RowStore -.->|"analytics often needs few columns"| ColStore
+```
+
+Row-oriented (text form):
 
 ```text
 Row 1 -> OrderID | Date | Region | Product | Quantity | Amount
 Row 2 -> OrderID | Date | Region | Product | Quantity | Amount
 ```
 
-Column-oriented (conceptual):
+Column-oriented (text form):
 
 ```text
 OrderID     OrderDate      SalesAmount
@@ -142,13 +173,19 @@ Similar values in one column compress well (many repeated region names, statuses
 
 ## 5. Basic ClickHouse architecture
 
+![How a query moves through ClickHouse](./assets/clickhouse-query-path.svg)
+
 ```mermaid
-flowchart LR
-    A[BI Tool / Application] --> B[ClickHouse Server]
-    B --> C[Query Processing]
-    B --> D[Storage]
-    D --> E[Data Parts]
-    C --> F[Query Result]
+flowchart TB
+    A[BI tool / application] --> B[ClickHouse server]
+
+    subgraph Server
+        B --> C[Query processing]
+        B --> D[(Storage)]
+        D --> E[Data parts]
+        C --> F[Query result]
+    end
+
     F --> A
 ```
 
@@ -169,16 +206,22 @@ That level is enough for this session.
 
 This course’s **lab data** lives in a database called `training` (already created for you).
 
-```text
-ClickHouse
-    |
-    +-- training                    (lab data — explore)
-          |
-          +-- regions, plants, products, customers
-          +-- orders, order_items, transactions
-          +-- v_lab_orders          (reporting view)
-    |
-    +-- training_student_<name>     (your sandbox — if write access)
+```mermaid
+flowchart TB
+    CH[ClickHouse]
+
+    subgraph LabData["training — lab data"]
+        T1[regions / plants / products / customers]
+        T2[orders / order_items / transactions]
+        V[v_lab_orders — reporting view]
+    end
+
+    subgraph Sandbox["training_student_name — your sandbox"]
+        S[Your MergeTree tables]
+    end
+
+    CH --> LabData
+    CH --> Sandbox
 ```
 
 **Do not** run `CREATE DATABASE training` on the lab. For DDL practice:
@@ -238,6 +281,19 @@ ORDER BY
 
 MergeTree stores inserts in **data parts** and merges them in the background.
 
+![MergeTree inserts parts, merges them, and SELECT reads parts](./assets/mergetree-parts.svg)
+
+```mermaid
+flowchart LR
+    I[INSERT] --> P1[Data part]
+    I --> P2[Data part]
+    P1 --> M[Background merge]
+    P2 --> M
+    M --> P3[Larger part]
+    Q[SELECT] --> P3
+    Q --> P1
+```
+
 > MergeTree is built for efficient storage and processing of large analytical datasets.
 
 **Live seed check** (read-only is enough):
@@ -288,12 +344,12 @@ Say this clearly in class: **sandbox teaching keys** and **live seed keys** can 
 
 ### Important distinction
 
-```text
-ORDER BY
-    |
-    +-- Controls data ordering
-    +-- Supports the sparse primary index
-    +-- Helps data skipping
+```mermaid
+flowchart TB
+    OB[ORDER BY sorting key]
+    OB --> A[Controls data ordering]
+    OB --> B[Supports sparse primary index]
+    OB --> C[Helps data skipping]
 ```
 
 It does **not** mean “`order_id` must be unique” the way a SQL Server primary key does.
@@ -328,6 +384,25 @@ WHERE order_date >= '2023-02-01'
 ```
 
 ### Partitioning vs ORDER BY
+
+![PARTITION BY splits data; ORDER BY sorts within parts](./assets/partition-vs-orderby.svg)
+
+```mermaid
+flowchart TB
+    subgraph Partition["PARTITION BY"]
+        direction LR
+        PA[202301] --- PB[202302] --- PC[202303]
+    end
+
+    subgraph Sorting["ORDER BY within a part"]
+        direction TB
+        S1["Sorted by key columns"]
+        S2["Supports sparse index / skipping"]
+        S1 --> S2
+    end
+
+    Partition -.->|"each partition holds sorted parts"| Sorting
+```
 
 ```text
 PARTITION BY  -> divides data into partitions
@@ -391,15 +466,14 @@ customer_email -> may be optional
 ## 12. Basic data model
 
 ```mermaid
-flowchart LR
-    R[Regions] --> P[Plants]
-    P --> O[Orders]
-
-    C[Customers] --> O
-    PR[Products] --> O
-
-    O --> OI[Order Items]
-    O --> T[Transactions]
+erDiagram
+    REGIONS ||--o{ PLANTS : contains
+    PLANTS ||--o{ ORDERS : fulfills
+    CUSTOMERS ||--o{ ORDERS : places
+    PRODUCTS ||--o{ ORDER_ITEMS : sold_as
+    ORDERS ||--|{ ORDER_ITEMS : has
+    ORDERS ||--o{ TRANSACTIONS : records
+    ORDERS ||--o| V_LAB_ORDERS : feeds_view
 ```
 
 Lab data tables include regions, plants, products, customers, orders, order_items, and transactions. For reporting columns in one place, use **`training.v_lab_orders`**.
@@ -450,12 +524,12 @@ Ask four questions:
 
 ```mermaid
 flowchart LR
-    A[Understand Data] --> B[Understand Queries]
-    B --> C[Choose Data Types]
+    A[Understand data] --> B[Understand queries]
+    B --> C[Choose types]
     C --> D[Choose MergeTree]
-    D --> E[Choose Partitioning]
+    D --> E[Choose PARTITION BY]
     E --> F[Choose ORDER BY]
-    F --> G[Load and Test]
+    F --> G[Load and test]
 ```
 
 > In ClickHouse, table design should be driven by the analytical workload.
@@ -471,15 +545,23 @@ Larger deployments use a cluster:
 * **Shard** — a portion of the data
 * **Replica** — another copy for availability
 
+![ClickHouse cluster with shards and replicas](./assets/cluster-shards-replicas.svg)
+
 ```mermaid
-flowchart LR
-    A[Application / BI Tool] --> B[ClickHouse Cluster]
+flowchart TB
+    subgraph Clients
+        A[BI tool / application]
+    end
 
-    B --> C[Shard 1]
-    B --> D[Shard 2]
+    subgraph Cluster["ClickHouse cluster"]
+        B[Coordinator / cluster entry]
+        B --> C[Shard 1]
+        B --> D[Shard 2]
+        C --> E[(Replica)]
+        D --> F[(Replica)]
+    end
 
-    C --> E[Replica]
-    D --> F[Replica]
+    A --> B
 ```
 
 Detailed cluster setup is outside this session — know the terms.

@@ -55,13 +55,12 @@ A manufacturing company runs plants across several regions. Customers place orde
 * Trends over time
 
 ```mermaid
-flowchart LR
-    R[Regions] --> P[Plants]
-    P --> O[Orders]
-    C[Customers] --> O
-    PR[Products] --> O
-
-    O --> A[Analytics and Reports]
+erDiagram
+    REGIONS ||--o{ PLANTS : contains
+    PLANTS ||--o{ ORDERS : fulfills
+    CUSTOMERS ||--o{ ORDERS : places
+    PRODUCTS ||--o{ ORDERS : includes
+    ORDERS ||--|{ ANALYTICS : feeds
 ```
 
 ## Session Topics
@@ -115,15 +114,23 @@ flowchart LR
 
 * Shards and replicas at a high level only
 
+![ClickHouse cluster with shards and replicas](./assets/cluster-shards-replicas.svg)
+
 ```mermaid
-flowchart LR
-    C[Client / Application] --> S[ClickHouse Cluster]
+flowchart TB
+    subgraph Clients
+        C[BI tool / application]
+    end
 
-    S --> SH1[Shard 1]
-    S --> SH2[Shard 2]
+    subgraph Cluster["ClickHouse cluster"]
+        S[Coordinator / cluster entry]
+        S --> SH1[Shard 1]
+        S --> SH2[Shard 2]
+        SH1 --> R1[(Replica)]
+        SH2 --> R2[(Replica)]
+    end
 
-    SH1 --> R1[Replica]
-    SH2 --> R2[Replica]
+    C --> S
 ```
 
 ## Hands-on Work
@@ -141,26 +148,14 @@ You can explain how ClickHouse stores and queries analytical data, and you can e
 
 Design loop to remember:
 
-```text
-Business Data
-     |
-     v
-Choose Data Types
-     |
-     v
-Choose Table Engine
-     |
-     v
-Choose Partitioning
-     |
-     v
-Choose ORDER BY / Sorting Key
-     |
-     v
-Load Data
-     |
-     v
-Run Analytical Queries
+```mermaid
+flowchart LR
+    A[Business data] --> B[Choose types]
+    B --> C[Choose engine]
+    C --> D[PARTITION BY]
+    D --> E[ORDER BY]
+    E --> F[Load data]
+    F --> G[Analytical queries]
 ```
 
 The same lab dataset is reused in later sessions (SQL, migration, optimization, Grafana, OData, and more).
@@ -172,4 +167,4 @@ The same lab dataset is reused in later sessions (SQL, migration, optimization, 
 | `README.md` | Session overview and navigation |
 | `notes.md` | Theory and teaching examples |
 | `lab.md` | Guided hands-on lab |
-| `assets/` | Diagrams or files when required |
+| `assets/` | Colorful SVG diagrams (plus Mermaid in the Markdown) |

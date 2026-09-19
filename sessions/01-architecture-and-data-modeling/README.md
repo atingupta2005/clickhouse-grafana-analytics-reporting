@@ -33,7 +33,7 @@ How ClickHouse stores and queries analytical data, and how to explore the lab mo
 
 ## What you will do
 
-**Core:** explore lab tables/views → simple analytics on `training.v_lab_orders`  
+**Core:** explore lab tables/views → simple analytics on `training.v_lab_orders` 
 
 **Stretch:** sandbox DDL if you have write access
 

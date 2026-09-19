@@ -2,7 +2,6 @@
 
 ## 1. API-Based Reporting
 
-<!-- training-diagrams:v1 -->
 ![API data into Grafana Infinity](./assets/infinity-architecture.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -45,10 +44,8 @@ This approach is useful when reporting data is exposed by an application rather 
 
 ## 2. REST API and OData
 
-<!-- training-diagrams:v2 -->
 ![REST vs OData roots in Infinity](./assets/rest-vs-odata-roots.svg)
 
-<!-- training-diagrams:v1 -->
 ![Root selector fork](./assets/root-data-vs-value.svg)
 
 
@@ -74,7 +71,6 @@ The detailed OData query syntax was covered in Session 7.
 
 ## 3. Grafana API Data Sources — Infinity (provisioned)
 
-<!-- training-diagrams:v2 -->
 ![ClickHouse DS vs Infinity DS](./assets/ch-vs-infinity.svg)
 
 This lab uses the **provisioned Infinity** data source (uid **`infinity`**). Do **not** create a new Infinity source.
@@ -102,7 +98,6 @@ Typical Infinity fields: URL, method GET, parser JSON, root selector, optional h
 
 ## 4. API Request
 
-<!-- training-diagrams:v2 -->
 ![Infinity request anatomy](./assets/request-anatomy.svg)
 
 A basic REST request can be represented as:
@@ -170,7 +165,6 @@ In production you may see API keys, Basic auth, Bearer tokens, or app-specific s
 
 ## 8. Query Parameters
 
-<!-- training-diagrams:v2 -->
 ![Stack region, status, dates, and page on /api/sales](./assets/rest-param-stack.svg)
 
 Query parameters allow a Grafana request to retrieve a specific subset of data.
@@ -348,7 +342,6 @@ The Grafana data-source configuration must identify the relevant collection:
 
 ## 14. Pagination
 
-<!-- training-diagrams:v2 -->
 ![REST page and page_size vs OData top/skip](./assets/rest-page-page-size.svg)
 
 **REST (this lab):**
@@ -374,7 +367,6 @@ An OData service may also return `@odata.nextLink`. Do not assume Infinity autom
 
 ## 15. Empty Responses
 
-<!-- training-diagrams:v2 -->
 ![Empty HTTP 200 vs HTTP errors](./assets/empty-vs-http-error.svg)
 
 An API can successfully respond but return no records.
@@ -451,7 +443,6 @@ After configuration, test the connection or execute a simple request before crea
 
 ## 18. API Query Workflow
 
-<!-- training-diagrams:v2 -->
 ![Incremental API panel workflow](./assets/api-query-workflow.svg)
 
 Use an incremental approach:
@@ -547,7 +538,6 @@ The response should be inspected before configuring the Grafana visualization.
 
 ## 21. Troubleshooting API Integration
 
-<!-- training-diagrams:v2 -->
 ![Empty result vs broken request](./assets/empty-vs-http-error.svg)
 
 ### Cannot connect to API
@@ -596,7 +586,6 @@ Check:
 
 ## 22. End-to-End Reporting Flow
 
-<!-- training-diagrams:v1 -->
 ![Same KPI two sources](./assets/same-kpi-two-sources.svg)
 
 
@@ -629,7 +618,7 @@ The key point is that Grafana is consuming application/API data rather than quer
 
 ## Key Points
 
-* Use provisioned **Infinity** (uid `infinity`); full HTTPS URLs; parser JSON.
+* Use provisioned **Infinity** ; full HTTPS URLs; parser JSON.
 * REST root selector **`data`**; OData root selector **`value`**.
 * REST pagination: **`page` / `page_size`**. Date aliases: `date_from`/`date_to`.
 * Training APIs have **no auth** — no 401 drill.

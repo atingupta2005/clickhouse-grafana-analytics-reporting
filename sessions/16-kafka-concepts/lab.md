@@ -6,7 +6,7 @@
 
 In this lab, follow an order event from an application through Kafka and into ClickHouse.
 
-The lab is an **architecture walkthrough**, not a Kafka administration exercise. Students do not need to produce or consume real Kafka messages.
+The lab is an **architecture walkthrough**, not a Kafka administration exercise. You do not need to produce or consume real Kafka messages.
 
 ---
 
@@ -332,42 +332,6 @@ Discuss:
 ### Expected Result
 
 The decision should be based on requirements such as freshness, event volume, multiple consumers, decoupling and continuous processing—not simply on the availability of Kafka.
-
----
-
-## 9. Optional Stretch — Redpanda Environment
-**Stretch (optional)**
-
-The lab environment uses Redpanda as a Kafka-compatible broker.
-
-Known lab facts:
-
-```text
-Compose profile: kafka
-Container: lab-kafka
-Internal port: 9092 (Kafka API inside the compose network)
-Student public Kafka URL: none
-```
-
-If the Data VM Compose stack can start the optional profile, example shared-demo commands (from the Data compose directory):
-
-```bash
-docker compose --profile kafka up -d redpanda
-docker compose --profile kafka ps
-docker compose --profile kafka logs --tail=50 redpanda
-```
-
-Discuss what “healthy broker” means. Do **not** turn this into a produce/consume lab.
-
-### Expected Result
-
-Students should see that the course environment can provide a Kafka-compatible broker when the profile is up — or understand that Core still completes if it is not.
-
-### Tip
-
-This is optional. If this profile is unavailable, you can still complete the Core session.
-
-Do not require students to install Kafka/Redpanda, create topics, produce messages, or consume messages. Do not invent a public Kafka endpoint for students.
 
 ---
 

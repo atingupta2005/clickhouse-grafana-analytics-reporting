@@ -2,7 +2,6 @@
 
 ## 1. SQL Server and ClickHouse
 
-<!-- training-diagrams:v1 -->
 ![SQL Server to ClickHouse migration](./assets/migration-pipeline.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -38,7 +37,6 @@ Common migration areas include:
 
 ## 2. Common Syntax Differences
 
-<!-- training-diagrams:v1 -->
 ![Common dialect swaps](./assets/dialect-cheats.svg)
 
 
@@ -461,7 +459,6 @@ A query that executes successfully can still produce different results because o
 
 ## 13. Query Validation
 
-<!-- training-diagrams:v1 -->
 ![Session 04 lab topology](./assets/dual-engine-lab.svg)
 
 

@@ -2,7 +2,6 @@
 
 ## 1. Working with Multiple Tables
 
-<!-- training-diagrams:v1 -->
 ![Joins build a reporting row](./assets/join-to-report.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -56,7 +55,6 @@ ORDER BY total_sales DESC;
 
 ## 2. INNER JOIN
 
-<!-- training-diagrams:v1 -->
 ![INNER JOIN vs LEFT JOIN](./assets/inner-vs-left.svg)
 
 
@@ -168,7 +166,6 @@ Detailed join performance optimization is outside this session.
 
 ## 5. CTEs
 
-<!-- training-diagrams:v2 -->
 ![CTE vs subquery](./assets/cte-vs-subquery.svg)
 
 
@@ -270,11 +267,9 @@ Subqueries are useful when one calculation is required before another calculatio
 
 ## 7. Window Functions
 
-<!-- training-diagrams:v2 -->
 ![GROUP BY vs window](./assets/groupby-vs-window.svg)
 
 
-<!-- training-diagrams:v2 -->
 ![Window function on sample rows](./assets/window-anatomy-rows.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -287,7 +282,6 @@ flowchart TB
 ```
 
 
-<!-- training-diagrams:v1 -->
 ![Window function mental model](./assets/window-frame.svg)
 
 
@@ -390,7 +384,6 @@ They differ mainly in how they handle ties.
 
 ## 9. Running Totals
 
-<!-- training-diagrams:v2 -->
 ![Running total over dates](./assets/running-total.svg)
 
 

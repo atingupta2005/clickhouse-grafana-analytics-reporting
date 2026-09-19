@@ -577,7 +577,7 @@ No joins yet — that comes later.
 ```text
 ╔══════════════════════════════════════════════════════════════════╗
 ║ NEVER run DROP on the `training` database. ║
-║ That database is used by the whole class. ║
+║ That database is shared by everyone in the lab. ║
 ║ ║
 ║ Cleanup applies ONLY to tables you created in ║
 ║ training_student_<yourname>. ║
@@ -609,4 +609,4 @@ Before finishing, confirm you can:
 * Inspect a table definition and (optionally) data parts
 * Query **`training.v_lab_orders`** for simple analytics
 * Explain partitioning vs sorting
-* Explain that the `training.orders` sort key is `(order_date, plant_id, order_id)`, while a **sandbox** teaching table may use `(region_id, order_date, order_id)`
+* Note: the `training.orders` sort key is `(order_date, plant_id, order_id)`, while a **sandbox** teaching table may use `(region_id, order_date, order_id)`

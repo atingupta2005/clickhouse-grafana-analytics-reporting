@@ -24,7 +24,7 @@ Dashboard name: **`Session 13 - Reporting Workshop`**
 * Build Core KPIs (orders, revenue, high-value lines) plus region/plant views
 * Filters: Region, Plant, Status (default Completed)
 
-**Core:** compact dashboard with the panels above + variables  
+**Core:** compact dashboard with the panels above + variables 
 
 **Stretch:** Infinity panel, extra drill-down, more transformations, `/cmf/plants`
 

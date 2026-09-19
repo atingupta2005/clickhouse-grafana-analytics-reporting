@@ -2,7 +2,6 @@
 
 ## 1. Grafana Alerting Overview
 
-<!-- training-diagrams:v1 -->
 ![Alert lifecycle](./assets/alert-lifecycle.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -145,7 +144,7 @@ Expressions become useful when the alert requires more processing than a direct 
 
 ### Core
 
-Students should understand the difference between:
+You should understand the difference between:
 
 - the query producing data
 - the expression transforming or evaluating data
@@ -179,11 +178,9 @@ The rule may be evaluated frequently while notification behavior is controlled s
 
 ## 6. Pending State
 
-<!-- training-diagrams:v2 -->
 ![Alert state transitions](./assets/alert-state-machine.svg)
 
 
-<!-- training-diagrams:v1 -->
 ![Alert states](./assets/alert-states.svg)
 
 
@@ -235,7 +232,6 @@ Pending periods help avoid notifications caused by short-lived fluctuations.
 
 ## 7. No-Data Handling
 
-<!-- training-diagrams:v2 -->
 ![Zero vs NoData vs Error](./assets/zero-nodata-error.svg)
 
 
@@ -352,7 +348,7 @@ Do not use `training.orders` for quantity, sales amount, or region-based reporti
 
 Keep the first alert simple. One query and one threshold are enough to demonstrate the complete lifecycle.
 
-For a classroom **firing** demo, use a condition that is clearly true against the returned Completed sales (for example **Is above 0**, or **Is below** a very large number). Say explicitly that the threshold is for demonstration only.
+For a lab **firing** demo, use a condition that is clearly true against the returned Completed sales (for example **Is above 0**, or **Is below** a very large number). Note that the threshold is for demonstration only.
 
 ---
 
@@ -434,13 +430,13 @@ Webhook endpoint
 
 ### Core
 
-Understand the role of a contact point and inspect the configuration during the watch-along.
+Understand the role of a contact point and inspect the configuration during the admin steps.
 
 ### Permission Note
 
 The `student` account may not have permission to create or save contact points.
 
-Therefore, creating a contact point is a watch-along demonstration, not a required Core task for the student account.
+Therefore, creating a contact point is a admin steps demonstration, not a required Core task for the student account.
 
 ---
 
@@ -476,7 +472,6 @@ Explain the difference clearly:
 
 ## 13. Generic Webhooks
 
-<!-- training-diagrams:v1 -->
 ![Webhook notification path](./assets/webhook-path.svg)
 
 
@@ -501,10 +496,10 @@ Possible consumers include:
 - Internal applications
 - Custom notification services
 
-The training lab does not require students to build a webhook receiver.
+The training lab does not require you to build a webhook receiver.
 
-### Watch-along (admin account)
-The watch-along may use:
+### admin steps (admin account)
+The admin steps may use:
 
 - a provided webhook URL, or
 - a clearly identified public demonstration request endpoint
@@ -530,9 +525,9 @@ The exact payload structure should be inspected from the Grafana version and con
 
 ### Tip
 
-The goal is to teach students how to read and use the payload, not to turn the session into webhook application development.
+The goal is to learn how to read and use the payload, not to turn the session into webhook application development.
 
-Ask students to identify:
+Identify:
 
 1. What alert generated the notification?
 2. What state is the alert in?
@@ -563,8 +558,7 @@ Webhook
 
 Use the Grafana administrator account for the test demonstration.
 
-Students can observe:
-
+You can observe:
 - Rule configuration
 - Evaluation behavior
 - State changes
@@ -627,14 +621,14 @@ with password:
 GrafanaLab!2026
 ```
 
-The student account may not have permission to create or save alert rules or contact points.
+Your account may not have permission to create or save alert rules or contact points.
 
 Therefore:
 
-- Alert creation is a Core watch-along step (admin account).
-- Contact-point creation is a Core watch-along step (admin account).
+- Alert creation is a Core admin steps step (admin account).
+- Contact-point creation is a Core admin steps step (admin account).
 - Student recreation is Stretch only where permissions allow.
-- The session does not depend on students having administrator privileges.
+- The session does not depend on you having administrator privileges.
 
 ---
 
@@ -664,4 +658,4 @@ Use this sequence during the live session:
 10. Test the complete flow
 ```
 
-Keep the first example simple and introduce webhook routing only after students understand how the alert rule itself works.
+Keep the first example simple and introduce webhook routing only after you understand how the alert rule itself works.

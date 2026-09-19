@@ -22,7 +22,7 @@ Improve dashboard layout, panel types, thresholds, transformations, and navigati
 * Reuse Session 10 variable patterns on ClickHouse panels
 * Build a polished multi-panel dashboard
 
-**Core:** layout → 3+ panel types → thresholds → one transformation → save  
+**Core:** layout → 3+ panel types → thresholds → one transformation → save 
 
 **Stretch:** annotations, Infinity panel, extra drill-down
 

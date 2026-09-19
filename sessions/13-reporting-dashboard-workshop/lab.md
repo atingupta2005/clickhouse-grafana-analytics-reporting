@@ -57,7 +57,7 @@ A new empty dashboard is available for building the workshop report.
 
 ### Tip
 
-Students should use the existing **ClickHouse** datasource. Do not create another ClickHouse datasource.
+Use the existing **ClickHouse** datasource. Do not create another ClickHouse datasource.
 
 ---
 
@@ -571,7 +571,7 @@ Region `2` should not appear in this Completed result.
 
 ### Tip
 
-This query is a useful troubleshooting query when students believe the Region variable is not working.
+This query is useful when you believe the Region variable is not working.
 
 ---
 

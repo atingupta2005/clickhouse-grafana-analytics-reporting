@@ -2,7 +2,6 @@
 
 ## 1. What is OData?
 
-<!-- training-diagrams:v1 -->
 ![OData query pipeline](./assets/odata-pipeline.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -36,7 +35,6 @@ https://example.com/odata/Orders?$filter=Status eq 'Completed'
 
 ## 2. OData and REST
 
-<!-- training-diagrams:v1 -->
 ![REST vs OData](./assets/rest-vs-odata.svg)
 
 
@@ -357,7 +355,6 @@ This can be used to retrieve the highest-value orders.
 
 ## 14. `$skip`
 
-<!-- training-diagrams:v2 -->
 ![$skip/$top on ordered rows](./assets/odata-skip-top-window.svg)
 
 
@@ -425,7 +422,6 @@ If
 
 ## 17. Combining Query Options
 
-<!-- training-diagrams:v1 -->
 ![OData option toolbox](./assets/odata-options.svg)
 
 

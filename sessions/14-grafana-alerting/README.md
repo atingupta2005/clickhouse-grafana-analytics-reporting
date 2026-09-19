@@ -17,10 +17,10 @@ Learn the Grafana alerting flow: **Query → Alert Rule → Evaluation → Conta
 ## What you will do
 
 * Sign in as `student` / `StudentLab!2026` to inspect Alerting
-* Watch-along with `admin` / `GrafanaLab!2026` for rule and webhook setup
+* admin steps with `admin` / `GrafanaLab!2026` for rule and webhook setup
 * Discuss KPI and no-data scenarios (including Region 2 + Completed)
 
-**Core:** review UI → watch-along KPI alert → contact point / webhook → test discussion  
+**Core:** review UI → admin steps KPI alert → contact point / webhook → test discussion 
 
 **Stretch:** recreate a simplified rule if your account allows saving alerts
 

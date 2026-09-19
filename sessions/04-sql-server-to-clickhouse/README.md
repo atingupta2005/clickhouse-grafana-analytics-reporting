@@ -25,7 +25,7 @@ Compare **logic and shape**, not identical row counts (SQL Server sample is smal
 
 ## What you will do
 
-**Core:** rewrite and run TOP→LIMIT, ISNULL/COALESCE, CASE, one date pattern, one aggregate on both engines  
+**Core:** rewrite and run TOP→LIMIT, ISNULL/COALESCE, CASE, one date pattern, one aggregate on both engines 
 
 **Stretch:** window functions, fuller migration set
 

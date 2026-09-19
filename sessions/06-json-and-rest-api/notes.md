@@ -2,7 +2,6 @@
 
 ## 1. JSON
 
-<!-- training-diagrams:v1 -->
 ![REST JSON into a report shape](./assets/rest-json-report.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -41,7 +40,6 @@ A JSON value can be:
 
 ## 2. JSON Objects
 
-<!-- training-diagrams:v1 -->
 ![JSON envelope vs flat rows](./assets/json-envelope.svg)
 
 
@@ -134,7 +132,7 @@ For live training calls, map the flat fields you actually see in the response.
 
 ## 5. JSON Field Extraction (no CREATE needed)
 
-Students use **`training_ro`**, which cannot `CREATE` or `INSERT`. Practice extraction with an **inline** JSON string — no table required.
+You use **`training_ro`**, which cannot `CREATE` or `INSERT`. Practice extraction with an **inline** JSON string — no table required.
 
 ```sql
 SELECT
@@ -399,7 +397,6 @@ Reporting Application
 
 ## 16. Pagination
 
-<!-- training-diagrams:v1 -->
 ![Pagination walk](./assets/pagination.svg)
 
 
@@ -552,7 +549,7 @@ Steps:
 
 * JSON can contain objects, arrays, nested structures, and `null` values.
 * Live training lists use `{ "data": [...], "count": N }` — flat rows.
-* Students extract JSON with inline `SELECT` — **no** `CREATE`/`INSERT` as `training_ro`.
+* You extract JSON with inline `SELECT` — **no** `CREATE`/`INSERT` as `training_ro`.
 * Pagination uses **`page` / `page_size`**.
 * Date filters: **`from_date`/`to_date`** or aliases **`date_from`/`date_to`**.
 * Training `/api` has **no auth**.

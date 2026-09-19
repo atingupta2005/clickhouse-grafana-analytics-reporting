@@ -2,7 +2,6 @@
 
 ## 1. Why variables?
 
-<!-- training-diagrams:v1 -->
 ![Variables drive the panel query](./assets/variable-to-panel.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -80,7 +79,7 @@ ORDER BY region_id
 
 In the variable editor:
 
-* Data source: **ClickHouse** (provisioned, uid `clickhouse`)
+* Data source: **ClickHouse** (provisioned)
 * Query: as above
 * Typically **value** = `region_id`, **text** = `region_name` (set in the variable UI / Refresh options)
 
@@ -121,11 +120,9 @@ That matches how labs filter `training.v_lab_orders` (view maps stored `Closed` 
 
 ## 6. Multi-value and the All option
 
-<!-- training-diagrams:v2 -->
 ![Multi-value equals vs IN](./assets/equals-vs-in.svg)
 
 
-<!-- training-diagrams:v1 -->
 ![Multi-value expansion](./assets/multivalue-ch-vs-odata.svg)
 
 
@@ -149,7 +146,6 @@ WHERE status IN (${status:sqlstring})
 
 ## 7. Variable formatting
 
-<!-- training-diagrams:v2 -->
 ![Variable expansion in ClickHouse](./assets/variable-expansion.svg)
 
 
@@ -206,7 +202,6 @@ WHERE v.region_id IN (${region})
 
 ## 9. Dependencies and cascading
 
-<!-- training-diagrams:v1 -->
 ![Cascading variables](./assets/cascade-region-plant.svg)
 
 
@@ -351,7 +346,7 @@ Use visualization **Time series** and map the `time` field.
 
 ## 12. Variables in REST (Infinity)
 
-Provisioned data source: **Infinity** (uid `infinity`).
+Provisioned data source: **Infinity** .
 
 | Setting | Value |
 | ------- | ----- |

@@ -1,6 +1,6 @@
 # ClickHouse Architecture and Data Modeling
 
-## Connect (classroom)
+## Connect
 
 | Item | Value |
 |------|--------|

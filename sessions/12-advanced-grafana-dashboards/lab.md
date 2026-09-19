@@ -254,7 +254,7 @@ The Stat panel changes its visual state according to the configured thresholds.
 
 ### Tip
 
-Explain that thresholds affect presentation. They do not modify the ClickHouse result.
+Note: thresholds affect presentation. They do not modify the ClickHouse result.
 
 ---
 
@@ -552,11 +552,11 @@ Before finishing, verify:
 
 If time permits, demonstrate Grafana annotations using an available Grafana-supported annotation mechanism.
 
-Keep this as a shared demo if the student role cannot create or save the required annotation configuration.
+Skip or observe if your account cannot create or save the required annotation configuration.
 
 ### Expected result
 
-Students understand how event markers can be displayed against a time-series visualization.
+You should understand how event markers can be displayed against a time-series visualization.
 
 ### Tip
 
@@ -566,7 +566,7 @@ Do not invent operational incidents or fake production events for the training d
 
 ## 18. Add an Infinity Panel
 
-Use the provisioned **Infinity** datasource (uid `infinity`). Do not recreate it.
+Use the provisioned **Infinity** datasource . Do not recreate it.
 
 Example OData table (root selector **`value`**):
 
@@ -584,7 +584,7 @@ For REST, use root selector **`data`** and `page` / `page_size` (Session 09).
 
 ### Expected result
 
-Students see how an Infinity panel can complement ClickHouse-based panels without changing the provisioned datasource configuration.
+You see how an Infinity panel can complement ClickHouse-based panels without changing the provisioned datasource configuration.
 
 ### Tip
 

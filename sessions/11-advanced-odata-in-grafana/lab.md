@@ -554,7 +554,7 @@ Verify:
 
 ### Expected Result
 
-Students can identify the difference between:
+You can identify the difference between:
 
 ```text
 Valid response + records
@@ -634,7 +634,7 @@ Working example with two regions selected (1 and 3) — use a **custom** variabl
 $filter=(RegionId eq 1 or RegionId eq 3) and Status eq 'Completed'
 ```
 
-In Grafana, a practical classroom approach is:
+In Grafana, a practical approach is:
 
 1. Prove the fixed `or` URL works.
 2. Then use a custom multi-value format that expands to `RegionId eq 1 or RegionId eq 3` (for example a regex/custom format that prefixes each value), **or** keep multi-region as a fixed OR demo if formatting is too fiddly in the time available.
@@ -779,7 +779,7 @@ Discuss:
 
 ### Expected Result
 
-Students understand why API queries should retrieve only the data required by the panel.
+You should understand why API queries should retrieve only the data required by the panel.
 
 ---
 
@@ -808,7 +808,7 @@ Discuss:
 
 ### Expected Result
 
-Students understand the purpose and limitation of `$expand`.
+You should understand the purpose and limitation of `$expand`.
 
 ---
 
@@ -850,7 +850,7 @@ Verify that the actual value appears in the request.
 
 ### Expected Result
 
-Students can distinguish:
+You can distinguish:
 
 ```text
 Query error

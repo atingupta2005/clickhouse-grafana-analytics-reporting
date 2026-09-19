@@ -16,12 +16,12 @@ See how dbt structures analytics transformations for ClickHouse (sources → mod
 
 ## What you will do
 
-* Walk through `stacks/app/dbt/` (sources + `mart_sales_by_region`)
+* Walk through the course dbt project (sources + `mart_sales_by_region`)
 * Trace source `training.*` → model schema `training_dbt`
 
-**Core:** project walkthrough (no App VM SSH required)  
+**Core:** project walkthrough (no server login required) 
 
-**Stretch:** shared demo of `dbt run` / `dbt test` when the `dbt` profile is available
+**Stretch:** optional `dbt run` / `dbt test` if shown in class
 
 ## Files
 

@@ -21,7 +21,7 @@ Work with JSON structures and REST APIs as inputs for analytics and reporting.
 * Apply `page` / `page_size` and date filters
 * Extract fields into a reporting-friendly shape
 
-**Core:** call `/api/sales` → inspect JSON → filter + paginate → extract fields  
+**Core:** call `/api/sales` → inspect JSON → filter + paginate → extract fields 
 
 **Stretch:** nested examples, error cases, extra endpoints
 

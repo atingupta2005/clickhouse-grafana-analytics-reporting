@@ -1,6 +1,6 @@
 # ClickHouse and Grafana — Training Materials
 
-Instructor-led course materials for analytics and reporting with ClickHouse and Grafana.
+Classroom materials for analytics and reporting with ClickHouse and Grafana.
 
 ## Lab access
 
@@ -14,7 +14,7 @@ Instructor-led course materials for analytics and reporting with ClickHouse and 
 | REST API | https://vmclickhouse.canadacentral.cloudapp.azure.com/api |
 | OData | https://vmclickhouse.canadacentral.cloudapp.azure.com/odata |
 
-Login details for class tools are provided by the instructor at the start of the course.
+Login details for class tools are provided at the start of the course.
 
 More URL notes: [`docs/ACCESS.md`](docs/ACCESS.md)
 

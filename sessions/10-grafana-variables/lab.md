@@ -21,8 +21,8 @@ Sign in:
 
 Use provisioned data sources only:
 
-* **ClickHouse** (uid `clickhouse`)
-* **Infinity** (uid `infinity`) — Stretch panels
+* **ClickHouse** 
+* **Infinity**  — Stretch panels
 
 Do **not** create new data sources.
 
@@ -185,7 +185,7 @@ Title: **Filtered Sales**.
 
 **Expected result:** **Empty / zero** — Completed seed exists only for regions **1, 3, 5**.
 
-> Explain empty Completed + region 2 so students do not “fix” working filters.
+> **Tip:** Region 2 + Completed is empty by design — do not “fix” working filters.
 
 ---
 

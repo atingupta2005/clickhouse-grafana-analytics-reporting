@@ -22,7 +22,7 @@ Make dashboards interactive with Grafana variables (including region → plant c
 * Wire Region, Plant, Status (and related filters) into panels
 * Confirm multi-value `IN (...)` patterns and Region 2 + Completed empty
 
-**Core:** absolute time → variables → 2–3 ClickHouse panels on `training.v_lab_orders` → save → empty demo  
+**Core:** absolute time → variables → 2–3 ClickHouse panels on `training.v_lab_orders` → save → empty demo 
 
 **Stretch:** Category → Product, Customer, Infinity with variables, time macros
 

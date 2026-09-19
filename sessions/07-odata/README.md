@@ -20,7 +20,7 @@ Query the training OData service with `$filter`, `$select`, `$orderby`, `$top`, 
 * Build filtered and projected queries
 * Confirm responses use the `value` array
 
-**Core:** basic Orders query → `$filter` Completed → `$select` / `$orderby` / `$top`  
+**Core:** basic Orders query → `$filter` Completed → `$select` / `$orderby` / `$top` 
 
 **Stretch:** `$skip` pagination, unsupported-feature checks
 

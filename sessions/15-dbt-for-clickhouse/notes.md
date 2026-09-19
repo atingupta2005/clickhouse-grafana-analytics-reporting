@@ -2,7 +2,6 @@
 
 ## 1. dbt and Analytics Engineering
 
-<!-- training-diagrams:v1 -->
 ![dbt workflow](./assets/dbt-workflow.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -83,13 +82,13 @@ This separation is useful because transformation outputs can be developed and ma
 The existing project is under:
 
 ```text
-stacks/app/dbt/
+the course dbt project/
 ```
 
 Important project files include:
 
 ```text
-stacks/app/dbt/
+the course dbt project/
 ├── dbt_project.yml
 ├── profiles.yml
 └── models/
@@ -133,13 +132,12 @@ The configured target uses ClickHouse HTTP and the `training_rw` user.
 - `dbt_project.yml` describes the dbt project.
 - `profiles.yml` describes how dbt connects to the target environment.
 
-Do not ask students to create a new warehouse profile during the Core walkthrough.
+Do not create a new warehouse profile during the Core walkthrough.
 
 ---
 
 ## 4. Sources
 
-<!-- training-diagrams:v1 -->
 ![Source vs model](./assets/source-vs-model.svg)
 
 
@@ -176,7 +174,7 @@ It also makes dependencies more understandable than hard-coding every table refe
 | Located in `training` | Intended to land in `training_dbt` |
 | Starting point | Transformation result |
 
-**Tip:** Emphasize that declaring a source does not copy the source table. It describes an existing database object that the dbt model can read.
+**Tip:** declaring a source does not copy the source table. It describes an existing database object that the dbt model can read.
 
 ---
 
@@ -215,7 +213,6 @@ This separates transformation logic from the process used to execute it.
 
 ## 6. Model Materialization
 
-<!-- training-diagrams:v2 -->
 ![Materialization types](./assets/materialization-types.svg)
 
 
@@ -283,7 +280,6 @@ dbt defines and manages the transformation workflow; ClickHouse executes the SQL
 
 ## 8. Transformation Example
 
-<!-- training-diagrams:v2 -->
 ![dbt model DAG to mart](./assets/model-dag-mart.svg)
 
 
@@ -308,7 +304,7 @@ The transformation can combine operational data and reference data to create a s
 
 This is an example of a **mart**: a dataset shaped for a particular analytical use case.
 
-**Tip:** Focus on reading the existing SQL rather than asking students to rewrite it. The purpose of the Core walkthrough is to understand how the model fits into the dbt workflow.
+**Tip:** Focus on reading the existing SQL rather than rewriting it. The purpose of the Core walkthrough is to understand how the model fits into the dbt workflow.
 
 ---
 
@@ -388,7 +384,7 @@ Test
 
 A successful model run does not automatically mean the resulting data is correct.
 
-**Lab honesty:** the `stacks/app/dbt/` project currently has **no** test YAML. Learn the concepts above; do not invent project tests for Core. The optional Stretch may show `dbt test` with nothing configured.
+**Note:** the `the course dbt project/` project currently has **no** test YAML. Learn the concepts above; do not invent project tests for Core. The optional Stretch may show `dbt test` with nothing configured.
 
 **Tip:** Explain this distinction carefully. `dbt run` answers whether the transformation executed successfully. `dbt test` checks defined data-quality expectations.
 
@@ -485,7 +481,6 @@ This is not a rule that every system must follow. Transformation location should
 
 ## 14. Where Should Transformation Happen?
 
-<!-- training-diagrams:v1 -->
 ![Where transforms should live](./assets/transform-layers.svg)
 
 
@@ -531,7 +526,7 @@ Useful for:
 
 ### Core
 
-Students should understand:
+You should understand:
 
 - What dbt is
 - Why analytics engineering uses dbt
@@ -556,4 +551,4 @@ dbt test
 
 from the existing `lab-dbt` container when the configured profile is available.
 
-Students should not be required to SSH to the App VM for the Core session.
+Do not be required to SSH to the App VM for the Core session.

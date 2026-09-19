@@ -2,7 +2,6 @@
 
 ## 1. Why Kafka?
 
-<!-- training-diagrams:v1 -->
 ![Kafka into ClickHouse analytics](./assets/kafka-to-clickhouse.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -129,7 +128,6 @@ Topic names should reflect the event stream and its ownership or business meanin
 
 ## 4. Partitions
 
-<!-- training-diagrams:v1 -->
 ![Topic and partitions](./assets/topic-partitions.svg)
 
 
@@ -236,11 +234,9 @@ For this course, the important example is a consumer that moves or processes ord
 
 ## 7. Consumer Groups
 
-<!-- training-diagrams:v2 -->
 ![Two consumer groups on one topic](./assets/two-consumer-groups.svg)
 
 
-<!-- training-diagrams:v2 -->
 ![Consumer group partitions and offsets](./assets/consumer-group-offsets.svg)
 
 
@@ -603,7 +599,6 @@ Kafka is discussed as a possible upstream event-ingestion mechanism.
 
 ## 15. When Kafka Is Required
 
-<!-- training-diagrams:v1 -->
 ![When Kafka helps](./assets/when-kafka.svg)
 
 

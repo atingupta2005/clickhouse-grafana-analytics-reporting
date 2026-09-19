@@ -2,7 +2,6 @@
 
 ## 1. Session Flow
 
-<!-- training-diagrams:v1 -->
 ![Build a dynamic OData URL](./assets/odata-url-build.svg)
 
 
@@ -20,7 +19,7 @@ JSON response
       ↓
 Grafana panel
 
-The session assumes students already know the basic Grafana variable concepts from Session 10 and the basic OData concepts from Session 07.
+The session assumes you already know the basic Grafana variable concepts from Session 10 and the basic OData concepts from Session 07.
 
 The focus here is using those concepts together.
 
@@ -53,7 +52,7 @@ Root selector: value
 
 ### Tip
 
-If students can open an OData URL in the browser but the Grafana panel is empty, check the Infinity parser and root selector before changing the OData query.
+If you can open an OData URL in the browser but the Grafana panel is empty, check the Infinity parser and root selector before changing the OData query.
 
 ---
 
@@ -147,7 +146,6 @@ If the fixed query works, investigate the variable configuration rather than the
 
 ## 5. Multiple Filter Conditions
 
-<!-- training-diagrams:v1 -->
 ![Combine filter clauses](./assets/filter-and-or.svg)
 
 
@@ -189,7 +187,6 @@ When combining `AND` and `OR`, use explicit parentheses. They make the intended 
 
 ## 6. Multi-Value Variables
 
-<!-- training-diagrams:v2 -->
 ![Multi-value to OData OR chain](./assets/odata-or-chain.svg)
 
 
@@ -336,7 +333,6 @@ Start with a fixed `$orderby` expression. Introduce the variable only after the 
 
 ## 10. `$top` and `$skip`
 
-<!-- training-diagrams:v2 -->
 ![$skip is not a page number](./assets/skip-vs-page.svg)
 
 
@@ -453,7 +449,6 @@ before changing the OData URL.
 
 ## 13. Empty Results
 
-<!-- training-diagrams:v1 -->
 ![Intentional empty result Region 2](./assets/empty-region2.svg)
 
 

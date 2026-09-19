@@ -34,7 +34,7 @@ List endpoints return JSON shaped like `{ "data": [ ... ], "count": N }`.
 
 **Core vs Stretch:** Core steps are marked below. Stretch items are optional / homework.
 
-> Students connect to ClickHouse as **`training_ro`** (read-only). Do **not** `CREATE` or `INSERT` tables on the `training` database.
+> Connect to ClickHouse as **`training_ro`** (read-only). Do **not** `CREATE` or `INSERT` tables on the `training` database.
 
 ---
 

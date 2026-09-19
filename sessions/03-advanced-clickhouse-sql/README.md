@@ -24,7 +24,7 @@ Joins, CTEs, window functions, and reporting-shaped queries on the lab seed.
 
 ## What you will do
 
-**Core:** joins + CTE + one window pattern with `LIMIT` for responsiveness  
+**Core:** joins + CTE + one window pattern with `LIMIT` for responsiveness 
 
 **Stretch:** richer window frames and multi-CTE reports
 

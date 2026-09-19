@@ -1,13 +1,13 @@
 # Session 14 — Grafana Alerting and Generic Webhooks
 
-## Core Lab — Observation and watch-along
+## Core Lab — Observation and admin steps
 ### Lab Scope
 
-The Core path is designed for all students, including students whose Grafana account cannot create or save alerting resources.
+The Core path is designed for everyone, including accounts whose Grafana account cannot create or save alerting resources.
 
 Watch the alert configuration (admin account) and reproduce the reasoning behind each step.
 
-Configuration that requires administrator permissions is done in the watch-along.
+Configuration that requires administrator permissions is done in the admin steps.
 
 ---
 
@@ -32,7 +32,7 @@ The Grafana interface opens and you can access the available dashboards and Graf
 
 ### Tip
 
-If you cannot access alerting configuration or save an alert rule, do not treat permissions as a Core blocker. Continue with the watch-along demonstration.
+If you cannot access alerting configuration or save an alert rule, do not treat permissions as a Core blocker. Continue with the admin demonstration.
 
 ---
 
@@ -49,11 +49,11 @@ Review the available sections for:
 
 ### Expected Result
 
-Students can identify the main parts of the Grafana alerting interface.
+You can identify the main parts of the Grafana alerting interface.
 
 ### Tip
 
-Explain that the exact options visible to a student depend on Grafana permissions.
+Note: the exact options visible to you depend on Grafana permissions.
 
 ---
 
@@ -81,7 +81,7 @@ Contact point
 Webhook
 ```
 
-Ask students to identify which component answers each question:
+Identify which component answers each question:
 
 | Question | Component |
 |---|---|
@@ -94,11 +94,11 @@ Ask students to identify which component answers each question:
 
 ---
 
-# Watch-along — KPI Alert
+# Admin steps — KPI Alert
 
 ## 4. Open the ClickHouse Data Source
 
-For the watch-along, sign in using:
+For admin steps, sign in using:
 
 ```text
 Username: admin
@@ -157,7 +157,7 @@ Use the returned KPI as the input to the alert condition.
 2. For a **firing** demonstration, configure a condition such as:
  - **Is below** `999999999999` (or any threshold clearly **above** the returned sales), **or**
  - **Is above** `0` (condition true whenever sales exist).
-3. Say aloud: this threshold is a **classroom demonstration value**, not a real business target.
+3. This threshold is a **demo value** for the lab, not a real business target.
 
 To show **Normal** instead, temporarily use a condition that is false (for example **Is above** a number larger than returned sales).
 
@@ -175,11 +175,11 @@ Condition becomes true or false
 
 ### Expected Result
 
-Students can explain the difference between the query and the alert condition, and see at least one clear true/false demonstration.
+You can explain the difference between the query and the alert condition, and see at least one clear true/false demonstration.
 
 ### Tip
 
-Do not ask students to treat the demonstration threshold as a production SLA or business target.
+Do not treat the demonstration threshold as a production SLA or business target.
 
 ---
 
@@ -196,7 +196,7 @@ Discuss the following settings:
 
 ### Expected Result
 
-Students understand that an alert is evaluated repeatedly rather than only when a dashboard is opened.
+You should understand that an alert is evaluated repeatedly rather than only when a dashboard is opened.
 
 ---
 
@@ -228,11 +228,11 @@ Normal
 
 ### Expected Result
 
-Students understand why a temporary threshold violation does not necessarily produce an immediate firing notification.
+You should understand why a temporary threshold violation does not necessarily produce an immediate firing notification.
 
 ### Tip
 
-Do not require students to reproduce the timing manually. The objective is understanding the state transition.
+You do not need to reproduce the timing manually. The objective is understanding the state transition.
 
 ---
 
@@ -268,7 +268,7 @@ Do not describe Region 2 + Completed as a normal successful KPI scenario. After 
 
 ## 10. Discuss Error Handling
 
-Explain that an alert query can also fail.
+Note: an alert query can also fail.
 
 Discuss examples such as:
 
@@ -287,23 +287,23 @@ Compare the three states:
 
 ### Expected Result
 
-Students understand that a query error should not automatically be interpreted as a business KPI failure.
+You should understand that a query error should not automatically be interpreted as a business KPI failure.
 
 ---
 
-# Watch-along — Contact Point and Webhook
+# Admin steps — Contact Point and Webhook
 
 ## 11. Open Contact Points
 
 From Grafana Alerting, open **Contact points**.
 
-Explain that a contact point defines the notification destination.
+Note: a contact point defines the notification destination.
 
 Create or demonstrate a **Generic Webhook** contact point (admin account).
 
 ### Expected Result
 
-Students can identify:
+You can identify:
 
 ```text
 Alert Rule → Contact Point → Webhook
@@ -311,7 +311,7 @@ Alert Rule → Contact Point → Webhook
 
 ### Tip
 
-Do not require students to create a contact point. The student account may not have sufficient permissions.
+You do not need to create a contact point. Your account may not have sufficient permissions.
 
 ---
 
@@ -320,11 +320,11 @@ Do not require students to create a contact point. The student account may not h
 Use either:
 
 - a provided webhook URL, or
-- a clearly identified demonstration webhook endpoint available for the shared demo.
+- a clearly identified demonstration webhook endpoint provided for the lab demo.
 
 Do not invent or require a specific public webhook service.
 
-The configuration should demonstrate the destination concept without requiring students to build a webhook receiver.
+The configuration should demonstrate the destination concept without requiring you to build a webhook receiver.
 
 ### Expected Result
 
@@ -346,7 +346,7 @@ Discuss the information carried by the notification, such as:
 
 ### Expected Result
 
-Students can identify the important information that a receiving application could use.
+You can identify the important information that a receiving application could use.
 
 ### Tip
 
@@ -374,7 +374,7 @@ Discuss why routing is separate from the alert condition.
 
 ### Expected Result
 
-Students understand that the alert rule determines when an alert exists, while routing determines where its notification goes.
+You should understand that the alert rule determines when an alert exists, while routing determines where its notification goes.
 
 ---
 
@@ -402,17 +402,17 @@ Review the resulting alert state and, where the demonstration endpoint supports 
 
 ### Expected Result
 
-Students can describe the complete path from database metric to webhook notification.
+You can describe the complete path from database metric to webhook notification.
 
 ### Tip
 
-The Core requirement is observation and understanding. Students do not need to successfully fire a webhook from their own account.
+The Core requirement is observation and understanding. You do not need to successfully fire a webhook from their own account.
 
 ---
 
 # Core Lab Checklist
 
-Students should be able to explain:
+You should be able to explain:
 
 - [ ] What an alert rule is
 - [ ] How a query supplies an alert metric
@@ -434,7 +434,7 @@ Students should be able to explain:
 
 ## 16. Create a Simplified Alert Rule
 
-Create a simplified version of the KPI alert from the watch-along using the provisioned ClickHouse datasource.
+Create a simplified version of the KPI alert from the admin steps using the provisioned ClickHouse datasource.
 
 Use the same reporting source:
 
@@ -454,7 +454,7 @@ The query must evaluate completed data.
 
 The student can create and save an alert rule if their Grafana permissions allow it.
 
-If Grafana prevents saving the rule, return to the watch-along demonstration. This is not a Core failure.
+If Grafana prevents saving the rule, return to the admin demonstration. This is not a Core failure.
 
 ---
 

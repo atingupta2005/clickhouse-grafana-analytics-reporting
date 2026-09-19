@@ -2,7 +2,6 @@
 
 ## 1. What is Grafana?
 
-<!-- training-diagrams:v1 -->
 ![ClickHouse to Grafana panel](./assets/grafana-ch-flow.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -184,7 +183,6 @@ Start with a simple query before creating a more complex panel.
 
 ## 8. Time Ranges
 
-<!-- training-diagrams:v1 -->
 ![Seed-friendly time range](./assets/time-range-seed.svg)
 
 
@@ -242,7 +240,6 @@ The query should return a time field and one or more values that can be plotted.
 
 ## 10. Explore
 
-<!-- training-diagrams:v1 -->
 ![Explore vs Dashboard](./assets/explore-vs-dashboard.svg)
 
 
@@ -433,7 +430,6 @@ means that Grafana repeatedly retrieves data for that seed window.
 
 ## 18. Query Validation
 
-<!-- training-diagrams:v2 -->
 ![Empty vs broken query](./assets/empty-vs-broken.svg)
 
 
@@ -552,7 +548,7 @@ Validate the query directly against ClickHouse before changing the panel configu
 ## Key Points
 
 * Grafana provides the visualization and reporting layer.
-* Prefer the **provisioned** ClickHouse data source (students do not add a new one).
+* Prefer the **provisioned** ClickHouse data source (do not add a new one).
 * Panels contain queries and visualizations.
 * Explore is useful for testing and investigating queries.
 * Use ClickHouse SQL on `training.v_lab_orders`.

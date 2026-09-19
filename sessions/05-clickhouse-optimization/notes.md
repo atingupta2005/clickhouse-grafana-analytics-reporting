@@ -2,7 +2,6 @@
 
 ## 1. Why Query Performance Matters
 
-<!-- training-diagrams:v1 -->
 ![Optimization loop](./assets/optimize-loop.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -98,7 +97,6 @@ LIMIT 100;
 
 ## 3. Sorting Keys
 
-<!-- training-diagrams:v1 -->
 ![Sort key alignment](./assets/sortkey-alignment.svg)
 
 
@@ -135,7 +133,6 @@ The sorting key should therefore be designed according to important query patter
 
 ## 4. Partitioning
 
-<!-- training-diagrams:v2 -->
 ![Partition prune vs sort-key skip](./assets/partition-prune-vs-skip.svg)
 
 
@@ -169,7 +166,6 @@ Avoid creating excessive numbers of partitions.
 
 ## 5. Data Skipping
 
-<!-- training-diagrams:v1 -->
 ![Data skipping concept](./assets/data-skipping.svg)
 
 
@@ -341,7 +337,6 @@ Do not change join semantics merely for performance.
 
 ## 11. EXPLAIN
 
-<!-- training-diagrams:v2 -->
 ![EXPLAIN mental model](./assets/explain-layers.svg)
 
 Same idea in Mermaid (GitHub theme colors):

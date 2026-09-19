@@ -22,7 +22,7 @@ Introduce Grafana and connect it to ClickHouse for basic reporting panels and a 
 * Build KPI / trend / by-region panels on `training.v_lab_orders`
 * Save one dashboard
 
-**Core:** login → ClickHouse DS → absolute time → 3 panels (Completed, regions **1/3/5**) → save  
+**Core:** login → ClickHouse DS → absolute time → 3 panels (Completed, regions **1/3/5**) → save 
 
 **Stretch:** extra visualizations, Completed vs all comparison
 

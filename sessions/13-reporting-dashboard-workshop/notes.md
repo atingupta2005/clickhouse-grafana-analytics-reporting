@@ -2,7 +2,6 @@
 
 ## 1. Reporting Requirements → Dashboard Design
 
-<!-- training-diagrams:v1 -->
 ![Workshop pipeline](./assets/workshop-pipeline.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -33,7 +32,7 @@ A useful dashboard does not expose every available field. Select fields that dir
 
 ### Tip
 
-Ask students to identify the **business question first**, then decide:
+Identify the **business question first**, then decide:
 
 1. KPI
 2. Dimension
@@ -47,7 +46,6 @@ Avoid starting with the Grafana visualization type.
 
 ## 2. Choosing the Reporting Data Source
 
-<!-- training-diagrams:v2 -->
 ![ClickHouse vs OData chooser](./assets/ch-vs-odata-chooser.svg)
 
 
@@ -71,13 +69,12 @@ Those reporting fields are available through the reporting view.
 
 ### Tip
 
-Keep the workshop focused on the reporting view. Students do not need to reconstruct the underlying joins during this session.
+Keep the workshop focused on the reporting view. You do not need to reconstruct the underlying joins during this session.
 
 ---
 
 ## 3. KPI Design
 
-<!-- training-diagrams:v1 -->
 ![Core KPI set](./assets/kpi-card-set.svg)
 
 
@@ -257,7 +254,7 @@ If Region 2 is deliberately included for validation, selecting it with Completed
 
 ### Tip
 
-Do not create a variable option that the Core lab later asks students to use but cannot actually be selected.
+Do not create a variable option that the Core lab later asks you to use but cannot actually be selected.
 
 Variable values and Core validation scenarios must agree.
 
@@ -479,7 +476,6 @@ Avoid adding navigation simply because Grafana provides the capability.
 
 ## 14. Validation
 
-<!-- training-diagrams:v1 -->
 ![Validation checklist](./assets/validation-checklist.svg)
 
 
@@ -570,7 +566,7 @@ A technically correct dashboard can still be difficult to use if the layout and 
 
 ---
 
-## 17. Core Classroom Pattern
+## 17. Core pattern
 
 The recommended build sequence is:
 

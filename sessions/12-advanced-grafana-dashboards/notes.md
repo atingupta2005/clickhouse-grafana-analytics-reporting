@@ -2,7 +2,6 @@
 
 ## 1. Dashboard Organization
 
-<!-- training-diagrams:v1 -->
 ![Dashboard reading order](./assets/dashboard-reading-order.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -32,7 +31,6 @@ Start with the question the dashboard should answer, then decide which panel typ
 
 ## 2. Choosing Panel Types
 
-<!-- training-diagrams:v1 -->
 ![Match viz to the question](./assets/panel-purpose-map.svg)
 
 ### Stat
@@ -217,7 +215,6 @@ The database values remain unchanged. Grafana controls their presentation.
 
 ## 7. Transformations
 
-<!-- training-diagrams:v1 -->
 ![Transform pipeline](./assets/transform-pipeline.svg)
 
 Transformations modify the data returned to a panel before visualization.
@@ -375,7 +372,6 @@ Do not invent links to external systems that are not part of the lab.
 
 ## 12. Drill-Down Design
 
-<!-- training-diagrams:v2 -->
 ![Drill-down navigation](./assets/drilldown-map.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -541,7 +537,7 @@ inside an OData `$filter`.
 
 ### Student permissions
 
-Students use the provisioned environment and should not be expected to create datasources or change server configuration.
+You use the provisioned environment and you should not create datasources or change server configuration.
 
 ### Large tables
 

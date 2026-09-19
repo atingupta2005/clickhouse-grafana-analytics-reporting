@@ -20,7 +20,7 @@ Use the CloudBeaver path **`/cloudbeaver/`** (not the site-root `#/` UI alone).
 
 ## Sign-in
 
-Usernames and passwords for Grafana, CloudBeaver, and ClickHouse are provided by the instructor in class.
+Usernames and passwords for Grafana, CloudBeaver, and ClickHouse are provided at the start of the course.
 
 ## Data used in labs
 

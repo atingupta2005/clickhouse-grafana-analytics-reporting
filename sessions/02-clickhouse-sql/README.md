@@ -25,7 +25,7 @@ Analytical SQL on `training.v_lab_orders`: filters, aggregates, dates, and KPI-s
 
 ## What you will do
 
-**Core:** explore the view → filter Completed + regions **1/3/5** → aggregates and simple KPIs  
+**Core:** explore the view → filter Completed + regions **1/3/5** → aggregates and simple KPIs 
 
 **Stretch:** extra date/string patterns
 

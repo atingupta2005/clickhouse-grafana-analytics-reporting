@@ -2,7 +2,6 @@
 
 ## 1. SELECT
 
-<!-- training-diagrams:v1 -->
 ![ClickHouse SELECT clause order](./assets/sql-clause-pipeline.svg)
 
 Same idea in Mermaid (GitHub theme colors):
@@ -44,7 +43,6 @@ Selecting only required columns is especially useful in a column-oriented databa
 
 ## 2. WHERE
 
-<!-- training-diagrams:v1 -->
 ![WHERE vs HAVING](./assets/where-vs-having.svg)
 
 
@@ -102,7 +100,6 @@ LIMIT 100;
 
 ## 3. ORDER BY
 
-<!-- training-diagrams:v2 -->
 ![SQL ORDER BY vs MergeTree ORDER BY](./assets/orderby-sql-vs-mergetree.svg)
 
 
@@ -202,7 +199,6 @@ FROM training.v_lab_orders;
 
 ## 6. Aggregate Functions
 
-<!-- training-diagrams:v1 -->
 ![From rows to a KPI](./assets/aggregation-funnel.svg)
 
 
@@ -408,7 +404,6 @@ String functions are useful for filtering, formatting and preparing values for r
 
 ## 10. Date and Time Functions
 
-<!-- training-diagrams:v2 -->
 ![Half-open date ranges](./assets/date-half-open.svg)
 
 Same idea in Mermaid (GitHub theme colors):

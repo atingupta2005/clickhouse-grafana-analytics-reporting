@@ -28,7 +28,6 @@ Set the dashboard time range to absolute **2023-01-01** → **2025-06-18** if pa
 
 ## 1. Identify the Training APIs (Core)
 
-<!-- training-diagrams:v2 -->
 ![ClickHouse DS vs Infinity DS](./assets/ch-vs-infinity.svg)
 
 Public base: `https://vmclickhouse.canadacentral.cloudapp.azure.com`
@@ -86,13 +85,11 @@ Records live under **`data`**.
 
 ## 4. Use the Provisioned Infinity Data Source (Core)
 
-<!-- training-diagrams:v2 -->
 ![Infinity request anatomy](./assets/request-anatomy.svg)
 
-<!-- training-diagrams:v2 -->
 ![REST vs OData roots](./assets/rest-vs-odata-roots.svg)
 
-Do **not** create a new Infinity data source. Use the existing provisioned one (uid often shown as **`infinity`**).
+Do **not** create a new Infinity data source. Use the existing provisioned one (named **Infinity**).
 
 ### Infinity panel settings (REST)
 
@@ -133,7 +130,6 @@ If `root_selector` / Rows path is wrong, the panel is empty even when the URL wo
 
 ## 6. Filter Sales by Region (Core)
 
-<!-- training-diagrams:v2 -->
 ![Stack filters on /api/sales](./assets/rest-param-stack.svg)
 
 ```text
@@ -170,7 +166,6 @@ Optional any-status Region 2 demo (expect rows, not Completed):
 
 Aliases `from_date` / `to_date` also work. Pagination on REST is **`page` / `page_size`** — not `top` / `skip` / `limit`.
 
-<!-- training-diagrams:v2 -->
 ![REST page and page_size](./assets/rest-page-page-size.svg)
 
 **Expected result:** Rows limited to Q1 2023 Completed sales for region 3.
@@ -243,7 +238,6 @@ OData pagination uses `$top` / `$skip` (different from REST `page` / `page_size`
 
 ## 18. Create an OData Table Panel (Core)
 
-<!-- training-diagrams:v2 -->
 ![Incremental API panel workflow](./assets/api-query-workflow.svg)
 
 Infinity → full OData HTTPS URL → parser JSON → root selector **`value`** → Table.
@@ -254,7 +248,6 @@ Infinity → full OData HTTPS URL → parser JSON → root selector **`value`** 
 
 ## 19. Empty Result vs Error (Core)
 
-<!-- training-diagrams:v2 -->
 ![Empty HTTP 200 vs HTTP errors](./assets/empty-vs-http-error.svg)
 
 Empty but successful:

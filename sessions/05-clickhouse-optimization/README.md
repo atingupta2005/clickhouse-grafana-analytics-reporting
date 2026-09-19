@@ -30,7 +30,7 @@ ORDER BY (order_date, plant_id, order_id)
 
 ## What you will do
 
-**Core:** compare filter alignment to the sort key → `EXPLAIN` → rewrite one slow pattern  
+**Core:** compare filter alignment to the sort key → `EXPLAIN` → rewrite one slow pattern 
 
 **Stretch:** deeper `system.query_log` / skipping demos
 

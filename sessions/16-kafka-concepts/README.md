@@ -21,7 +21,7 @@ Understand Kafka as an event-streaming layer and where it fits before ClickHouse
 * Trace partitions and consumer groups
 * Relate Kafka to ClickHouse (`training.v_lab_orders`) and Grafana
 
-**Core:** concepts + architecture walkthrough (no produce/consume exercise required)  
+**Core:** concepts + architecture walkthrough (no produce/consume exercise required) 
 
 **Stretch:** optional Redpanda profile walkthrough when available
 
